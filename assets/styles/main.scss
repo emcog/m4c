@@ -1,0 +1,63 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+ 
+ // CSS variables
+:root {
+    --monotone:#4B596F;
+    --font1: 'Arial black', sans-serif;
+    --font2: Georgia;
+    --font3: 'Courier std', Courier;
+    --btn-height: 41px;
+    --highlight-pad: .25rem;
+    --nav-dropdown: 100px;
+}
+
+
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/helpers',
+  'base/resets',
+  'base/form-inputs',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/grid-12_default',
+  'layout/grid-12_share-block';
+  // 'layout/share-block-left';
+
+// 5. Components
+@import
+  'components/button',
+  'components/100vh',
+  'components/banner_98vh',
+  // 'components/signup-form',
+  'components/signup-form-2',
+  'components/callout.scss',
+  'components/nav-bar';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';

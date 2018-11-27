@@ -1,0 +1,34 @@
+.grid-12_share-block {
+	grid-column: 1/-1;
+	display: grid;
+	// grid-template-columns: repeat(2, 1fr) 32px repeat(3, 100px) repeat(6, 1fr);
+	grid-template-columns:  3fr 32px 300px repeat(6, 1fr);
+	grid-template-areas:  "1fr-1 1fr-2 32px-3 100px-4 100px-5 100px-6 1fr-7 1fr-8 1fr-9 1fr-10 1fr-11 1fr-12";
+	grid-gap: $grid-gap;
+	margin: 15px 0 15px 0;
+}
+
+.quote-n-attribute {
+	grid-column: 4/8;
+	grid-row: 1;
+}
+
+.atom__meme {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.molecule__share-strip {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.share-block_supporting-text {
+	grid-row: 1;
+	grid-column: 4/8;
+	align-self: end;
+}
+
+.quote-n-attribute > h2 {
+	padding-top: 0;
+}

@@ -1,0 +1,23 @@
+.callout { 
+	&.is-vertical {
+		grid-column: 4 / span 2;
+			& > .is-circle { //apply to img
+				width: 50%; // 1 col
+				height: auto;
+				border-radius: 50%;
+				margin-right: 50% //to prevent text from wrapping unexpectidly
+			}
+			& > .is-square { //apply to img
+				width: 100%; //2 cols
+				height: auto;
+			}
+	}
+	&.is-horizontal {
+		grid-column: 5 / span 5;
+			& > img {
+				float: left;
+				width: 20%; //1 col
+				margin-right: $grid-gap;
+			}
+	}
+}

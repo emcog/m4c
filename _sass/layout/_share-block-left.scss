@@ -1,0 +1,278 @@
+.share-blocks {
+  max-width: 1280px;
+  margin: auto;   
+}
+
+//these need to be condensed in to one block with .left .right distinguishing GTAs
+.organism__share-block__meme-right{
+  display: grid;
+  grid-template-columns:  1fr 300px 32px;
+  grid-template-rows: fit-content;
+  grid-template-areas: "c-1 b-1 a-1" "c-2 b-2 a-2" ;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  justify-content: start; 
+}
+
+
+.share-block_img-left{
+  display: grid;
+  grid-template-columns: 32px 300px 1fr;
+  grid-template-rows: fit-content;
+  grid-template-areas: "a-1 b-1 c-1" "a-2 b-2 c-2" ;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  justify-content: start; 
+  margin:35px 0 35px 0;
+}
+
+
+.share-block_img-left_default-12 {
+  // display: grid;
+  // // grid-template-columns: 32px 300px 1fr;
+  // // grid-template-rows: fit-content;
+  // // grid-template-areas: "a-1 b-1 c-1" "a-2 b-2 c-2" ;
+  // grid-column-gap: 5px;
+  // grid-row-gap: 0px;
+  justify-content: start; 
+  margin:35px 0 35px 0;
+}
+
+.quote-n-attribute {
+  grid-area:c-1;
+  margin: 0 0 0 8px;
+  align-self: start;
+}
+
+.quote-n-attribute > h2 {
+  padding-top: 0;
+}
+
+.molecule__share-strip{
+  margin-top: .25rem;
+  grid-area: a-1;
+  display: flex;
+  flex-direction: column; 
+}
+
+.atom__social-button{
+  margin-bottom: 0.35rem;
+}
+
+.atom__meme{
+  grid-row: 1/4;
+ }
+
+
+.atom__attribute {
+   // text-align: right;
+   line-height: 1.6rem;
+   font-size: 1.2rem;
+   margin-top: .8rem;
+ }
+
+.share-block_supporting-text {
+  // margin: 0.6rem 0 0 26px;
+  margin: 0.6rem 0 0 0;
+  grid-area: c-2;
+  align-self: end;
+  font-size: 1.125rem;
+}
+
+
+// .share-block_supporting-text::first-letter{
+//   font-size: 2.2em;
+//   font-family: var(--font1);
+//   line-height: 1.6rem;
+// }
+ 	
+
+/*----- MEDIA QUERY -----*/
+
+@media(max-width: 590px) {
+  .share-blocks{
+    margin: auto;
+	}
+  
+  .share-block_img-left,
+  .organism__share-block__meme-right
+     {
+      display: grid;
+      grid-template-columns: 1fr 300px 1fr;
+  		/*grid-template-columns: 0.25fr 1fr 300px 1fr 0.125fr;*/
+      grid-template-rows: 300px repeat(3 1fr);
+  		grid-template-areas: "a-1 b-1 c-1" "a-2 b-2 c-2" "a-3 b-3 c-3" "a-4";
+  	}
+
+    .molecule__share-strip{
+    	grid-area: b-1;
+    	display: flex;
+    	flex-direction: row;
+    	margin: 320px 0 0 0;
+    }
+
+  	.quote-n-attribute{
+  		grid-area: b-1;
+  		align-self: end;
+  		margin: 0 0 1.9rem 0;
+  }
+
+  .atom__social-button{
+  	margin: 0 .25rem 0 0;
+  }
+
+  .atom__meme{
+  	grid-area: b-1;
+  }
+
+  .atom__attribute{
+  	font-size: .7rem;
+  }
+
+  .share-block_img-left > .share-block_supporting-text, 
+  .organism__share-block__meme-right > .share-block_supporting-text{
+    grid-column:1/-1;
+  	margin-left: 12px;
+  	padding: 6px 0 0 0;
+  }
+  
+  .share-block_supporting-text {
+  	font-size: 1rem;
+  }
+  
+  .share-block_supporting-text::first-letter{
+  	font-size: 2.2em;
+  	font-family: var(--font1);
+  	line-height: 1.6rem;
+  }
+  
+  h2{
+    display: none;
+  	margin: 0;
+    }
+}
+
+
+/*----- MEDIA QUERY -----*/
+
+@media(max-width: 680px){
+
+ .share-blocks{
+   margin: 0 10px 0 -22px;
+ }
+
+ .molecule__share-strip{
+   margin: 310px 0 0 0;
+   grid-area: b-1;
+   display: flex;
+   flex-direction: row;
+   align-self: end;
+   grid-gap: 0px;
+ }
+
+ .highlight-text{
+   line-height: 2.4rem;
+   font-size: 1.4rem;
+ }
+
+ .share-block_supporting-text::first-letter{
+   font-size: 2.2em;
+   font-family: var(--font1);
+   line-height: 1.6rem;
+ }
+
+ .atom__social-button{
+   margin: 0 .25rem 0 0;
+ }
+
+}
+
+
+/*----- MEDIA QUERY -----*/
+
+@media(max-width: 1250px){
+    .share-blocks{
+    margin: 0 10px 0 10px;
+  }
+
+.highlight-text  {
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  color: white; 
+}
+
+.share-block_supporting-text {
+    font-size: 1rem;
+  }
+
+}
+
+
+/*----- MEDIA QUERY -----*/
+@media(max-width: 890px){
+  
+  .share-blocks{
+    margin: 0 10px 0 10px;
+  }
+  
+  .share-block_img-left,
+  .organism__share-block__meme-right
+   {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  .quote-n-attribute{
+    grid-area: c-1;
+    align-self: center;
+    margin: 0 0 0 8px;
+  }
+  
+  .molecule__share-strip{
+    margin-top: .25rem;
+    grid-area: a-1;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .atom__attribute{
+    align-self: end;
+    grid-area: b-1;
+    font-size: 1rem;
+    text-align: right;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+  }
+
+  .atom__social-button{
+    grid-auto-flow: column;
+    display: flex;
+    flex-direction: column;
+    grid-area: a-2;
+  }
+
+  .atom__meme{
+    grid-area: b-1;
+  }
+
+  .highlight-text{
+    font-size: 1.8rem;
+    line-height: 2.95rem;
+  }
+
+  .organism__share-block__meme-right > .share-block_supporting-text{
+    grid-column: 1/-2;
+  }
+
+  .share-block_img-left > .share-block_supporting-text{
+    grid-column: 2/-1;
+  }
+
+  .share-block_supporting-text{
+    margin: 0 0 0 28px;
+    padding-top: .6rem;
+    grid-row: 2;
+    /*grid-column: 2/-1;*/
+    font-size: 1rem;
+  }
+}

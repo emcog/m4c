@@ -1,0 +1,87 @@
+input[type="submit"] {
+  @extend %border-styles;
+  @extend %radius-right;
+  @extend %radius-left;
+  color: white;
+  // background-color: rgba(0, 0, 0, 0);
+  font-family: $font_title_stack;
+  width: 100%;
+}
+
+// https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3
+//custom checkbox
+
+//targets the mailchimp checkbox
+.checkbox {
+	height: 2.6rem;
+	padding: .35rem 0 .35rem 1rem; 
+	font-size: 1.25rem;
+}
+
+.checkbox > span {
+	margin-left: 2rem;
+}
+
+//targets custom checkbox styles
+.ec__checkbox input[type="checkbox"] {
+	@extend %visually-hidden;
+	// opacity: 0;
+}
+
+.ec__checkbox label::before{
+    content: "";
+    display: inline-block;
+    height: 1.65rem;
+    width: 1.65rem;
+    border: 1px solid;  
+    border-radius: 3px; 
+}
+
+//tick for checkbox
+.ec__checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 15px;
+    margin-left: .9rem;
+    border-left: 3px solid;
+    border-bottom: 3px solid;  
+    //padding hack to increase size of check-mark
+    padding-left: 1rem;
+    transform: rotate(-45deg);
+}
+
+.ec__checkbox label {
+    position: relative;
+}
+
+.ec__checkbox label::before,
+.ec__checkbox label::after {
+    position: absolute;
+}
+
+/*Outer-box*/
+.ec__checkbox label::before {
+    top: 3px;
+}
+
+/*Checkmark*/
+.ec__checkbox label::after {
+    left: 4px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.ec__checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide the checkmark on the checked state*/
+.ec__checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}

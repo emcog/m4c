@@ -1,0 +1,41 @@
+.full-height {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	// align-items: flex-end;
+	height: 98vh;
+	padding: 0 15% 0 15%;
+	background-color: $colour_M4C-wireframe-dark;
+}
+
+.full-height > h2 {
+	// align-self: flex-start;
+	margin: 0 0 0 0;
+	font-size: 55pt;
+	line-height: .98;
+	color: $colour_M4C-wireframe-light;
+}
+
+.full-height > h2 > span {
+	font-family: $font_body_stack;
+	font-size: 55pt;
+	
+}
+
+h2 br {
+margin-bottom: .8rem;
+}
+
+.player {
+	margin: 20px 0 0 0;
+	padding: 0 0 0 0;
+	width: 80%;
+	min-height: 160px;
+	max-height: 250px;
+}
+
+.full-height > .btn-cta {
+	// align-self: flex-end; 
+	margin: 50px 0 0 25%;
+	width: 35%;
+}

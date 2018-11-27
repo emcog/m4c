@@ -1,0 +1,104 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  // font: normal 125% / 1.4 $text-font-stack;
+}
+
+.font_quote-highlight {
+
+}
+
+// p ($font_body_stack, $colour_M4C-wireframe-dark) {
+// 	font-family: $font_body_stack;
+// 	font-size: 1 rem;
+// 	color: $colour_M4C-wireframe-dark; 
+// }
+
+p {
+	font-family: $font_body_stack;
+	font-size: 16px;
+	color: $colour_M4C-wireframe-dark; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	{
+		font-family: $font-title-stack;
+	}
+
+q
+	{
+  font-family: $font_quote-highlight_stack;
+	}
+
+
+h2{
+ font-weight: 400;
+}
+
+label {
+  font-family: $font_body_stack;
+}
+
+
+//nav – make this conditional based inside button
+ h2 {
+    margin-top: 0;
+    padding-top: .8em;
+  } 
+
+//share block
+.atom__attribute {
+  font-family: var(--font3);
+  color: var(--monotone);
+}
+
+.molecule__meme-text > p {
+  padding-left: 2rem;
+}
+
+
+//text hightlight with nice endings
+.highlight-text  {
+  color: white;
+  background-color: var(--monotone);
+  box-shadow: var(--highlight-pad) 0px var(--monotone), 
+  calc(var(--highlight-pad)*-1) 0px var(--monotone);
+  white-space: pre-wrap;
+  box-decoration-break: clone;
+  border: 1px solid var(--monotone);
+  margin-bottom: 0;   
+ }
+
+P {
+  margin-bottom: 1rem;
+  margin-top: .25rem;
+}
+
+//todo
+ .highlight-text  {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: white; 
+}
+
+p > a {
+  font-family: $font_body_stack;
+  color: $colour_M4C-wireframe-dark;
+  border-bottom: 1px solid;
+  padding-bottom: .125rem;
+  text-decoration: none;
+}
+
+p > a:hover {
+  border-bottom: 1px solid;
+  padding-bottom: .125rem;
+  text-decoration: none;
+  color: $colour_M4C-wireframe-dark;
+}

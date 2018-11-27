@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+ * Basic styles for links
+ */
+a {
+  font-family: var(--font3);
+  color: $colour_M4C-wireframe-dark;
+   text-decoration: none;
+  font-size: 16px;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+input {
+  @extend %border-styles;
+  @extend %radius-right;
+  @extend %radius-left;
+  padding: .35rem 0 .35rem .9rem; 
+  font-family: $font_body_stack;
+  font-size: 1.2rem;
+}
+
+fieldset {
+  border: 0px none #ffffff;
+  padding: 0;
+}

@@ -1,0 +1,141 @@
+  <nav id="navTop">
+    <div class="dropdown-background">
+    </div>
+    <ul class="hasDropdowns">
+      <li>
+        <figure class="logo-parent">
+          <a href="#">
+            <img class="logo" src="assets/emcog_white.png" alt="M4C logo">
+          </a>
+        </figure>
+      </li>
+      <li>
+        <a href="#">
+          <span>Workshops & trainings
+          </span></a>
+        <ul class="dropdown courses">
+          <li>
+            <span>Yoga Changemakers</span>
+            <a href="#"></a>
+          </li>
+          <li>
+            <span>Mindfulness and Inclusion</span>
+            <a href="#"></a>
+          </li>
+          <li>
+            <span>Conscious Organisations</span>
+            <a href="#"></a>
+          </li>
+          <li>
+            <span>Mindfulness and the Community</span>
+            <a href="#"></a>
+            </li>                    
+        </ul>
+      </li>
+      <li>
+        <a href="#"><span>Pass the time</span></a>
+        <ul class="dropdown courses">
+          <li>
+            <span class="btn-filter">Read</span>
+          </li>
+          <li>
+            <span class="btn-filter">Listen</span>
+          </li>
+          <li>
+            <span class="btn-filter">Watch</span>
+          </li>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><span>About</span></a>
+        <ul class="dropdown courses">
+          <li>
+            <span>People</span>
+          </li>
+          <li>
+            <span>Organisation</span>
+          </li>
+          <li>
+            <span>Intention</span>
+          </li>
+         
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><span>Wiki</span></a>
+        <ul class="dropdown">
+          <li>
+            <span>Modern history of mindfulness</span>
+           
+          </li>
+          <li>
+            <span>
+              Stages of mindfulness meditation
+            </span>
+            
+          </li>
+          <li>
+            <span>Defintions</span>
+          </li>
+        </ul>
+      </li>
+      <li class="btn-cta">
+        <a href="">Free mindfulness ecourse</a>
+      </li>
+      <li>
+        <a href="">Resume</a>
+       </li>
+    </ul>
+  </nav>
+  
+  <!-- <div id = "content-wrapper"></div> -->
+
+
+<!-- to do move js files -->
+<script>
+const tabs = document.querySelectorAll('.hasDropdowns > li');
+const nav =  document.querySelector('#navTop'); 
+const dropdown = document.querySelector('.dropdown');
+const background =  document.querySelector('.dropdown-background');
+const wrapper = document.getElementById('content-wrapper');
+// const wrapperStyle = document.styleSheets[0].rules[0].wrapper.style;
+
+// Get the absolute position of Nav elements
+const coordsDropdown = dropdown.getBoundingClientRect();
+const coordsNav = nav.getBoundingClientRect();
+const coordsBG = background.getBoundingClientRect();
+const coords = {
+   height: coordsDropdown.height,  
+   top: coordsNav.height
+ };
+
+//Display correct content for li element clicked, disactivate active tab when active tab clicked. When active show background to nav.
+function tabClick() {
+  //refactor using arrow functions
+if(this.classList.contains('tab-enter')) {
+  //dropdown close
+  this.classList.remove('tab-enter', 'is_tab-enter_active');
+  background.classList.remove('is-open');
+  nav.classList.remove('is_nav_open');
+} else {
+  //dropdown open
+  let i;
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('tab-enter', 'is_tab-enter_active' );
+    this.classList.add('tab-enter', 'is_tab-enter_active');
+    background.classList.add('is-open');
+    nav.classList.add('is_nav_open');
+  }
+};
+}
+
+//Correctly position nav background
+window.onload = function() {
+  background.style.setProperty('transform', `translateY(${coords.top}px)`);
+}
+//Create buttons
+tabs.forEach(tab => tab.addEventListener('mousedown', tabClick));
+
+</script>

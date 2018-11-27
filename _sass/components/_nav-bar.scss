@@ -1,0 +1,146 @@
+  .hasDropdowns > li > a {
+    display: flex;
+    margin: 16px 0 0px 0;
+    border-radius: 2px 2px 0px 0px;
+    padding: 14px 20px 5px 20px;
+    text-decoration: none;
+    color: $colour_M4C-wireframe-light;
+  }
+
+  .hasDropdowns > .btn-cta > a {
+    color: $colour_M4C-wireframe-dark;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-background {
+    width:100%;
+    position: absolute;
+    background: cadetblue;
+    border-radius: 0px;
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    height: var(--nav-dropdown);
+  }
+
+
+.is_nav_open {
+  margin-bottom: var(--nav-dropdown);
+}
+
+
+.hasDropdowns > li > a> span {
+  height: 1.8rem;
+   padding: 0 0.25rem 0 0;
+}
+.hasDropdowns > li > a> span:hover {
+  border-bottom: .5rem solid white;
+}
+
+
+  .courses {
+    min-width:100%;
+  }
+
+  .courses li {
+    margin: 15px 30px 0px 0px;
+    padding: 10px 0;
+  }
+
+  .dropdown a {
+    text-decoration: none;
+    color: #ffc600;
+  }
+
+
+ body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+
+
+
+/*LAYOUTS*/
+#navTop {
+    background: var(--monotone);
+    position: relative;
+    transition: margin-bottom ease .6s;
+  }
+
+#content-wrapper {
+  background-color: chocolate;
+  height: 300px;
+  display: block;
+  position: relative;
+}
+  
+  /*MODULES*/
+.logo-parent{
+  padding-top: 2px
+}
+
+.logo-parent > a > img {
+  height: 42px;
+  width: 42px;
+}
+
+.dropdown > li {
+  display: flex;
+  align-items: center;
+  font-family: var(--font3);
+  margin: 0px 30px 0px 30px;
+  font-size: 1rem;
+}
+
+.tab-enter > a > span {
+  border-bottom: .5rem solid white;
+}
+
+.btn-filter {
+  font-size: 16px;
+  padding: 0 2.25rem 0.1rem 2.25rem;
+  float: right;
+  height: 40px;
+  border: var(--monotone) solid 3px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font1);
+  text-align: center;
+  justify-content: center;
+} 
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding:20px;
+  top:-20px;
+  border-radius:2px;
+  transform: translateY(100px);
+  /*transition: opacity .5s ease;*/
+}
+
+.tab-enter .dropdown {
+  display: flex;
+  justify-content: center;
+}
+
+.hasDropdowns > li {
+  /*position: relative;*/
+  display:flex;
+  justify-content: center;
+}
+
+.is_tab-enter_active .dropdown {
+  opacity: 1;
+  transition: opacity 1s ease;
+}

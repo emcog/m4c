@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="299px" viewBox="0 0 299 299" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>iPhone SE</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="1" width="299" height="299"></rect>
+    </defs>
+    <g id="Article-concepts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE">
+            <g id="Meme" transform="translate(0.000000, -1.000000)">
+                <g id="Square-Image">
+                    <g id="Rectangle-2-Copy">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#4B596F" stroke-width="2" x="1" y="2" width="297" height="297"></rect>
+                    </g>
+                    <rect id="Rectangle-4" fill="#4B596F" transform="translate(149.845977, 150.845977) rotate(45.000000) translate(-149.845977, -150.845977) " x="-59.6540226" y="149.845977" width="419" height="2"></rect>
+                    <rect id="Rectangle-4-Copy" fill="#4B596F" transform="translate(150.282179, 149.792893) rotate(135.000000) translate(-150.282179, -149.792893) " x="-59.2178208" y="148.792893" width="419" height="2"></rect>
+                </g>
+                <g id="Copy-on-image" transform="translate(0.000000, 178.000000)" fill="#4B596F">
+                    <rect id="Rectangle-5" x="0" y="0" width="164" height="34"></rect>
+                    <rect id="Rectangle-5-Copy" x="0" y="40" width="122" height="34"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
