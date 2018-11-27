@@ -917,6 +917,10 @@ nav ul {
   transform-origin: 50% 0;
   display: flex;
   justify-content: center;
+  height: 0;
+  transition: height 0.6s; }
+
+.is-open {
   height: var(--nav-dropdown); }
 
 .is_nav_open {
@@ -994,12 +998,7 @@ body {
   padding: 20px;
   top: -20px;
   border-radius: 2px;
-  transform: translateY(100px);
-  /*transition: opacity .5s ease;*/ }
-
-.tab-enter .dropdown {
-  display: flex;
-  justify-content: center; }
+  transform: translateY(100px); }
 
 .hasDropdowns > li {
   /*position: relative;*/
@@ -1008,4 +1007,6 @@ body {
 
 .is_tab-enter_active .dropdown {
   opacity: 1;
-  transition: opacity 1s ease; }
+  transition: opacity 0.6s cubic-bezier(0.95, -1.32, 0, 1.01);
+  display: flex;
+  justify-content: center; }
