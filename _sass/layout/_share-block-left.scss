@@ -48,18 +48,18 @@
   padding-top: 0;
 }
 
-.molecule__share-strip{
+.social-buttons{
   margin-top: .25rem;
   grid-area: a-1;
   display: flex;
   flex-direction: column; 
 }
 
-.atom__social-button{
+.social-button{
   margin-bottom: 0.35rem;
 }
 
-.atom__meme{
+.share-image{
   grid-row: 1/4;
  }
 
@@ -104,7 +104,7 @@
   		grid-template-areas: "a-1 b-1 c-1" "a-2 b-2 c-2" "a-3 b-3 c-3" "a-4";
   	}
 
-    .molecule__share-strip{
+    .social-buttons{
     	grid-area: b-1;
     	display: flex;
     	flex-direction: row;
@@ -117,11 +117,11 @@
   		margin: 0 0 1.9rem 0;
   }
 
-  .atom__social-button{
+  .social-button{
   	margin: 0 .25rem 0 0;
   }
 
-  .atom__meme{
+  .share-image{
   	grid-area: b-1;
   }
 
@@ -161,7 +161,7 @@
    margin: 0 10px 0 -22px;
  }
 
- .molecule__share-strip{
+ .social-buttons{
    margin: 310px 0 0 0;
    grid-area: b-1;
    display: flex;
@@ -181,7 +181,7 @@
    line-height: 1.6rem;
  }
 
- .atom__social-button{
+ .social-button{
    margin: 0 .25rem 0 0;
  }
 
@@ -228,7 +228,7 @@
     margin: 0 0 0 8px;
   }
   
-  .molecule__share-strip{
+  .social-buttons{
     margin-top: .25rem;
     grid-area: a-1;
     display: flex;
@@ -244,14 +244,14 @@
     margin-top: 0.5rem;
   }
 
-  .atom__social-button{
+  .social-button{
     grid-auto-flow: column;
     display: flex;
     flex-direction: column;
     grid-area: a-2;
   }
 
-  .atom__meme{
+  .share-image{
     grid-area: b-1;
   }
 
