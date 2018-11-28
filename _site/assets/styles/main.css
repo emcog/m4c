@@ -696,6 +696,17 @@ p > a:hover {
   text-decoration: none;
   color: #4a586d; }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background: #4a586d; }
+
+footer > a {
+  padding: 0 2rem 0 2rem;
+  color: white; }
+
 .grid-12_default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -948,7 +959,6 @@ body {
   margin: 0;
   min-height: 100vh; }
 
-/*LAYOUTS*/
 #navTop {
   background: var(--monotone);
   position: relative;
@@ -960,7 +970,6 @@ body {
   display: block;
   position: relative; }
 
-/*MODULES*/
 .logo-parent {
   padding-top: 2px; }
 
@@ -972,7 +981,7 @@ body {
   font-family: var(--font3);
   margin: 0px 15px 0px 15px;
   font-size: 1rem;
-  width: 100% f; }
+  min-width: 144px; }
 
 .tab-enter > a > span {
   border-bottom: .5rem solid white; }
@@ -1001,6 +1010,10 @@ body {
   opacity: 0;
   justify-content: center;
   align-items: flex-start; }
+
+.mboe {
+  float: right;
+  margin-right: 20px; }
 
 .has-dropdowns > li {
   display: flex;

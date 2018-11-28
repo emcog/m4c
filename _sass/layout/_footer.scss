@@ -1,3 +1,12 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background: $colour_M4C-wireframe-dark;
+}
+
+footer > a {
+	padding: 0 2rem 0 2rem;
+	color: $colour_M4C-wireframe-light;
+}
