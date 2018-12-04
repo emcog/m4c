@@ -1,15 +1,14 @@
 ---
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: ecourse
+layout: ecourse-landing
 title: Manifesto
+banner-image: /assets/images/mr-brainwash_love-is-the-answer.jpg
 ---
-
-
 
 A short explanation about what all these quotes are doing here, or a number of people are calling for change. We believe an ethical, sustainable society is possible and that psycho-education supported by practices like mindfulness meditation are vital to this conversation. Below you'll find a number of quotes which link to their respective talks which provide context or rational to our work.
 
 {% include share-block__left-parameters_default-12.html 
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Dalia Lama examines the idea of the present moment" 
 	share-quote="So, half is past, half is future. No present!"
 	share-attribute="Dalai Lama"
@@ -18,7 +17,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html 
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Johann Hari talks about the causes of depression." 
 	share-quote=" Junk values have taken over our lives and are making us mentally sick."
 	share-attribute="Johann Hari"
@@ -27,7 +26,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html 
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="The True Cost, Fashion Documentary, Official Trailer." 
 	share-quote="When everything is concentrated on making profits, what you see is that human rights, the environment, workers' rights get lost."
 	share-attribute="Andrew Morgan"
@@ -48,7 +47,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 <!-- block two -->
 
 {% include share-block__left-parameters_default-12.html 
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Clara Vuletich, How to Engage with Ehtical Fashion." 
 	share-quote="Fast fashion has turned us into these passive consumers who are constantly chasing the fantasy that buying more clothes will make us happy. "
 	share-attribute="Clara Vuletich"
@@ -57,7 +56,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html 
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Slavoj Zized interview with Vice." 
 	share-quote="When you dream how to escape from reality you just reproduce the same world."
 	share-attribute="Slavoj Zizek"
@@ -66,7 +65,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Russel Brand and Yuval Harari try to answer the question: Who Really Runs the World?." 
 	share-quote="It's very difficult to know where power really lies in the 21st Century."
 	share-attribute="Yuval Harari"
@@ -83,7 +82,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 <!-- Block three -->
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Naomi Klein talks about her book, No Is Not Enough."
 	share-quote="To have a hope of changing the world, we're going to have to be willing to change both the culture as well as ourselves."
 	share-attribute="Naomi Klein"
@@ -92,7 +91,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Slavoj Zizek explains why Walter Benjamin was right." 
 	share-quote="Either a new form of the Left will be reinvented or, here is my simple but I love it answer; or look at Hollywood. I always trust Hollywood. Hollywood is warning us all the time: Hunger Games, Elysium and so on. That's the society we are approaching. 20% of the people live in the privileged zone. The majority is out. That's the future."
 	share-attribute="Slavoj Zizek"
@@ -101,7 +100,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Nacy Fraser: Marx and Feminism." 
 	share-quote="To make a better world change has to more than a struggle to improve the lot of different minority groups"
 	share-attribute="Nancy Fraser"
@@ -112,7 +111,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 <!-- Block 4 -->
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="TEDx Talk with Gretchen Busl, ask us to take control of our stories." 
 	share-quote="Social change means we have to empower ourselves by challenging the stories that control us."
 	share-attribute="Gretchen Busl"
@@ -121,7 +120,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mark Fisher: The Slow Cancellation of The Future." 
 	share-quote="There's now a feeling that nothing ever really dies but that's not good. That means that we are assailed on all sides by kind of zombie forms which persist forever."
 	share-attribute="Mark Fisher"
@@ -130,7 +129,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Neil MacGregor in BBC short, The Lion Man." 
 	share-quote="This Lion-man crafted forty thousand years ago comes from a world that exists only in our imagination, yet he is here and his pricked-up ears are listening to us, his eyes watching us."
 	share-attribute="Neil MacGregor"
@@ -150,7 +149,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 <!-- links to about MBOE, graphic of our chart/ MBOE paper -->
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Gabor Mate talks about Toxic Materialistic Culture." 
 	share-quote="If a woman was emotionally isolated and stressed the risk of that lump being cancerous was nine times as great as the average."
 	share-attribute="Gabor Mate"
@@ -160,7 +159,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Is The War On Drugs Working? - The People Speak." 
 	share-quote="How drug users are treated is often based on their socio-economic status or their race."
 	share-attribute="Vice News"
@@ -169,7 +168,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Rober Sapolski: Humans are Unique Among Living Creatures." 
 	share-quote="Hippos would be repulsed by this. There's hardly any other species that has non-reproductive sex like this and nobody talks about it afterward."
 	share-attribute="Robert Sapolsky"
@@ -188,7 +187,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="short descrption of image, e.g. Mark Fischer, presenting at.." 
 	share-quote="So, half is past, half is future. No present!"
 	share-attribute="HH Dalai Lama"
@@ -197,7 +196,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Robert Sapolsky on Life and Free Will." 
 	share-quote="What do you do with the whole notion that crime and evil and guilt and punishment and criminal justice and none of those concepts make any sense whatsoever?"
 	share-attribute="Robert Sapolski"
@@ -206,7 +205,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="What is Protestant Buddhism?" 
 	share-quote="You may have heard of the term \"Protestant Buddhism\": It's a description to a lot of contemporary belief and practice. What is it and where did it come from?" 
 	share-attribute="Doug Smith"
@@ -224,7 +223,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 <!-- either reference to Adam Curtis here or critique of the lefts attempt to use logic to dismantly Trumpian identiy built on confusion, denial and bullying -->
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Robert Sharf ¬- Mindfulness or Mindlessness?" 
 	share-quote="A state in which both objects and conscious experience cease altogether. It's a kind of vegetative coma."
 	share-attribute="Robert Sharf"
@@ -233,7 +232,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Sam Harris: Mindfulness is Powerful, But Keep Religion Out of It." 
 	share-quote="Mindfulness is more like the large hadron collider in that it's a real tool for making some fundamental discoveries about the nature of the mind and one of these discoveries is that the sense of self that we all carry around from day to day is an illusion."
 	share-attribute="Sam Harris"
@@ -242,7 +241,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mindfulness at Royal Orthopaedic Hospital, Birmingham." 
 	share-quote="Our main intention was to bring the technique to the clinical areas around [surgical] theatres where the service demands and the stresses on the teams and the individual are greatest and where we felt that mindfulness or to be mindful would bring the greatest benefit to the Trust or to the teams as well as to the patients, ultimately."
 	share-attribute="Dr Conny Blunt"
@@ -251,7 +250,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Evan Thompson, What is Mindfulness? An Embodied Cognitive Perspective, Closing Keynot, International Symposium on Contemplative Studies." 
 	share-quote="Narcissism and the mass marketing of mindfulness to the individual consumer go hand in hand."
 	share-attribute="Evan Thompson"
@@ -261,7 +260,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mark Leonard, Mindfulness, from Therapy to Social Change, Buddhafield Festival, 2016." 
 	share-quote="The only way I could see of really having some strong impact on [social change and sustainability] was to find a way of teaching meditation to a wide audience; to make everybody be able to engage in an internal process as a social process; to create a groundswell of systemic change in society."
 	share-attribute="Mark Leonard"
@@ -270,7 +269,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Catherine Kerr - [Neuroscience,] Mindfulness and Meaning." 
 	share-quote="Without this volume control system, you would be overwhelmed and psychotic. You would be flooded with sensory inputs."
 	share-attribute="Catherine Kerr"
@@ -279,7 +278,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Game Changer: Amy Cuddy, Power Pose." 
 	share-quote="One of the things we noticed was that students who were participating a lot had different body language to student who were not participating a lot, who tended to be women and non-white men."
 	share-attribute="Amy Cuddy"
@@ -288,7 +287,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Susan Fiske, Social Psychology Videos: Stereotypes." 
 	share-quote="Even well-intentioned white people have automatic associations from racial labels to racial stereotypes."
 	share-attribute="Diana Onu"
@@ -297,7 +296,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="A History of Violence: Steven Pinker." 
 	share-quote="Which historical developments bring out our better angels of our nature?"
 	share-attribute="Steven Pinker"
@@ -306,7 +305,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="short descrption of image, e.g. Mark Fischer, presenting at.." 
 	share-quote="I am doing my political and environmental work by cultivating this knowledge of the body."
 	share-attribute="Name of person being quoted"
@@ -315,7 +314,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="The Self and The Other: Social Baseline Theory with Dr James Coan." 
 	share-quote="The self is not some membrane bounded entity. It is not the equivalent of my body or even my mind. What this research shows is that, whatever the self is, it's extendable. Selves only exist in relation to other selves and we need each other."
 	share-attribute="EvoS Seminar Series"
@@ -324,7 +323,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 {% include share-block__left-parameters_default-12.html
-	share-image="assets/images/share-block/placeholder__meme.svg"
+	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Alyssa Crittenden, Hunter-gatherers, Human Diet, and Our Capacity for Cooperation." 
 	share-quote="So what this means is human mothers have an incredibly difficult task."
 	share-attribute="Alyssa Crittenden"

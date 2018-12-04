@@ -1,0 +1,25 @@
+<div class="ecourse_sub-head_YouTube grid_ecourse-week is_first-letter-follows">
+	<div class="section_sub-head">
+		<span class="folio">Video</span>
+		<h3 class="sub-head">{{include.sub-head}}</h3>
+		<q class="is-highlighted">{{include.pull-quote}}</q>
+		<br>
+		<span class="attribute is-highlighted">{{ include.attribute }}</span>
+	</div>
+	<div class="social-buttons">
+			<img src="/assets/placeholder_btn-social.png" class="social-button">
+			<img src="/assets/placeholder_btn-social.png" class="social-button">
+			<img src="/assets/placeholder_btn-social.png" class="social-button">
+			<img src="/assets/placeholder_btn-social.png" class="social-button">
+			<img src="/assets/placeholder_btn-social.png" class="social-button">
+		</div>
+	<div class="share-image"><img src="{{ include.share-image }}" alt="{{ include.share-image-alt }}"></div>
+	<iframe class="embeded-video"
+		width="533" 
+		height="300" 
+		src="https://www.youtube.com/embed/{{ include.video-id }}" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+		allowfullscreen>
+	</iframe>
+</div>

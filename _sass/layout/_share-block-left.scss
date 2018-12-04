@@ -64,7 +64,7 @@
  }
 
 
-.atom__attribute {
+.attribute {
    // text-align: right;
    line-height: 1.6rem;
    font-size: 1.2rem;
@@ -125,7 +125,7 @@
   	grid-area: b-1;
   }
 
-  .atom__attribute{
+  .attribute{
   	font-size: .7rem;
   }
 
@@ -170,7 +170,7 @@
    grid-gap: 0px;
  }
 
- .highlight-text{
+ .is-highlighted{
    line-height: 2.4rem;
    font-size: 1.4rem;
  }
@@ -195,7 +195,7 @@
     margin: 0 10px 0 10px;
   }
 
-.highlight-text  {
+.is-highlighted  {
   font-size: 2.4rem;
   line-height: 3.8rem;
   color: white; 
@@ -235,7 +235,7 @@
     flex-direction: column; 
   }
 
-  .atom__attribute{
+  .attribute{
     align-self: end;
     grid-area: b-1;
     font-size: 1rem;
@@ -255,7 +255,7 @@
     grid-area: b-1;
   }
 
-  .highlight-text{
+  .is-highlighted{
     font-size: 1.8rem;
     line-height: 2.95rem;
   }

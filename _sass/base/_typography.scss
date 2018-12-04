@@ -10,16 +10,26 @@ body {
 
 }
 
+.is_first-letter-follows + p::first-letter {
+  font-family: $sans-stack;
+  font-size: 2rem;
+}
+
 // p ($font_body_stack, $colour_M4C-wireframe-dark) {
-// 	font-family: $font_body_stack;
-// 	font-size: 1 rem;
-// 	color: $colour_M4C-wireframe-dark; 
+//  font-family: $font_body_stack;
+//  font-size: 1 rem;
+//  color: $colour_M4C-wireframe-dark; 
 // }
 
 p {
-	font-family: $font_body_stack;
-	font-size: 16px;
-	color: $colour_M4C-wireframe-dark; 
+  font-family: $font_body_stack;
+  font-size: 16px;
+  color: $colour_M4C-wireframe-dark; 
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: .25rem;
 }
 
 h1,
@@ -28,14 +38,14 @@ h3,
 h4,
 h5,
 h6
-	{
-		font-family: $font-title-stack;
-	}
+  {
+    font-family: $font-title-stack;
+  }
 
 q
-	{
+  {
   font-family: $font_quote-highlight_stack;
-	}
+  }
 
 
 h2{
@@ -54,7 +64,7 @@ label {
   } 
 
 //share block
-.atom__attribute {
+.attribute {
   font-family: var(--font3);
   color: var(--monotone);
 }
@@ -65,7 +75,7 @@ label {
 
 
 //text hightlight with nice endings
-.highlight-text  {
+.is-highlighted  {
   color: white;
   background-color: var(--monotone);
   box-shadow: var(--highlight-pad) 0px var(--monotone), 
@@ -76,13 +86,9 @@ label {
   margin-bottom: 0;   
  }
 
-P {
-  margin-bottom: 1rem;
-  margin-top: .25rem;
-}
 
 //todo
- .highlight-text  {
+ .is-highlighted  {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: white; 

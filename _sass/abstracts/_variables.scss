@@ -3,17 +3,30 @@
 // -----------------------------------------------------------------------------
 
 
-$font_link_stack: 'Courier', monospace !default;
+$serif_stack:
+	'georgia',
+	serif !default;
+
+$sans_stack:
+	'Arial black', 
+	sans-serif !default;
+
+$slab_stack:
+	'Courier', 
+	monospace !default;
+
+
+$font_link_stack: $slab_stack;
 $font_link_weight: 700;
 
+$font_body_stack: $serif_stack;
 
-$font_body_stack: 'georgia', serif !default;
+$font_button_stack: $sans_stack;
+$font_title_stack: $sans_stack;
+$font_quote-highlight_stack: $sans_stack;
 
-$font_button_stack: 'Arial black', sans-serif !default;
-$font_title_stack: 'Arial black', sans-serif !default;
-$font_quote-highlight_stack: 'Arial black', sans-serif !default;
 
-$font_quote-highlight_stack:'Arial black', sans-serif !default;
+$font_quote-highlight_stack: $sans_stack;
 $font_quote-highlight_size: 39pt;
 $font_quote-highlight_weight: 500;
 
@@ -36,7 +49,7 @@ $colour_background-dark: $M4C-off-black;
 $colour_M4C-wireframe-dark: hsl(217, 19%, 36%);
 $colour_M4C-wireframe-light: hsl(0,0%,100%);
 $colour_M4C-wireframe-alt: chocolate;
-
+$monotone: #4B596F;
 
 /// Regular font family
 /// @type List
