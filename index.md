@@ -7,7 +7,7 @@ banner-image: /assets/images/mr-brainwash_love-is-the-answer.jpg
 
 A short explanation about what all these quotes are doing here, or a number of people are calling for change. We believe an ethical, sustainable society is possible and that psycho-education supported by practices like mindfulness meditation are vital to this conversation. Below you'll find a number of quotes which link to their respective talks which provide context or rational to our work.
 
-{% include share-block__left-parameters_default-12.html 
+{% include share-block-parameters-left_default-12.html 
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Dalia Lama examines the idea of the present moment" 
 	share-quote="So, half is past, half is future. No present!"
@@ -16,7 +16,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Sometimes people think that thinking is the opposite of mindfulness, but this can be just a way of escaping reality."
 %}
 
-{% include share-block__left-parameters_default-12.html 
+{% include share-block-parameters-left_default-12.html 
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Johann Hari talks about the causes of depression." 
 	share-quote=" Junk values have taken over our lives and are making us mentally sick."
@@ -25,7 +25,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="The real causes of mental ill-health is social, not biochemical imbalance."
 %}
 
-{% include share-block__left-parameters_default-12.html 
+{% include share-block-parameters-left_default-12.html 
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="The True Cost, Fashion Documentary, Official Trailer." 
 	share-quote="When everything is concentrated on making profits, what you see is that human rights, the environment, workers' rights get lost."
@@ -46,7 +46,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 <!-- block two -->
 
-{% include share-block__left-parameters_default-12.html 
+{% include share-block-parameters-left_default-12.html 
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Clara Vuletich, How to Engage with Ehtical Fashion." 
 	share-quote="Fast fashion has turned us into these passive consumers who are constantly chasing the fantasy that buying more clothes will make us happy. "
@@ -55,7 +55,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="We must learn to listen to others and ourselves to make fairer more sustainable world."
 %}
 
-{% include share-block__left-parameters_default-12.html 
+{% include share-block-parameters-left_default-12.html 
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Slavoj Zized interview with Vice." 
 	share-quote="When you dream how to escape from reality you just reproduce the same world."
@@ -64,7 +64,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="The message behind Holywood movies."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Russel Brand and Yuval Harari try to answer the question: Who Really Runs the World?." 
 	share-quote="It's very difficult to know where power really lies in the 21st Century."
@@ -81,7 +81,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 <!-- Block three -->
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Naomi Klein talks about her book, No Is Not Enough."
 	share-quote="To have a hope of changing the world, we're going to have to be willing to change both the culture as well as ourselves."
@@ -90,7 +90,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Trump is just a logical conclusion of a society shaped by Neo-Liberal values."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Slavoj Zizek explains why Walter Benjamin was right." 
 	share-quote="Either a new form of the Left will be reinvented or, here is my simple but I love it answer; or look at Hollywood. I always trust Hollywood. Hollywood is warning us all the time: Hunger Games, Elysium and so on. That's the society we are approaching. 20% of the people live in the privileged zone. The majority is out. That's the future."
@@ -99,7 +99,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Behind every rise of fascism there is a failed revolution."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Nacy Fraser: Marx and Feminism." 
 	share-quote="To make a better world change has to more than a struggle to improve the lot of different minority groups"
@@ -110,7 +110,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 <!-- Block 4 -->
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="TEDx Talk with Gretchen Busl, ask us to take control of our stories." 
 	share-quote="Social change means we have to empower ourselves by challenging the stories that control us."
@@ -119,7 +119,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="The dangerous thing is that, myself and my fellow narrative scholars, are not the only ones who know about this narrative paradigm thing and that makes it very easy to manipulate and exploit us"
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mark Fisher: The Slow Cancellation of The Future." 
 	share-quote="There's now a feeling that nothing ever really dies but that's not good. That means that we are assailed on all sides by kind of zombie forms which persist forever."
@@ -128,7 +128,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Seeking a politics of time to wake up to the trap overrating the present."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Neil MacGregor in BBC short, The Lion Man." 
 	share-quote="This Lion-man crafted forty thousand years ago comes from a world that exists only in our imagination, yet he is here and his pricked-up ears are listening to us, his eyes watching us."
@@ -148,7 +148,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 
 <!-- links to about MBOE, graphic of our chart/ MBOE paper -->
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Gabor Mate talks about Toxic Materialistic Culture." 
 	share-quote="If a woman was emotionally isolated and stressed the risk of that lump being cancerous was nine times as great as the average."
@@ -158,7 +158,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Is The War On Drugs Working? - The People Speak." 
 	share-quote="How drug users are treated is often based on their socio-economic status or their race."
@@ -167,7 +167,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Social change asks us to examine the facts."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Rober Sapolski: Humans are Unique Among Living Creatures." 
 	share-quote="Hippos would be repulsed by this. There's hardly any other species that has non-reproductive sex like this and nobody talks about it afterward."
@@ -186,7 +186,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="short descrption of image, e.g. Mark Fischer, presenting at.." 
 	share-quote="So, half is past, half is future. No present!"
@@ -195,7 +195,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Description of quote/why quote is relevant to the agenda or manifesto"
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Robert Sapolsky on Life and Free Will." 
 	share-quote="What do you do with the whole notion that crime and evil and guilt and punishment and criminal justice and none of those concepts make any sense whatsoever?"
@@ -204,7 +204,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="We can understand the best and the worst in human nature as biological mechanisms but there is a point where we can't be rational about the meaning of life itself."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="What is Protestant Buddhism?" 
 	share-quote="You may have heard of the term \"Protestant Buddhism\": It's a description to a lot of contemporary belief and practice. What is it and where did it come from?" 
@@ -222,7 +222,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 <!-- either reference to Adam Curtis here or critique of the lefts attempt to use logic to dismantly Trumpian identiy built on confusion, denial and bullying -->
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Robert Sharf ¬- Mindfulness or Mindlessness?" 
 	share-quote="A state in which both objects and conscious experience cease altogether. It's a kind of vegetative coma."
@@ -231,7 +231,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Mindfulness can help reduce stress but some argue this is a form of escapism. Buddhists have also been highly critical of mindfulness as it developed in Asia."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Sam Harris: Mindfulness is Powerful, But Keep Religion Out of It." 
 	share-quote="Mindfulness is more like the large hadron collider in that it's a real tool for making some fundamental discoveries about the nature of the mind and one of these discoveries is that the sense of self that we all carry around from day to day is an illusion."
@@ -240,7 +240,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Most people think mindfulness is a way of calming the mind or being in the 'present moment', but this is at best only half of the truth. Meditation is a tool to cut through the endless automatic train of thoughts and process strong emotions to see things clearly."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mindfulness at Royal Orthopaedic Hospital, Birmingham." 
 	share-quote="Our main intention was to bring the technique to the clinical areas around [surgical] theatres where the service demands and the stresses on the teams and the individual are greatest and where we felt that mindfulness or to be mindful would bring the greatest benefit to the Trust or to the teams as well as to the patients, ultimately."
@@ -249,7 +249,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Mindfulness for hospital staff to improve wellbeing, communication and patient outcomes."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Evan Thompson, What is Mindfulness? An Embodied Cognitive Perspective, Closing Keynot, International Symposium on Contemplative Studies." 
 	share-quote="Narcissism and the mass marketing of mindfulness to the individual consumer go hand in hand."
@@ -259,7 +259,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 %}
 
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Mark Leonard, Mindfulness, from Therapy to Social Change, Buddhafield Festival, 2016." 
 	share-quote="The only way I could see of really having some strong impact on [social change and sustainability] was to find a way of teaching meditation to a wide audience; to make everybody be able to engage in an internal process as a social process; to create a groundswell of systemic change in society."
@@ -268,7 +268,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="To make mindfulness a force for social change it needs to be understood as social process."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Catherine Kerr - [Neuroscience,] Mindfulness and Meaning." 
 	share-quote="Without this volume control system, you would be overwhelmed and psychotic. You would be flooded with sensory inputs."
@@ -277,7 +277,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Mindfulness practice may involve developing attention and selectively filtering neurological noise but this enables us to tune into subtle heartfelt feelings with the thinking mind."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Game Changer: Amy Cuddy, Power Pose." 
 	share-quote="One of the things we noticed was that students who were participating a lot had different body language to student who were not participating a lot, who tended to be women and non-white men."
@@ -286,7 +286,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="By changing our body posture we can not only change the way others perceive us but change the way we think, feel and act."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Susan Fiske, Social Psychology Videos: Stereotypes." 
 	share-quote="Even well-intentioned white people have automatic associations from racial labels to racial stereotypes."
@@ -295,7 +295,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Understanding how we automatically categorise people, connecting with people from different backgrounds and being motivated to go beyond first impressions can help us to free ourselves from seeing others in terms of stereotypes."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="A History of Violence: Steven Pinker." 
 	share-quote="Which historical developments bring out our better angels of our nature?"
@@ -304,7 +304,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Contrary to the popular impression view that we are living in extraordinarily violent times, rates of violence at all scales have been in decline over the course of history"
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="short descrption of image, e.g. Mark Fischer, presenting at.." 
 	share-quote="I am doing my political and environmental work by cultivating this knowledge of the body."
@@ -313,7 +313,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Description of quote/why quote is relevant"
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="The Self and The Other: Social Baseline Theory with Dr James Coan." 
 	share-quote="The self is not some membrane bounded entity. It is not the equivalent of my body or even my mind. What this research shows is that, whatever the self is, it's extendable. Selves only exist in relation to other selves and we need each other."
@@ -322,7 +322,7 @@ A short explanation about what all these quotes are doing here, or a number of p
 	share-attribute-supporting="Many of our problems come from our belief that we are separate psychological selves, but this is really an illusion."
 %}
 
-{% include share-block__left-parameters_default-12.html
+{% include share-block-parameters-left_default-12.html
 	share-image="/assets/images/memes/placeholder_meme.svg"
 	share-image-alt="Alyssa Crittenden, Hunter-gatherers, Human Diet, and Our Capacity for Cooperation." 
 	share-quote="So what this means is human mothers have an incredibly difficult task."
