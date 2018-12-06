@@ -1,8 +1,9 @@
 ---
-permalink: /mindfulness-course/week-2/
 layout: ecourse-weeks
+permalink: mindfulness-course/week-2
 title: Week 2
 banner-image: /assets/images/mr-brainwash_dalai-lama.jpg
+comments: true
 ---
 
 ## In the beginning
