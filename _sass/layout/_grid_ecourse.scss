@@ -9,7 +9,7 @@
 	grid-column: 5/-3;
 	font-family: georgia;
 	font-size: 16pt;
-	line-height: 1.2;
+	line-height: 1.24;
 }
 
 .section_sub-head {
@@ -100,3 +100,36 @@
 }
 
 
+.is_body-landscape > img {
+  grid-column: 5/11;
+  margin: 0 $grid-gap-3x 0 $grid-gap-3x;
+// width calc prevents img from braking out of grid columns and equals total l&r margin
+  width: calc(100% - #{$grid-gap-6x});
+}
+
+.is_body-landscape > figcaption {
+	grid-column: 5/11;
+	margin: 0 $grid-gap-4x 0 $grid-gap-4x;
+	font-family: $serif-stack;
+	font-size: 18pt;
+	line-height: 0.8;
+	color: $monotone;
+
+}
+
+.is_body-portrait > img {
+  grid-column: 5/8;
+  margin: 0 0 0 $grid-gap-3x;
+  // width calc prevents img from braking out of grid columns
+  width: calc(100% - #{$grid-gap-3x});
+}
+
+.is_body-portrait > figcaption {
+  grid-column: 8/11;
+  align-self: center;
+  margin: 0 $grid-gap-3x 0 0;
+  font-family: $serif-stack;
+  font-size: 24pt;
+  line-height: 0.8;
+  color: $monotone;
+}

@@ -65,6 +65,18 @@ $text-font-stack:
 // Grid
 $grid-gap: 16px;
 
+$grid-gap-quarter: calc(#{$grid-gap/4});
+$grid-gap-half: calc(#{$grid-gap/2});
+
+$grid-gap-2x: calc(#{$grid-gap*2});
+$grid-gap-3x: calc(#{$grid-gap*3});
+$grid-gap-4x: calc(#{$grid-gap*4});
+$grid-gap-4x: calc(#{$grid-gap*4});
+$grid-gap-5x: calc(#{$grid-gap*5});
+$grid-gap-6x: calc(#{$grid-gap*6});
+$grid-gap-7x: calc(#{$grid-gap*7});
+$grid-gap-8x: calc(#{$grid-gap*8});
+
 
 /// Inherited variables
 /// Code (monospace) font family

@@ -68,9 +68,6 @@ main {
 /**
  * Add the correct margin in IE 8.
  */
-figure {
-  margin: 1em 40px; }
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -537,7 +534,8 @@ input, input[type="submit"], .btn-right, .btn-alone {
   background-color: #4a586d; }
 
 .is_full-width {
-  grid-column: 1/-1; }
+  grid-column: 1/-1;
+  margin: 0; }
 
 .is_height-quarter {
   height: 25vh; }
@@ -548,14 +546,9 @@ input, input[type="submit"], .btn-right, .btn-alone {
 .is_height-half {
   padding-top: 50vh; }
 
-.is_course-copy-width {
-  grid-column: 5/11; }
-
-.is_course-side-width {
-  grid-column: 4/5; }
-
 .is_course-full-width {
-  grid-column: 4/11; }
+  grid-column: 4/11;
+  width: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -689,7 +682,8 @@ h2 {
 
 .attribute {
   font-family: var(--font3);
-  color: var(--monotone); }
+  color: var(--monotone);
+  font-size: 12pt; }
 
 .molecule__meme-text > p {
   padding-left: 2rem; }
@@ -758,7 +752,7 @@ h1 {
   grid-column: 5/-3;
   font-family: georgia;
   font-size: 16pt;
-  line-height: 1.2; }
+  line-height: 1.24; }
 
 .section_sub-head {
   grid-column: 4/9;
@@ -820,6 +814,33 @@ h1 {
   font-family: courier;
   font-weight: bold;
   font-size: 12pt; }
+
+.is_body-landscape > img {
+  grid-column: 5/11;
+  margin: 0 calc(48px) 0 calc(48px);
+  width: calc(100% - calc(96px)); }
+
+.is_body-landscape > figcaption {
+  grid-column: 5/11;
+  margin: 0 calc(64px) 0 calc(64px);
+  font-family: "georgia", serif;
+  font-size: 18pt;
+  line-height: 0.8;
+  color: #4B596F; }
+
+.is_body-portrait > img {
+  grid-column: 5/8;
+  margin: 0 0 0 calc(48px);
+  width: calc(100% - calc(48px)); }
+
+.is_body-portrait > figcaption {
+  grid-column: 8/11;
+  align-self: center;
+  margin: 0 calc(48px) 0 0;
+  font-family: "georgia", serif;
+  font-size: 24pt;
+  line-height: 0.8;
+  color: #4B596F; }
 
 .grid-12_share-block {
   grid-column: 1/-1;

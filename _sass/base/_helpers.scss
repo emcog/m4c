@@ -98,6 +98,7 @@
 //Sizing to screen
 .is_full-width {
   grid-column: 1/-1;
+  margin: 0;
 }
 
 .is_height-quarter {
@@ -113,12 +114,8 @@
 }
 
 //sizing to width of content
-.is_course-copy-width {
-  grid-column: 5/11;
-} 
-.is_course-side-width{
-  grid-column: 4/5;
-}
-.is_course-full-width{
+
+.is_course-full-width {
   grid-column: 4/11;
+  width: 100%;
 }
