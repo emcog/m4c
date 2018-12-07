@@ -3,7 +3,21 @@ layout: ecourse-weeks
 permalink: mindfulness-course/week-2
 title: Week 2
 banner-image: /assets/images/mr-brainwash_dalai-lama.jpg
-comments: true
+<!-- disqus setting -->
+<!-- comments: true -->
+
+1-of-3_image:
+1-of-3_title:
+1-of-3_intro: 
+
+2-of-3_image:
+2-of-3_title:
+2-of-3_intro: 
+
+3-of-3_image:
+3-of-3_title:
+3-of-3_intro: 
+
 ---
 
 ## In the beginning

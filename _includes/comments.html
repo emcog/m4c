@@ -1,0 +1,62 @@
+<!-- <form method="POST" action="https://api.staticman.net/v2/entry/eduardoboucas/staticman/gh-pages/comments">  -->
+<!-- https://api.staticman.net/v2/entry/{GITHUB USERNAME}/{GITHUB REPOSITORY}/{BRANCH}/{PROPERTY (optional)} -->
+<form method="POST" action="https://api.staticman.net/v2/entry/emcog/m4c/master/{PROPERTY (optional)}">
+  <input name="options[redirect]" type="hidden" value="https://my-site.com">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <label><input name="fields[name]" type="text">Name</label>
+  <label><input name="fields[email]" type="email">E-mail</label>
+  <label><textarea name="fields[message]"></textarea>Message</label>
+  <!-- honeypot field start -->
+<div style="display:none;">
+   <label>Keep this field blank</label>
+   <input type="text" name="honeypot" id="honeypot" />
+</div>
+<!-- honeypot field end -->
+
+  <button type="submit">Go!</button>
+</form>
+
+
+
+<script type="text/javascript">
+
+const honeyP = document.getElementById('honeypot');
+
+  (() => {
+  const form = document.querySelector('form');
+
+  form.onsubmit = e => {
+    e.preventDefault();
+    // Escape if the honeypot has been filled
+    // if (!!form.children.namedItem('honeypot').value) return;
+    if (!!honeyP.value) return;
+
+    // // Prepare data to send
+    // const data = {};
+    // const formElements = Array.from(form);
+    // formElements.map(input => (data[input.name] = input.value));
+
+    // // Construct an HTTP request
+    // var xhr = new XMLHttpRequest();
+    // xhr.open(form.method, form.action, true);
+    // xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+    // xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+    // // Send the collected data as JSON
+    // xhr.send(JSON.stringify(data));
+
+    // Callback function
+    // xhr.onloadend = response => {
+    //   if (response.target.status === 200) {
+    //     // The form submission was successful
+    //   } else {
+        // The form submission failed
+        // Static Site Mailer returns a JSON object with error messages on
+        // JSON.parse(response.target.response).message
+        // console.error(JSON.parse(response.target.response).message);
+      }
+    };
+  };
+})();
+</script>
