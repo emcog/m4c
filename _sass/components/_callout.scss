@@ -1,23 +1,37 @@
-.callout { 
-	&.is-vertical {
-		grid-column: 4 / span 2;
-			& > .is-circle { //apply to img
-				width: 50%; // 1 col
-				height: auto;
-				border-radius: 50%;
-				margin-right: 50% //to prevent text from wrapping unexpectidly
-			}
-			& > .is-square { //apply to img
-				width: 100%; //2 cols
-				height: auto;
-			}
-	}
-	&.is-horizontal {
-		grid-column: 5 / span 5;
-			& > img {
-				float: left;
-				width: 20%; //1 col
-				margin-right: $grid-gap;
-			}
-	}
+.callout-row {
+
 }
+
+.callout-row > span {
+	grid-column: ;
+}
+
+.callout > image {
+	height:;
+}
+
+.callout > span {
+	padding: $grid-gap-half;
+	font-family: $sans-stack;
+	font-size: 18pt;
+	color: monotone;
+}
+
+.callout > p {
+	font-family: $serif-stack;
+	font-size: 18pt;
+	color: monotone;
+}
+
+.first-of-3 {
+	grid-column: ;
+}
+
+.second-of-3 {
+	grid-column: ;
+}
+
+.third-of-3 {
+	grid-column: ;
+}
+
