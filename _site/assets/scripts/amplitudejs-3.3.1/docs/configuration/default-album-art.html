@@ -1,0 +1,33 @@
+<h1 id="setting-default-album-art">Setting Default Album Art</h1>
+
+<p>If you have songs that don’t have a specific piece of album art, you can define
+a default image url using the “default_album_art” key.  Once again, this is
+handled on initialization.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		<span class="s2">"songs"</span><span class="p">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 1"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 2"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 3"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">}</span>
+		<span class="p">],</span>
+		<span class="s2">"default_album_art"</span><span class="p">:</span> <span class="s2">"/url/to/default.jpg"</span>
+	<span class="p">});</span>
+</code></pre></div></div>

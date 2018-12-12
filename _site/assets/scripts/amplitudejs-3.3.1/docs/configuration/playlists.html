@@ -1,0 +1,160 @@
+<h1 id="playlists">Playlists</h1>
+
+<p>The ability to make playlists has been introduced in Amplitude 3.0. You can now
+scope functionality of Amplitude.js into playlists such as play/pause buttons,
+meta data, next, prev, etc.  To make a playlist you must first define all of
+your songs as song objects in the songs array. This is like your library. You
+will then make a playlists object when you init Amplitude.js and you will give
+a key for the unique identifier for your playlist. This key will then contain
+an array of song indexes being used by your playlist. These are the index of
+the song in the songs array. The original songs array index will be used in
+<em>EVERY</em> reference even in a playlist. Consider it the unique ID of the song.</p>
+
+<p>That sounds like a lot, so let’s break it down. We will be making a playlist f
+or Rock and Roll tracks using the following songs:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		<span class="s2">"songs"</span><span class="p">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 1"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"country"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 2"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 3"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 4"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"classical"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 5"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 6"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"indie"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 7"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">}</span>
+		<span class="p">]</span>
+	<span class="p">});</span>
+</code></pre></div></div>
+
+<p>At the end of your config, you will add a key that states you will have
+playlists including a playlist keyed as “rock_and_roll”. Remember these are
+JSON keys so use underscores!</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">	</span><span class="s2">"playlists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="s2">"rock_and_roll"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In the playlist we will be adding all the songs that have the genre rock. These
+are the indexes of songs that will be added.  Your final Amplitude.init()
+method will look like:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		<span class="s2">"songs"</span><span class="p">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 1"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"country"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 2"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 3"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 4"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"classical"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 5"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 6"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"indie"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 7"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span>
+				<span class="s2">"genre"</span><span class="p">:</span> <span class="s2">"rock"</span>
+			<span class="p">}</span>
+		<span class="p">],</span>
+		<span class="s2">"playlists"</span><span class="p">:</span> <span class="p">{</span>
+			<span class="s2">"rock_and_roll"</span><span class="p">:</span> <span class="p">[</span>
+				<span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span>
+			<span class="p">]</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+</code></pre></div></div>
+
+<p>You now have a playlist with a key “rock_and_roll” that contains 4 songs from
+your library. As we add more features, you will see how this playlist key will
+come into play to scope the functions of Amplitude.js by playlist.</p>

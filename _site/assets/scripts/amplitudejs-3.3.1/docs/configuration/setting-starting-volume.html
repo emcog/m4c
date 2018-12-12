@@ -1,0 +1,34 @@
+<h1 id="setting-the-starting-volume">Setting the Starting Volume</h1>
+
+<p>You can define the starting volume for when the user initially presses play.<br />
+To do this, you need to add a “volume” key to your initialization JSON.  This
+value is any number between 0 and 100. Think of this as a percentage.
+If you want the volume percentage at 35%, set this value equal to 35.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		<span class="s2">"songs"</span><span class="p">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 1"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 2"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">},</span>
+			<span class="p">{</span>
+				<span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 3"</span><span class="p">,</span>
+				<span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+				<span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+				<span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+				<span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+			<span class="p">}</span>
+		<span class="p">],</span>
+		<span class="s2">"volume"</span><span class="p">:</span> <span class="mi">35</span>
+	<span class="p">});</span>
+</code></pre></div></div>

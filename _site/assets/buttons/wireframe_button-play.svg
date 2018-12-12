@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="99px" viewBox="0 0 99 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>wireframe_button-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Article-concepts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-18" transform="translate(-353.000000, -2145.000000)">
+            <g id="wireframe_button-play" transform="translate(353.000000, 2145.000000)">
+                <g id="Group-2">
+                    <ellipse id="Oval-2" fill="#FFFFFF" cx="49.0181495" cy="49.0623435" rx="49.0181495" ry="49.0623435"></ellipse>
+                    <polygon id="Triangle" fill="#4B596F" transform="translate(55.509137, 51.526662) rotate(90.000000) translate(-55.509137, -51.526662) " points="55.5091373 29.8705288 77.1457634 73.1827955 33.8725112 73.1827955"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

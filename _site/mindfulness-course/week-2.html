@@ -184,11 +184,73 @@ tabs.forEach(tab => tab.addEventListener('mousedown', tabClick));
   -->
   <div data-netlify-identity-button>Login with Netlify Identity</div>
 <article class="grid_ecourse-week">
+<!-- disqus setting -->
+<!-- comments: true -->
+
+<!--   -->
+
 <h2 id="in-the-beginning">In the beginning</h2>
 
 <p>Auntissequi suntiusa sitae aboreris eation nullam earum dolupta tibustNam eum reic totaecabo. Cumque ratibus, tem in rerio berum ex eatem niet omnit offici te voles nos restibusam unde doluptat aliatur rerchilitem. Ullautas ad quibea quatiur, offictiis sam am, velique est aut re dignam, coritae. Uga. Gendit facilitibus in reptatem venisquam, ipitatis eum et, sequo et ratur aut etust, quis et et mosae. Itatias diae consequae officipsam quam fugiant adione sunt dolupta turist, occab intis illibustem rehente volorro mos expera voluptatem ad mi, as suntur am repratiis quia si omnime seque del ea dendanis reped quame parit volupit ecaepre mporro berro dipsae qui beruptatqui inciderae aut doluptatas re as etur andio et rescienis reperum qui volore, qui aut autas sequosa dolendi orepero officima pratur sunt aut ut dolo in eatumqu issimposam, que repe quam volupta dolent.</p>
 
-<iframe class="media-player_clyp is_course-full-width" src="https://clyp.it/n14skqcv/widget" frameborder="0"></iframe>
+<div id="audio-player" class="audio-player is_course-full-width">
+	<div class="container_control">
+	  <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+	</div>
+	<div class="container_meta_progress-time">
+		<span amplitude-song-info="album" amplitude-main-song-info="true" class="album-name"></span>	
+		<span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+		<div class="container_progress-time">
+			<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+			<span class="current-time">
+				<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+			</span>
+			<span class="duration">
+				<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+			</span>
+		</div>
+	</div>
+</div>
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v3.3.1/dist/amplitude.js">
+// document.addEventListener("DOMContentLoaded", function(event) {
+	
+	Amplitude.init({
+		"songs": [
+			{
+				"name": "Three minute reset",
+				"album": "M4C Make a change course",
+				"url": "/assets/audio/Three-step-reset.mp3"
+			}
+		]
+	});
+	
+	document.getElementById('song-played-progress').addEventListener('click', function( e ){
+	    var offset = this.getBoundingClientRect();
+	    var x = e.pageX - offset.left;
+	
+	    Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+	});
+
+// }
+
+
+
+
+
+
+
+ // Amplitude.init({
+ //        "bindings": {
+ //          37: 'prev',
+ //          39: 'next',
+ //          32: 'play_pause'
+ //        },
+ //       
+
+	</script> -->
+
+<!-- https://serversideup.net/set-song-played-percentage-amplitudejs/ -->
 
 <p>Pudaersped qui il maximenis sintion sequis accaborunt magnati iscimusda nat harciat volenieture es imincto esto es ut ut iduscim issequam, quid ellest, non num inus rectatiatur restrum unto in renis ne nosamen imaionsequi blam cum ium volo blam estius ut aut quodigendel idunt mod quam et earum iure sin ex exeritios ut harupta tioria nem assit remquatus et laborrum in corum ditiatet illaudis dipis sitiorp oritati dolum rerit res eium aut del ium comnist volupta tempore pellecatat fuga. Ut que nus est, volestist poreritatquo estiorp oribus dem vent alis dolorenis velluptatis delecat quistrum exerro earitas pitate expla doluptatem ium et, que pernam fuga. Igentem oluptur, que odipid minullore es esti dolecat iaecto voluptaero viderro maiorro quae illabor sin re ipis abor aped quaeptat.</p>
 
@@ -197,8 +259,9 @@ tabs.forEach(tab => tab.addEventListener('mousedown', tabClick));
     <figcaption>Punk<span class="attribute"><br />Mr Brainwash</span></figcaption>
 </figure>
 
-<p>Volor sent aut quam quid mil incilluptas dolesti stibus, aborrore por sinci sit viderum laccum dolluptium eatur moloreictes dem. Tas eum fugias vent millabo. Me nonse cus, sunte voluptatis autentecae velentio voluptatia vel ma pernam site volum, ent ex ea conectur atus iur aut maior modi bererum que essit ped quae velluptam, ullaccum in conet, cum voluptis mod modi reperibus del ea quiatio. Ducipsae magnihi llaborem. Ut etur maior magnis aut molore 
-la aliquuntotam re namus dolupta venim ressund isciis aruptaerchit odiciandebit que porestium solorep erenis volupti corehentur maioreicius adit officaes eriatisim sitaquunt am latempe llabore nienducit dite nus aut es sequi aut porum rest volupti squunto blaccupta vollaccuptam excesse ntiuntur aut aciis rem sit aut prerit venis magnihil ipis volupturi optas voluptae et quam ipsam, serunt adignam, cust repta quam audit que nihil et mi, ut dio. Axim eum rehenis velest doluptiis cupta quas si as eaquo dolendi optae. Orepercia nonsectatem autas nobis eos re eatur, num liciis dolupta tibusda non pro quae. Em. Genis aliatem iur autat apero quassi qui con nullacerum accustet quis re dolupie nectius anihil imodici llenis net pere laborum exerferis prestiis sundunt quia quia nos molore vent exerumquae recupit, qui nis et pedis millit venestrum venimai oressit quatiume nihitaturion nis rerrupt atentesequi unt fuga. Occate santiis quia corios exces volestis accabor sitiat.</p>
+<p>Volor sent aut quam quid mil incilluptas dolesti stibus, aborrore por sinci sit viderum laccum dolluptium eatur moloreictes dem. Tas eum fugias vent millabo. Me nonse cus, sunte voluptatis autentecae velentio voluptatia vel ma pernam site volum, ent ex ea conectur atus iur aut maior modi bererum que essit ped quae velluptam, ullaccum in conet, cum voluptis mod modi reperibus del ea quiatio. Ducipsae magnihi llaborem. Ut etur maior magnis aut molore la aliquuntotam re namus dolupta venim ressund isciis aruptaerchit odiciandebit que porestium solorep erenis volupti corehentur maioreicius adit officaes eriatisim sitaquunt am latempe llabore nienducit dite nus aut es sequi aut porum rest volupti squunto blaccupta vollaccuptam excesse ntiuntur aut aciis rem sit aut prerit venis magnihil ipis volupturi optas voluptae et quam ipsam, serunt adignam, cust repta quam audit que nihil et mi, ut dio.</p>
+
+<p>Axim eum rehenis velest doluptiis cupta quas si as eaquo dolendi optae. Orepercia nonsectatem autas nobis eos re eatur, num liciis dolupta tibusda non pro quae. Em. Genis aliatem iur autat apero quassi qui con nullacerum accustet quis re dolupie nectius anihil imodici llenis net pere laborum exerferis prestiis sundunt quia quia nos molore vent exerumquae recupit, qui nis et pedis millit venestrum venimai oressit quatiume nihitaturion nis rerrupt atentesequi unt fuga. Occate santiis quia corios exces volestis accabor sitiat.</p>
 
 <div class="ecourse_sub-head_YouTube grid_ecourse-week is_first-letter-follows">
 	<div class="section_sub-head">
@@ -235,28 +298,106 @@ la aliquuntotam re namus dolupta venim ressund isciis aruptaerchit odiciandebit 
 
 <p>Ugia ium escietum, officimuste voluptate verumqui omnis am veritatium exceprorem. Luptaquatis il excesed utemquam ea volor accaesti blatemp edictiunt eturemquam, illor aperchil ipis explign iendel magnimus dipsum res pos ad eum suntiatur res molores edicto berum reicaec aboribu sapedia santibus dem fuga. Apis eatus.</p>
 
+<aside class="callout-row is_full-width grid_ecourse-week">
+	<span>Related</span>
+	<div class="callout first-of-3">
+		<img src="">
+		<span>Previous</span>
+		<p>The previous course section or Manifesto if part-1</p>
+	</div>
+	<div class="callout second-of-3">
+		<img src="">
+		<span>Tangent</span>
+		<p>A cross-related article, perhaps in the blog</p>
+	</div>
+	<div class="callout third-of-3">
+		<img src="">
+		<span>Next</span>
+		<p>The next course section or something else if part-last</p>
+	</div>
+</aside>
+
 </article>
-<div id="disqus_thread" class="is_full-width"></div>
-<script>
+<!-- <form method="POST" action="https://api.staticman.net/v2/entry/eduardoboucas/staticman/gh-pages/comments">  -->
+<!-- https://api.staticman.net/v2/entry/{GITHUB USERNAME}/{GITHUB REPOSITORY}/{BRANCH}/{PROPERTY (optional)} -->
+<form method="POST" action="https://api.staticman.net/v2/entry/emcog/m4c/master/{PROPERTY (optional)}">
+  <input name="options[redirect]" type="hidden" value="https://my-site.com">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input name="options[slug]" type="hidden" value="">
+  <label><input name="fields[name]" type="text">Name</label>
+  <label><input name="fields[email]" type="email">E-mail</label>
+  <label><textarea name="fields[message]"></textarea>Message</label>
+  <!-- honeypot field start -->
+<div style="display:none;">
+   <label>Keep this field blank</label>
+   <input type="text" name="honeypot" id="honeypot" />
+</div>
+<!-- honeypot field end -->
+  <button type="submit">Go!</button>
+</form>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-var disqus_config = function () {
-this.page.url = site.url;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = page.permalink; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://mindfulness4change.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
+<script type="text/javascript">
+
+const honeyP = document.getElementById('honeypot');
+
+  (() => {
+  const form = document.querySelector('form');
+
+  form.onsubmit = e => {
+    e.preventDefault();
+    // Escape if the honeypot has been filled
+    // if (!!form.children.namedItem('honeypot').value) return;
+    if (!!honeyP.value) return;
+
+    // // Prepare data to send
+    // const data = {};
+    // const formElements = Array.from(form);
+    // formElements.map(input => (data[input.name] = input.value));
+
+    // // Construct an HTTP request
+    // var xhr = new XMLHttpRequest();
+    // xhr.open(form.method, form.action, true);
+    // xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+    // xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+    // // Send the collected data as JSON
+    // xhr.send(JSON.stringify(data));
+
+    // Callback function
+    // xhr.onloadend = response => {
+    //   if (response.target.status === 200) {
+    //     // The form submission was successful
+    //   } else {
+        // The form submission failed
+        // Static Site Mailer returns a JSON object with error messages on
+        // JSON.parse(response.target.response).message
+        // console.error(JSON.parse(response.target.response).message);
+      }
+    };
+  };
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
+<script type="text/javascript" src="/assets/scripts/amplitude.min.js"></script> 
+<script type="text/javascript">
+	Amplitude.init({
+		"songs": [
+			{
+				"name": "Three minute reset",
+				"album": "M4C Make a change course",
+				"url": "/assets/audio/Three-step-reset.mp3"
+			}
+		]
+	});
+	
+	document.getElementById('song-played-progress').addEventListener('click', function(e){
+	    var offset = this.getBoundingClientRect();
+	    var x = e.pageX - offset.left;
+	
+	    Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+	});
+</script>
 </article>
 <!-- FB share button -->
 <!-- <div id="fb-root"></div>

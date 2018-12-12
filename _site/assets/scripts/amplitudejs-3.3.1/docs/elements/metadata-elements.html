@@ -1,0 +1,176 @@
+<h1 id="meta-data-elements">Meta Data Elements</h1>
+
+<p>Meta data elements get their information filled in with meta data from the
+active song object. These can be any type of HTML element except when filling
+in cover_art_url, station_art_url, podcast_episode_cover_art_url.</p>
+
+<p>These specific keys have to be on an img tag since they update the src attribute
+of the tag. Every other attribute fills in the inner html of the tag.</p>
+
+<h2 id="image-metadata">Image Metadata</h2>
+<p>When defining a song object there are 3 different keys you can define image meta
+data with:</p>
+
+<ol>
+  <li>cover_art_url</li>
+  <li>station_art_url</li>
+  <li>podcast_episode_cover_art_url</li>
+</ol>
+
+<p>These URLs point to an image that will be substituted out for the active song
+image.</p>
+
+<h2 id="text-metadata">Text Metadata</h2>
+<p>With text metadata describing a song, you can use whatever information you like
+and place it in whatever element you like. This is new to Amplitude 3.0.
+Previous versions of AmplitudeJS limited the user to certain meta data fields
+such as artist, album, title, etc. The newest version of AmplitudeJS allows the
+user to do whatever keys on a song object and insert that text into any element
+defined appropriately. This give much more flexibility when using AmplitudeJS
+in a variety of audio scenarios such as for radio stations and podcasts. To add
+an element that contains a piece of meta data regarding the now playing song
+simply add:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">amplitude-song-info=</span><span class="s">"{song_meta_index}"</span> <span class="na">amplitude-main-song-info=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>If it’s a main element for a playlist add the key for the playlist:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">amplitude-song-info=</span><span class="s">"{song_meta_index}"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="autofill-meta-data">Autofill Meta Data</h2>
+<p>Sometimes when building a player, you don’t know what every song is on load and
+need to load songs dynamically. As of AmplitudeJS version 3.3 this is not a
+problem. AmplitudeJS will autofill the meta data for lists of songs if you do a
+combination of the following on the element.</p>
+
+<ol>
+  <li>‘amplitude-song-info’ - Defines the information you want injected into the
+element. This is the key of the song object.</li>
+  <li>‘amplitude-song-index’ - Defines the index of the song in the songs array
+that you want to inject into the element.</li>
+</ol>
+
+<p>This is super convenient when loading songs dynamically either server side or
+loading after the page has loaded.</p>
+
+<h2 id="time-metadata">Time Metadata</h2>
+<p>There are certain elements that contain time data about the active song. You
+can add these elements to your document and they will auto fill with the current
+status of the song. Like other elements, these can be either for the overall
+player, scoped in a playlist or for a specific song. There are three sets of
+time meta data: current time, song duration, time remaining.
+The song duration can only be set for the active song since the metadata isn’t
+preloaded for all of the songs. The time remaining is a count down for how much
+time is left for a song.</p>
+
+<p>Main Current Time - Displays in MM:SS</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-time"</span> <span class="na">amplitude-main-current-time=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Current Hours</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-hours"</span> <span class="na">amplitude-main-current-hours=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Current Minutes</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-minutes"</span> <span class="na">amplitude-main-current-minutes=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Current Seconds</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-seconds"</span> <span class="na">amplitude-main-current-seconds=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Hours For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-hours"</span> <span class="na">amplitude-playlist-current-hours=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Minutes For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-minutes"</span> <span class="na">amplitude-playlist-current-minutes=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Seconds For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-seconds"</span> <span class="na">amplitude-playlist-current-seconds=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Hours For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-hours"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Minutes For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-minutes"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Current Seconds For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-current-seconds"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Duration Time MM:SS</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitud-duration-time"</span> <span class="na">amplitude-main-duration-time=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Duration Time - Displays in MM:SS</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-time"</span> <span class="na">amplitude-main-duration-time=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Duration Hours</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-hours"</span> <span class="na">amplitude-main-duration-hours=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Duration Minutes</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-minutes"</span> <span class="na">amplitude-main-duration-minutes=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Duration Seconds</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-seconds"</span> <span class="na">amplitude-main-duration-seconds=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Hours For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-hours"</span> <span class="na">amplitude-playlist-duration-hours=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Minutes For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-minutes"</span> <span class="na">amplitude-playlist-duration-minutes=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Seconds For Playlist</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-seconds"</span> <span class="na">amplitude-playlist-duration-seconds=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Hours For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-hours"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Minutes For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-minutes"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Duration Seconds For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-duration-seconds"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Main Time Remaining For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-time-remaining"</span> <span class="na">amplitude-main-time-remaining=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Playlist Main Time Remaining For Song</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-time-remaining"</span> <span class="na">amplitude-playlist-main-time-remaining=</span><span class="s">"{playlist_key}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Song Time Remaining</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-time-remaining"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="song-container">Song Container</h2>
+<p>This is a unique element. What this does is allow you to assign a container to
+the visual representation of a song or a song in a playlist. When that song is
+currently playing, the class <code class="highlighter-rouge">amplitude-active-song-container</code> will be applied
+to the song container element. This way you can style the element to show the
+active song.</p>
+
+<p>For a single song container it would be:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"amplitude-song-container"</span> <span class="na">amplitude-song-index=</span><span class="s">"{X}"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>For a playlist song container it would be:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"amplitude-song-container"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlist_key}"</span> <span class="na">amplitude-song-index=</span><span class="s">"{X}"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>

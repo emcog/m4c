@@ -3,11 +3,13 @@
 }
 
 .callout-row > span {
-	grid-column: ;
+	// grid-column: ;
 }
 
-.callout > image {
-	height:;
+.callout > img {
+	width: 100%;
+	padding-top: 66.66%;
+	background-color: $monotone;
 }
 
 .callout > span {
@@ -18,20 +20,21 @@
 }
 
 .callout > p {
+	padding: 0 $grid-gap-half;
 	font-family: $serif-stack;
 	font-size: 18pt;
 	color: monotone;
 }
 
 .first-of-3 {
-	grid-column: ;
+	grid-column: 5/7;
 }
 
 .second-of-3 {
-	grid-column: ;
+	grid-column: 7/9;
 }
 
 .third-of-3 {
-	grid-column: ;
+	grid-column: 9/11;
 }
 

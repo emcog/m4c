@@ -1,0 +1,315 @@
+<h1 id="public-functions">Public Functions</h1>
+<p>There are a variety of public functions that AmplitudeJS exposes to the user.
+These methods allow the user to change config variables, add new songs, play
+now, etc.</p>
+
+<h2 id="bind-new-elements">Bind New Elements</h2>
+<p>The bind new elements function should be called whenever a new song element is
+added to the page. This will bind all of the event handlers for that element.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">bindNewElements</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-active-playlist">Get Active Playlist</h2>
+<p>This method will return the key of the active playlist.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getActivePlaylist</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-playback-speed">Get Playback Speed</h2>
+<p>Returns the current playback speed for the player.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getPlaybackSpeed</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-repeat">Get Repeat</h2>
+<p>Returns the state of the global repeat status for the player.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getRepeat</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-repeat-playlist">Get Repeat Playlist</h2>
+<p>Returns the state of the repeat status for the playlist.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getRepeatPlaylist</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="get-shuffle">Get Shuffle</h2>
+<p>Returns the current state of the global shuffle status for the player.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getShuffle</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-shuffle-playlist">Get Shuffle Playlist</h2>
+<p>Returns the state of the shuffle flag for a playlist.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getShufflePlaylist</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="set-shuffle">Set Shuffle</h2>
+<p>Sets the global shuffle state for AmplitudeJS.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setShuffle</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="set-shuffle-playlist">Set Shuffle Playlist</h2>
+<p>Sets the shuffle state for a playlist.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setShufflePlaylist</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="set-repeat">Set Repeat</h2>
+<p>Sets the global repeat status for AmplitudeJS</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setRepeat</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="set-repeat-song">Set Repeat Song</h2>
+<p>Sets the global state to determine if we should repeat the individual song upon
+completion.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setRepeatSong</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="set-repeat-playlist">Set Repeat Playlist</h2>
+<p>Sets the repeat for the playlist. This will toggle the playlist repeat status.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setRepeatPlaylist</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="get-default-album-art">Get Default Album Art</h2>
+<p>Returns the default album art URL set in the player.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getDefaultAlbumArt</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="set-default-album-art">Set Default Album Art</h2>
+<p>Sets the default album art for the player to the URL provided.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setDefaultAlbumArt</span><span class="p">(</span> <span class="nx">url</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="set-debug">Set Debug</h2>
+<p>To change the debug mode setting, you can call the setDebug method any time and
+start to receive data about the state of the player or turn off debugging.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setDebug</span><span class="p">(</span> <span class="p">{</span><span class="nx">bool</span><span class="p">}</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="get-active-song-metadata">Get Active Song Metadata</h2>
+<p>Returns the active song’s metadata as a JSON object.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getActiveSongMetadata</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="get-song-by-index">Get Song By Index</h2>
+<p>Returns a song’s metadata at a specific index.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongByIndex</span><span class="p">(</span> <span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="get-song-at-playlist-index">Get Song At Playlist Index</h2>
+<p>Returns a song at a playlist’s index.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongAtPlaylistIndex</span><span class="p">(</span> <span class="p">{</span><span class="nx">playlistIndex</span><span class="p">},</span> <span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="add-song">Add Song</h2>
+<p>Adds a song to the AmplitudeJS player. You will need to write a method yourself
+to add the visual side of things to fit your custom design, and then call the
+bindNewElements() method to make sure it works.</p>
+
+<p>This method returns the index of the song added to the player.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">addSong</span><span class="p">(</span> <span class="p">{</span><span class="nx">song_object</span><span class="p">}</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="add-song-to-playlist">Add Song To Playlist</h2>
+<p>Adds a song to a specific playlist within AmplitudeJS. Once the song is added
+you will need to update the visual side of the player yourself.  After you
+update the visual side, run the <code class="highlighter-rouge">Amplitude.bindNewElements()</code> method to make
+sure the functionality is there for the new element.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">addSongToPlaylist</span><span class="p">(</span> <span class="nx">songObject</span><span class="p">,</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="remove-song">Remove Song</h2>
+<p>Removes a song from the global song array. You will have to remove the
+containing element by yourself.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">removeSong</span><span class="p">(</span> <span class="nx">indexOfSong</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="remove-song-from-playlist">Remove Song From Playlist</h2>
+<p>Removes a song from a playlist. You will have to update the visual side by
+yourself.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">removeSongFromPlaylist</span><span class="p">(</span> <span class="nx">indexOfSongInPlaylist</span><span class="p">,</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="play-song-at-index">Play Song At Index</h2>
+<p>Plays whatever song is set in the config at the specified index.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">playSongAtIndex</span><span class="p">(</span> <span class="nx">songIndex</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="play-playlist-song-at-index">Play Playlist Song At Index</h2>
+<p>Plays the song in a playlist at the specified index.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">playPlaylistSongAtIndex</span><span class="p">(</span> <span class="nx">playlistIndex</span><span class="p">,</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="play-now">Play Now</h2>
+<p>In AmplitudeJS 2.0 this was referred to as ‘Dynamic Mode’. Now you can just pass
+a song to AmplitudeJS and it will automatically play. If there are visual
+elements, then they will sync as well.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">playNow</span><span class="p">(</span> <span class="p">{</span><span class="nx">song_object</span><span class="p">}</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="play">Play</h2>
+<p>This simply plays whatever song is active.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="pause">Pause</h2>
+<p>This simply pauses whatever song is active.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">pause</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="next">Next</h2>
+<p>Plays the next song either in the playlist or globally.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="o">=</span> <span class="kc">null</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="prev">Prev</h2>
+<p>Plays the previous song either in the playlist or globally.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">prev</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="o">=</span> <span class="kc">null</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="get-audio">Get Audio</h2>
+<p>This returns the actual audio element. This is mainly used for writing
+extensions but exposes the core of AmplitudeJS. This returns the audio element
+used by AmplitudeJS.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">audio</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-songs">Get songs</h2>
+<p>This method returns all of the songs defined in AmplitudeJS. It can be used for
+a variety of different functions. It’s extremely helpful if you are AJAX loading
+songs and want to see the contents of the song array.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongs</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-songs-in-playlist">Get Songs In Playlist</h2>
+<p>This method returns all of the songs in a playlist. Since the user defines a
+playlist with a key and the indexes of the songs, this will map the keys to the
+songs and return all of the songs in the playlist.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongsInPlaylist</span><span class="p">(</span> <span class="nx">playlistKey</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="get-songs-state">Get Songs State</h2>
+<p>This method returns the current order of the songs. It can be used for
+determining what song is next. If shuffle is on, it will return the shuffled
+list of songs.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongsState</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-songs-state-playlist">Get Songs State Playlist</h2>
+<p>This method returns the current order of the songs in a playlist. If needed this
+can be used to determine the next song in a playlist. This accounts for whether
+the playlist has been shuffled or not.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongsStatePlaylist</span><span class="p">(</span> <span class="nx">playlist</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="get-active-index">Get Active Index</h2>
+<p>This method returns the index of the active song in the songs array.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getActiveIndex</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-active-index-state">Get Active Index State</h2>
+<p>This method returns the index of the active song in the songs array but accounts
+for if shuffle has been enabled or not.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getActiveIndexState</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-version">Get Version</h2>
+<p>This method returns the version of AmplitudeJS being used.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getVersion</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-buffered">Get Buffered</h2>
+<p>This method returns the buffered percentage of the now playing song. This can be
+used to show how much of the song has been buffered and ready to be played.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getBuffered</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-song-played-percentage">Get Song Played Percentage</h2>
+<p>This method returns the percentage of the song played. When implementing a 3rd
+party tracking element, you can set the percentage of the element to the
+percentage played of the song.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongPlayedPercentage</span><span class="p">()</span>
+</code></pre></div></div>
+<p>You can combine this method with the time_update callback and whenever the time
+updates your method can call Amplitude.getSongPlayedPercentage() and you can set
+your tracking element correctly.</p>
+
+<h2 id="get-song-played-seconds">Get Song Played Seconds</h2>
+<p>This method returns the current seconds the user is into the song.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongPlayedSeconds</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="get-song-duration">Get Song Duration</h2>
+<p>Returns the duration of the current song.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">getSongDuration</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="set-song-played-percentage">Set Song Played Percentage</h2>
+<p>This method allows you to set the percentage of the active song. The method
+accepts a float between 0 and 100 for the percentage of the song to be set to.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setSongPlayedPercentage</span><span class="p">(</span> <span class="nx">percentage</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="skip-to">Skip To</h2>
+<p>Allows the user to skip to a specific location in the song whether that song is
+in a playlist or not.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">skipTo</span><span class="p">(</span> <span class="nx">seconds</span><span class="p">,</span> <span class="nx">songIndex</span><span class="p">,</span> <span class="nx">playlist</span> <span class="o">=</span> <span class="kc">null</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="set-delay">Set Delay</h2>
+<p>If you have multiple songs that your player is using you can change the amount
+of time you have as a delay between the songs. When one song ends, what is set
+will be the amount of time delayed before the next song starts.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setDelay</span><span class="p">(</span> <span class="nx">milliseconds</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="set-meta-data">Set Meta Data</h2>
+<p>You can set the meta data for any song in your song objects. This is helpful if
+you are doing a live stream and have a call back that returns the information of
+what song is currently playing.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Amplitude</span><span class="p">.</span><span class="nx">setMetaData</span><span class="p">(</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">metaData</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p>The first parameter <code class="highlighter-rouge">index</code> is the index of the song in the songs array you are
+setting the meta data for. The <code class="highlighter-rouge">metaData</code> is an object that contains meta data
+similar to a song object. The keys that get passed will be updated on the song
+object at the index.  The only key that can not be updated is the <code class="highlighter-rouge">url</code>.</p>

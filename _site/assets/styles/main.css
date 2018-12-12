@@ -515,11 +515,11 @@ input, .light-fill, .dark-fill, input[type="submit"] {
   border-width: 2px;
   border-style: solid; }
 
-input, input[type="submit"], .btn-left, .btn-alone {
+input, input[type="submit"], .btn-left, .btn-alone, .audio-player, .amplitude-song-played-progress {
   border-bottom-left-radius: 999px;
   border-top-left-radius: 999px; }
 
-input, input[type="submit"], .btn-right, .btn-alone {
+input, input[type="submit"], .btn-right, .btn-alone, .audio-player, .amplitude-song-played-progress {
   border-bottom-right-radius: 999px;
   border-top-right-radius: 999px; }
 
@@ -1009,22 +1009,31 @@ h2 br {
 .content__gdprLegal > p {
   margin-bottom: 0; }
 
-.callout.is-vertical {
-  grid-column: 4 / span 2; }
-  .callout.is-vertical > .is-circle {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 50%; }
-  .callout.is-vertical > .is-square {
-    width: 100%;
-    height: auto; }
-.callout.is-horizontal {
-  grid-column: 5 / span 5; }
-  .callout.is-horizontal > img {
-    float: left;
-    width: 20%;
-    margin-right: 16px; }
+.callout > img {
+  width: 100%;
+  padding-top: 66.66%;
+  background-color: #4B596F; }
+
+.callout > span {
+  padding: calc(8px);
+  font-family: "Arial black", sans-serif;
+  font-size: 18pt;
+  color: monotone; }
+
+.callout > p {
+  padding: 0 calc(8px);
+  font-family: "georgia", serif;
+  font-size: 18pt;
+  color: monotone; }
+
+.first-of-3 {
+  grid-column: 5/7; }
+
+.second-of-3 {
+  grid-column: 7/9; }
+
+.third-of-3 {
+  grid-column: 9/11; }
 
 .banner_image-wrapper {
   position: relative;
@@ -1052,6 +1061,64 @@ h2 br {
   height: 70px;
   font-size: 61pt;
   line-height: 18px; }
+
+.audio-player {
+  display: flex;
+  height: 143px;
+  background-color: #4B596F; }
+
+.container_meta_progress-time {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  padding: 3px 48px 0 16px;
+  width: 100%; }
+
+.song-name {
+  font-family: "georgia", serif;
+  font-size: 22pt;
+  color: white; }
+
+.album-name {
+  margin-bottom: 4px;
+  font-family: "Arial black", sans-serif;
+  font-size: 11pt; }
+
+.amplitude-song-played-progress {
+  margin: 1px 0 1px 0;
+  height: 11px;
+  width: 100%; }
+
+.album-name, .current-time, .duration {
+  font-family: "Arial black", sans-serif;
+  font-size: 09pt;
+  color: white; }
+
+.current-time {
+  float: left; }
+
+.duration {
+  float: right; }
+
+.container_control {
+  display: flex; }
+
+div.amplitude-play-pause {
+  width: 99px;
+  height: 99px;
+  cursor: pointer;
+  float: left;
+  margin-left: 27px;
+  align-self: center; }
+
+div.amplitude-play-pause.amplitude-paused {
+  background: url("/assets/buttons/wireframe_button-play.svg");
+  background-size: cover; }
+
+div.amplitude-play-pause.amplitude-playing {
+  background: url("/assets/buttons/wireframe_button-pause.svg");
+  background-size: cover; }
 
 .has-dropdowns > li > a {
   margin: 16px 0 0px 0;

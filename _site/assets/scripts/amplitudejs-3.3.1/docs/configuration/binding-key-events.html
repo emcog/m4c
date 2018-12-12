@@ -1,0 +1,30 @@
+<h1 id="binding-key-events">Binding Key Events</h1>
+<p>This allows you to configure certain
+events to trigger on key presses. The main piece of information needed is the
+key code (http://keycode.info/)[http://keycode.info/]. Once you have that, you
+can make an object that references a certain event key. There are 6 events that
+you can bind a key code to:</p>
+
+<ul>
+  <li>prev (on key down, goes to previous song)</li>
+  <li>next (on key down, goes to next song)</li>
+  <li>play_pause (on key down, toggles play/pause)</li>
+  <li>stop (on key down, stops the song)</li>
+  <li>shuffle (on key down, toggles shuffle state global)</li>
+  <li>repeat (on key down, toggles repeat state global)</li>
+</ul>
+
+<p>To add a binding, for example, the right arrow key on a mac keyboard has code
+39 you’d add the following to your config:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		<span class="s2">"bindings"</span><span class="p">:</span> <span class="p">{</span>
+			<span class="mi">39</span><span class="p">:</span> <span class="s1">'next'</span>
+		<span class="p">},</span>
+		<span class="s2">"songs"</span><span class="p">:</span> <span class="p">[{}]</span>
+	<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Now every time the right arrow down is pressed, AmplitudeJS will go to the next
+song. You can add multiple bindings to the array with multiple key codes. It
+could be any key you want!</p>

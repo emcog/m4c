@@ -1,0 +1,386 @@
+<h1 id="interactive-elements">Interactive Elements</h1>
+
+<p>The interactive elements of Amplitude.js have event handlers bound to them that
+responds to a touch or click from a user. These elements build the functionality
+of the player you are designing. The scoping of these elements is handled by
+attributes that define the level of functionality each element has such as
+global, playlist, individual song. These are outlined in detail for each element.</p>
+
+<h2 id="play-button">Play Button</h2>
+
+<p>There are 3 different levels for a play button.</p>
+<ol>
+  <li>Global Play - Plays the current song whether it’s an individual song or in a
+playlist</li>
+  <li>Playlist Play - Plays the current song in the playlist.</li>
+  <li>Song Play - Plays an individual song whether it’s in a playlist or by itself.</li>
+</ol>
+
+<p>The play button responds to the ‘click’ event on a desktop or a ‘touchstart’
+event on mobile.</p>
+
+<h3 id="global-play-button">Global Play Button</h3>
+<p>The global play button will play the active song whether or not the song is an
+individual song or in a playlist. To add a global play button simply an HTML
+element with the class ‘amplitude-play’.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-play"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="playlist-play-button">Playlist Play Button</h3>
+<p>The playlist play button will play the active song in the playlist or it will
+play the first song in the playlist if the playlist is out of scope (meaning
+another playlist was being played or it’s the first playlist being played). To
+add a playlist play button, add an HTML element with the class of
+‘amplitude-play’ and the attribute ‘amplitude-playlist=”playlist_index”’.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-play"</span> <span class="na">amplitude-playlist=</span><span class="s">"playlist_index"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="individual-song-play-button">Individual Song Play Button</h3>
+<p>The individual song play button will play the song defined by the ‘amplitude-song-index=”song_index”’ attribute.
+You can also add an ‘amplitude-playlist=”playlist_index”’ attribute to the
+element which will play an individual song in the playlist.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-play"</span> <span class="na">amplitude-song-index=</span><span class="s">"1"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>To play song index 1 in playlist “test_playlist”:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-play"</span> <span class="na">amplitude-song-index=</span><span class="s">"1"</span> <span class="na">amplitude-playlist=</span><span class="s">"test_playlist"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="pause-button">Pause Button</h2>
+<p>Like the play button, the pause button has 3 different levels.</p>
+<ol>
+  <li>Global Pause - Pauses the active song no matter if it’s individual or in a
+playlist.</li>
+  <li>Playlist Pause - Pauses the active song in the playlist.</li>
+  <li>Song Pause - Pauses an individual song in a playlist or by itself.</li>
+</ol>
+
+<p>The pause button responds to the ‘click’ event on a desktop or a ‘touchstart’
+event on mobile.</p>
+
+<h3 id="global-pause">Global Pause</h3>
+<p>The global pause button will pause whatever song is currently playing. To add a
+global pause button simply add an HTML element with the class of ‘amplitude-pause’.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-pause"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="playlist-pause">Playlist Pause</h3>
+<p>The playlist pause button will pause the active song in the playlist. It only
+works if the playlist defined in the attribute is playing the song.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-pause"</span> <span class="na">amplitude-playlist=</span><span class="s">"test_playlist"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="individual-song-pause">Individual Song Pause</h3>
+<p>The individual song pause button will pause the song defined by the attribute ‘amplitude-song-index=”song_index”’. If you want an individual song in a
+playlist to add the ‘amplitude-playlist=”test_playlist”’ attribute to the element
+and Amplitude.js will pause that individual song in the playlist when clicked.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-pause"</span> <span class="na">amplitude-song-index=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>If you want to pause song index 3 in the playlist “test_playlist”</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-pause"</span> <span class="na">amplitude-song-index=</span><span class="s">"3"</span> <span class="na">amplitude-playlist=</span><span class="s">"test_playlist"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="play-pause-button">Play Pause Button</h2>
+<p>The play/pause button is probably the most common button to be implemented when
+working with Amplitude.js. Depending on the global state, playlist state and/or
+song state, this element will get a class that is ‘amplitude-playing’ or
+‘amplitude-paused’ that can be styled accordingly. It’s common to set a play or
+pause button image as a background in CSS so when the interaction occurs, the
+proper button appears.</p>
+
+<p>There are 3 levels of Play/Pause buttons.</p>
+<ol>
+  <li>Global Play/Pause - Plays or pauses the active song no matter if it’s
+independent or part of a playlist.</li>
+  <li>Playlist Play/Pause - Plays or pauses the active song in the scope of the playlist.</li>
+  <li>Song Play/Pause - Plays or pauses an individual song.</li>
+</ol>
+
+<h3 id="global-playpause">Global Play/Pause</h3>
+<p>The global play pause button plays or pauses the current song depending on the
+state of the AmplitudeJS player. This button does not account for whether the
+song is in a playlist or an individual song, it’s whatever song is active the
+functionality works on.  To add a global play/pause button you add an element
+and give the property of ‘amplitude-main-play-pause=”true”’:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"button amplitude-play-pause"</span> <span class="na">amplitude-main-play-pause=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="playlist-playpause">Playlist Play/Pause</h3>
+<p>The playlist play pause button plays or pauses the current song in a playlist.
+If a song is being played outside of a playlist when clicked, the playlist will
+play the first song in the playlist assigned to the button clicked and pause the
+other song. To add a playlist play pause button add an element with the class of ‘amplitude-play-pause’ an attribute of ‘amplitude-playlist-main-play-pause=”true”’
+and an attribute of ‘amplitude-playlist=”{playlist-index}’.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"button amplitude-play-pause amplitude-paused"</span> <span class="na">amplitude-playlist-main-play-pause=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="song-playpause">Song Play/Pause</h3>
+<p>The song play pause button plays or pauses the song clicked. This can either be
+in a playlist or an individual song. If the song is in a playlist you will have
+to add an attribute stating the playlist with the playlist key. The element will
+also have to have an attribute of the song index on the element.</p>
+
+<p>Playlist Song:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"button amplitude-play-pause"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span> <span class="na">amplitude-playlist=</span><span class="s">"{song_playlist}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>Individual Song:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"button amplitude-play-pause amplitude-paused"</span> <span class="na">amplitude-song-index=</span><span class="s">"{song_index}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="stop-button">Stop Button</h2>
+<p>The stop button simply stops the active song. On a desktop, this will respond to
+the ‘click’ event and a ‘touchstart’ on mobile. To add a stop button simply add
+the following HTML element:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-stop"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="mute-button">Mute Button</h2>
+<p>The mute button is another global element that mutes the active song. On a
+desktop, this element will respond to the ‘click’ event and a ‘touchstart’ on
+mobile.
+There are two classes that get added to the mute button so you can style it
+according to the state of the player.</p>
+
+<p>When the player is not muted the class ‘amplitude-not-muted’ is added to the
+element and ‘amplitude-muted’ is added when the player is muted.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-mute"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="volume-up">Volume Up</h2>
+<p>The volume up button increments the volume by the amount defined in the config.
+By default the increment is 5. To change the increment you must adjust the
+volume_increment setting in the Amplitude.init() method. This element will
+respond to a ‘click’ on desktop or a ‘touchstart’ event on mobile. On iPhones,
+the user can not adjust the volume through the web page. To add a volume up
+element add:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-volume-up"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="volume-down">Volume Down</h2>
+<p>The volume down button decrements the volume by the amount defined in the
+config. By default the decrement is 5. To change the increment you must adjust
+the volume_decrement setting in the Amplitude.init() method. This element will
+respond to a ‘click’ on desktop or a ‘touchstart’ event on mobile. On iPhones,
+the user can not adjust the volume through the web page. To add a volume up
+element add:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-volume-down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="volume-slider">Volume Slider</h2>
+<p>The volume slider is an HTML 5 range input element. This allows the user to
+slide the volume to where they want. On desktop and mobile,
+this element listens to a ‘change’ or ‘input’ event. It will not work on iPhones
+since iOS doesn’t allow the user to adjust the volume through anything but the
+volume up and down hardware buttons. To add a volume slider, add the following
+HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"amplitude-volume-slider"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="next-button">Next Button</h2>
+<p>Amplitude.js extends functionality for the audio tag by allowing designers and
+developers to build playlists. When a next button has been added Amplitude.js
+will go to the next song in the state of the player. There are two versions of
+the next button.</p>
+
+<ol>
+  <li>Global Next -&gt; Will go to the next song in the state no matter what state
+the player is in.</li>
+  <li>Playlist Next -&gt; Will go to the next song in the playlist no matter the
+state.</li>
+</ol>
+
+<p>The next button will either go sequentially down the indexes or the next index
+in the shuffled songs array. If the player is playing a playlist, then the
+global next button will operate on that playlist.</p>
+
+<p>To add a global next button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-next"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>To add a playlist next button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-next"</span> <span class="na">amplitude-playlist=</span><span class="s">"playlist_key"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+<p>The playlist next button has an amplitude-playlist attribute with the key for
+the playlist it’s corresponding to.</p>
+
+<h2 id="previous-button">Previous Button</h2>
+<p>Similar to the next button, the previous button goes to the previous song in the
+state of the player. There are two versions of the previous button.</p>
+
+<ol>
+  <li>Global Prev -&gt; Will go to the previous song in the state no matter what state
+the player is in.</li>
+  <li>Playlist Prev -&gt; Will go to the previous song in the playlist no matter the
+state.</li>
+</ol>
+
+<p>The previous button will go sequentilly down the indexes or to the previous
+index in the shuffled songs array. If the player is playing a playlist,
+the global previous button will operate on that playlist.</p>
+
+<p>To add a global previous button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-prev"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>To add a playlist previous button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-prev"</span> <span class="na">amplitude-playlist=</span><span class="s">"playlist_key"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+<p>The playlist previous button has an amplitude-playlist attribute with the key
+for the playlist it’s corresponding to.</p>
+
+<h2 id="shuffle-button">Shuffle Button</h2>
+<p>The shuffle button is also an extension of functionality added by Amplitude.js.
+It allows the developer/user to shuffle songs in a playlist or on a global level.
+Playlists can have shuffle states indpendant of other playlists. When a song
+ends or the user goes to the next song, Amplitude.js will know whether or not
+the playlist should go to the next sequential user defined song or the next song
+in the shuffle array.  When a playlist is shuffled or the global songs are
+shuffled a class of ‘amplitude-shuffle-on’ is applied to the element where if
+shuffle is turned off ‘ampltiude-shuffle-off’ is applied to the element.</p>
+
+<p>To add a shuffle button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-shuffle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>To add a playlist shuffle button add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-shuffle"</span> <span class="na">amplitude-playliste=</span><span class="s">"playlist_key"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>This shuffle button contains the attribute that defines the playlist key. This
+will shuffle only the playlist defined.</p>
+
+<h2 id="repeat-button">Repeat Button</h2>
+<p>The repeat button, when active, will repeat the entire songs array when the
+there are no songs. This is a global level element. The button can be styled
+based off of the state of the classes applied to the button. When repeat is not
+on, the button will have a class of ‘amplitude-repeat-off’ applied to the
+element and when repeat is on, the class ‘amplitude-repeat-on’ applied to the
+class.</p>
+
+<p>To add the repeat button, add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-repeat"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h3 id="repeat-song">Repeat Song</h3>
+<p>The repeat song button, when active, will repeat the individual song when the
+song has ended. The button can be styled based off of the sate of classes
+applied to the button. When the repeat is not on, the button will have a class
+of ‘amplitude-repeat-song-off’ and when on, ‘amplitude-repeat-song-on’.</p>
+
+<p>To add the repeat song button, add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-repeat-song"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="playback-speed-button">Playback Speed Button</h2>
+<p>The playback speed button controls how fast the audio is played back through
+Amplitude.js. There are 3 speeds.</p>
+
+<ol>
+  <li>‘1.0’ which is the base speed.</li>
+  <li>‘1.5’ which is 1.5x as fast</li>
+  <li>‘2.0’ which is 2x as fast</li>
+</ol>
+
+<p>When clicked, the playback speed button will add a class representing the speed
+the player is playing back at. The classes can be styled as well and are as
+follows:</p>
+
+<p>‘1.0’ = ‘amplitude-playback-speed-10’
+‘1.5’ = ‘amplitude-playback-speed-15’
+‘2.0’ = ‘amplitude-playback-speed-20’</p>
+
+<p>To add a playback speed button simply add the following HTML:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-playback-speed"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h2 id="skip-to-link">Skip To Link</h2>
+<p>The skip to links allow the user to define spots in the audio like bookmarks
+that can be skipped to. They can reference a song in a playlist or an individual
+song depending on the attributes. If you want to link to a song in a playlist,
+you have to add the attribute ‘amplitude-song-index=”index”’ and ‘amplitude-playlist=”playlist”’. To make the skip work, you will also have to
+add an attribute ‘amplitude-location=”seconds”’ to link to in the song.</p>
+
+<p>An example song link would be:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"amplitude-skip-to"</span> <span class="na">amplitude-song-index=</span><span class="s">"7"</span> <span class="na">amplitude-location=</span><span class="s">"30"</span> <span class="na">amplitude-playlist=</span><span class="s">"rock"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>This link will go to the song at index 7 on the playlist rock and the location
+of 30 seconds into the song.</p>
+
+<h2 id="song-tracking-slider-html-5-range">Song Tracking Slider (HTML 5 Range)</h2>
+
+<p>The easiest way to implement song tracking is through an HTML 5 Range slider.
+The sliding functionality is already taken care of for you and it provides a
+smooth UX. There are some downfalls with this element since you can’t style the
+before and after pieces. We also have an HTML 5 progress element that allows for
+easy styling of before and after but requires some custom JS to update the
+interaction. No worries, though the tutorial will be linked!</p>
+
+<p>Note that features like the tracking slider and progress bar depend on the
+browser being able to request the audio file in arbitrary chunks. Firefox can
+work around lack of support from the server, but for these features to work
+properly, your server must support
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range">Content-Range HTTP headers</a>.</p>
+
+<p>To add a song slider, add the following element:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"amplitude-song-slider"</span> <span class="na">amplitude-main-song-slider=</span><span class="s">"true"</span> <span class="na">step=</span><span class="s">".1"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>The class name is <code class="highlighter-rouge">amplitude-song-slider</code>. You can also add
+<code class="highlighter-rouge">amplitude-main-song-slider="true"</code> if you want it to reference the current song
+no matter what. If you want to do an individual playlist, you can add the
+attributes of <code class="highlighter-rouge">amplitude-playlist-song-slider="true"</code>
+and <code class="highlighter-rouge">amplitude-playlist="{playlistKey}"</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"amplitude-song-slider"</span> <span class="na">amplitude-playlist-song-slider=</span><span class="s">"true"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlistKey}"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>You can also add a song slider for an individual song like this:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"amplitude-song-slider"</span> <span class="na">amplitude-playlist=</span><span class="s">"{playlistKey}"</span> <span class="na">amplitude-song-index=</span><span class="s">"{songIndex}"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"amplitude-song-slider"</span> <span class="na">amplitude-song-index=</span><span class="s">"{songIndex}"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>The first of the individual song examples is for a playlist, the second is for
+an individual song.</p>
+
+<h2 id="song-progress-bar">Song Progress Bar</h2>
+<p>In AmplitudeJS 3.2, we added the song progress bar. This allows the user further
+customization over the design. It essentially replaces the song time
+visualization that was removed in this release. These operate the same as the
+range except you will have to implement your own slider event handling. I wrote
+a quick tutorial on that here: <a href="https://serversideup.net/set-song-played-percentage-amplitudejs/">https://serversideup.net/set-song-played-percentage-amplitudejs/</a>.</p>
+
+<p>To add a song progress bar, add the following:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;progress</span> <span class="na">id=</span><span class="s">"song-played-progress"</span> <span class="na">class=</span><span class="s">"amplitude-song-played-progress"</span> <span class="na">amplitude-main-song-played-progress=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+</code></pre></div></div>
+
+<h2 id="song-buffered-progress-bar">Song Buffered Progress Bar</h2>
+<p>In AmplitudeJS 3.2, we added the song buffered progress bar. This allows for a
+visual display of how much of the song has been buffered. You can do some CSS
+techniques to overlay this progress element over the song-played-progress
+element to make an all in one, or you could leave it by itself.</p>
+
+<p>To add a song buffered progress element, add the following:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;progress</span> <span class="na">id=</span><span class="s">"song-buffered-progress"</span> <span class="na">class=</span><span class="s">"amplitude-buffered-progress"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+</code></pre></div></div>

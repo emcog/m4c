@@ -1,0 +1,79 @@
+.audio-player {
+	display: flex;
+	height: 143px;
+	@extend %radius-right;
+	@extend %radius-left;
+	background-color: $monotone;
+}
+
+
+.container_meta_progress-time {
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 8px;
+	padding:3px 48px 0 16px;
+	width: 100%;
+}
+
+.song-name {
+	font-family: $serif-stack;
+	font-size: 22pt;
+	color: white;
+}
+
+.album-name {
+	margin-bottom: 4px; 
+	font-family: $sans-stack;
+	font-size: 11pt;
+	@extend %info;
+}
+
+.amplitude-song-played-progress {
+	margin: 1px 0 1px 0;
+	height: 11px;
+	width: 100%;
+	@extend %radius-right;
+	@extend %radius-left;
+}
+
+%info {
+	font-family: $sans-stack;
+	font-size: 09pt;
+	color: white;
+}
+
+
+.current-time {
+	float: left;
+	@extend %info;
+}
+
+.duration {
+	float: right;
+	@extend %info;
+}
+
+
+.container_control {
+	display: flex;
+}
+
+div.amplitude-play-pause {
+  width: 99px;
+  height: 99px;
+  cursor: pointer;
+  float: left;
+  margin-left: 27px;
+  align-self: center;
+}
+
+div.amplitude-play-pause.amplitude-paused {
+  background: url('/assets/buttons/wireframe_button-play.svg');
+  background-size: cover;
+}
+
+div.amplitude-play-pause.amplitude-playing {
+  background: url('/assets/buttons/wireframe_button-pause.svg');
+  background-size: cover;
+}

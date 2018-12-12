@@ -1,0 +1,125 @@
+<h1 id="configuring-amplitudejs">Configuring Amplitude.js</h1>
+<p>Amplitude JS contains many variables that can be configured to determine the
+functionality of AmplitudeJS.</p>
+
+<p>These are set and passed in during the Amplitude.init() method:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th style="text-align: center">Default</th>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: left">Functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>autoplay</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center">boolean</td>
+      <td style="text-align: left">When true, autoplays the current song</td>
+    </tr>
+    <tr>
+      <td>callbacks</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">JSON Object</td>
+      <td style="text-align: left">Object containing methods that get called at certain actions</td>
+    </tr>
+    <tr>
+      <td>songs</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">JSON Object</td>
+      <td style="text-align: left">Object containing all of the songs used by AmplitudeJS</td>
+    </tr>
+    <tr>
+      <td>playlists</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">JSON Object</td>
+      <td style="text-align: left">Object containing all of the playlists used by AmplitudeJS</td>
+    </tr>
+    <tr>
+      <td>default_album_art</td>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">URL</td>
+      <td style="text-align: left">URL to the default album art image</td>
+    </tr>
+    <tr>
+      <td>debug</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center">Boolean</td>
+      <td style="text-align: left">Determines if we should print out debugging to the console</td>
+    </tr>
+    <tr>
+      <td>volume</td>
+      <td style="text-align: center">50</td>
+      <td style="text-align: center">Integer (0 - 100)</td>
+      <td style="text-align: left">The level of volume of the active audio with 0.0 being the quietest and 1.0 the loudest</td>
+    </tr>
+    <tr>
+      <td>volume_increment</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">Integer (1 - 100)</td>
+      <td style="text-align: left">How much the volume increments every time the volume increment pressed.</td>
+    </tr>
+    <tr>
+      <td>volume_decrement</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">Integer (1 - 100)</td>
+      <td style="text-align: left">How much the volume decrements every time the volume decrement pressed.</td>
+    </tr>
+    <tr>
+      <td>soundclound_client</td>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">String</td>
+      <td style="text-align: left">The API key for SoundCloud if being used</td>
+    </tr>
+    <tr>
+      <td>soundcloud_use_art</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center">Boolean</td>
+      <td style="text-align: left">Determines if we should use the SoundCloud album art by default</td>
+    </tr>
+    <tr>
+      <td>continue_next</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">boolean</td>
+      <td style="text-align: left">Determines if when a song ends, do we continue to the next song</td>
+    </tr>
+    <tr>
+      <td>starting_playlist</td>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">JSON Object</td>
+      <td style="text-align: left">If there are multiple playlists, determine which one will be started by default</td>
+    </tr>
+    <tr>
+      <td>starting_playlist_song</td>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">Integer</td>
+      <td style="text-align: left">Key of the song in the playlist that you’d like to start with</td>
+    </tr>
+    <tr>
+      <td>start_song</td>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">Integer</td>
+      <td style="text-align: left">The index of the song that AmplitudeJS should start with.</td>
+    </tr>
+    <tr>
+      <td>shuffle_on</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center">Boolean</td>
+      <td style="text-align: left">When on, gets set to true so when traversing through songs, AmplitudeJS knows whether or not to use the songs object or the shuffle_list</td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td style="text-align: center">null</td>
+      <td style="text-align: center">Integer</td>
+      <td style="text-align: left">The millisecond delay set between songs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A note about <code class="highlighter-rouge">autoplay</code>. In newer versions of Safari on iOS, user interaction
+has to take place before the song can be autoplayed. This is for bandwidth
+restrictions and not playing music in unwanted areas. For More information,
+visit: <a href="https://www.reddit.com/r/webdev/comments/71nkym/safari_11_has_a_major_change_to_web_audio_api/">https://www.reddit.com/r/webdev/comments/71nkym/safari_11_has_a_major_change_to_web_audio_api/</a></p>

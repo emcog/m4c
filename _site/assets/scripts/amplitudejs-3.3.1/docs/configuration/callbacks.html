@@ -1,0 +1,102 @@
+<h1 id="callbacks">Callbacks</h1>
+<p>There are a variety of callbacks that AmplitudeJS calls at certain times and
+the developer can bind to.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Callback</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>before_play</td>
+      <td>Occurs before the play method is called</td>
+    </tr>
+    <tr>
+      <td>after_play</td>
+      <td>Occurs after the play method is called</td>
+    </tr>
+    <tr>
+      <td>before_stop</td>
+      <td>Occurs before the stop method is called</td>
+    </tr>
+    <tr>
+      <td>after_stop</td>
+      <td>Occurs after the stop method is called</td>
+    </tr>
+    <tr>
+      <td>time_update</td>
+      <td>Occurs when the time has updated</td>
+    </tr>
+    <tr>
+      <td>album_change</td>
+      <td>Occurs when an album changes</td>
+    </tr>
+    <tr>
+      <td>song_change</td>
+      <td>Occurs when a song has been changed</td>
+    </tr>
+    <tr>
+      <td>time_updated</td>
+      <td>Occurs when the current song time has been updated</td>
+    </tr>
+    <tr>
+      <td>playlist_changed</td>
+      <td>Occurs when the active playlist has changed</td>
+    </tr>
+    <tr>
+      <td>song_repeated</td>
+      <td>Occurs when the now playing song has been repeated</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To bind to a callback you add a function to your callbacks object with the key
+of one of the callbacks listed above. That key will be a function. When the
+callback is called, the function the user passes will be run. For example,
+after the user clicks play we want to increase the play count. I’d set up a
+callback that has a method to increase the play count:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">playCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nx">Amplitude</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+		 <span class="s2">"songs"</span><span class="p">:</span> <span class="p">[</span>
+				 <span class="p">{</span>
+						 <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 1"</span><span class="p">,</span>
+						 <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+						 <span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+						 <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+						 <span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+				 <span class="p">},</span>
+				 <span class="p">{</span>
+						 <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 2"</span><span class="p">,</span>
+						 <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+						 <span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+						 <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+						 <span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+				 <span class="p">},</span>
+				 <span class="p">{</span>
+						 <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Song Name 3"</span><span class="p">,</span>
+						 <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Artist Name"</span><span class="p">,</span>
+						 <span class="s2">"album"</span><span class="p">:</span> <span class="s2">"Album Name"</span><span class="p">,</span>
+						 <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/song/url.mp3"</span><span class="p">,</span>
+						 <span class="s2">"cover_art_url"</span><span class="p">:</span> <span class="s2">"/cover/art/url.jpg"</span>
+				 <span class="p">}</span>
+		 <span class="p">],</span>
+		 <span class="s2">"callbacks"</span><span class="p">:</span> <span class="p">{</span>
+			 <span class="s1">'after_play'</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+				 <span class="nx">playCount</span><span class="o">++</span><span class="p">;</span>
+				 <span class="nx">alert</span><span class="p">(</span> <span class="nx">playCount</span> <span class="p">);</span>
+			 <span class="p">}</span>
+		 <span class="p">}</span>
+ <span class="p">});</span>
+</code></pre></div></div>
+
+<p>Every time the play button is called, the song will begin to play and after
+all the code has been run, the callback will increase the play count.</p>
+
+<p>The ‘time_update’ callback is super helpful because this gets triggered when
+the song time updates. This can be used to call other AmplitudeJS events such
+as song played percentage and set 3rd party visualizations.</p>

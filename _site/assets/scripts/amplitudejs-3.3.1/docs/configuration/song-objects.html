@@ -1,0 +1,51 @@
+<h1 id="song-objects">Song Objects</h1>
+
+<p>An array of JSON song objects is required by Amplitude.js.  This directs
+AmplitudeJS to the metadata and information necessary for playing the audio.</p>
+
+<p>A basic song object has the following keys:</p>
+
+<ul>
+  <li>name = The name of the song</li>
+  <li>artist = The song’s artist</li>
+  <li>album = The song’s album ( Also used to determine album changes in an
+  environment where multiple albums are used on the page)</li>
+  <li>url = The URL to the song. This is most imporatant.  (Soundcloud URLs
+  discussed later)</li>
+  <li>cover_art_url = The URL to the song’s cover art.</li>
+  <li>live = Set to true for a URL that is a live audio source.</li>
+</ul>
+
+<p>The only actualy required key is the url so Amplitude.js can play the song.</p>
+
+<p>As of Amplitude 3.0, the song object can include any number of keys which can
+be displayed anywhere on the page. You can make up a key name if you want like</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">	</span><span class="p">{</span><span class="w">
+		</span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Song Name 3"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Artist Name"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"album"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Album Name"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/song/url.mp3"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"cover_art_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/cover/art/url.jpg"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"made_up_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I'm made up completely"</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>and reference it anywhere on your page using the ‘amplitude-song-info’ attribute
+on the element you want to display the data like:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"made-up-key"</span> <span class="na">amplitude-song-info=</span><span class="s">"made_up_key"</span> <span class="na">amplitude-main-song-info=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>It is important to note that in multiple song environments, the order that you
+list the songs makes a difference. When utilizing next and previous
+functionality, Amplitude.js will iterate over the songs object and go to the
+next song or the previous song in the list. If you are using AmplitudeJS in a
+playlist type environment, you will define the order of the songs in the playlist
+by their individual indexes.</p>
+
+<p>It is also important to note how songs are indexed. Like in almost all
+programming, indexes start at 0.  So when you are setting up multiple play/pause
+functions or song status sliders that relate to an individual song or playlists,
+the indexes are used. For example, the song above named “Song Name 1” would have
+an index of 0, “Song Name 2” would have an index of 1, and so on.</p>

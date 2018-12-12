@@ -1,0 +1,68 @@
+<div id="audio-player" class="audio-player is_course-full-width">
+	<div class="container_control">
+	  <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+	</div>
+	<div class="container_meta_progress-time">
+		<span amplitude-song-info="album" amplitude-main-song-info="true" class="album-name"></span>	
+		<span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+		<div class="container_progress-time">
+			<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+			<span class="current-time">
+				<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+			</span>
+			<span class="duration">
+				<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+			</span>
+		</div>
+	</div>
+</div>
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v3.3.1/dist/amplitude.js">
+// document.addEventListener("DOMContentLoaded", function(event) {
+	
+	Amplitude.init({
+		"songs": [
+			{
+				"name": "Three minute reset",
+				"album": "M4C Make a change course",
+				"url": "/assets/audio/Three-step-reset.mp3"
+			}
+		]
+	});
+	
+	document.getElementById('song-played-progress').addEventListener('click', function( e ){
+	    var offset = this.getBoundingClientRect();
+	    var x = e.pageX - offset.left;
+	
+	    Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+	});
+
+// }
+
+
+
+
+
+
+
+ // Amplitude.init({
+ //        "bindings": {
+ //          37: 'prev',
+ //          39: 'next',
+ //          32: 'play_pause'
+ //        },
+ //       
+
+	</script> -->
+
+
+
+
+
+
+
+
+<!-- https://serversideup.net/set-song-played-percentage-amplitudejs/ -->
+
+
+     
