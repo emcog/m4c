@@ -1,0 +1,13 @@
+<figure class="is-full-width {{ include.is_proud-flush-inset }} ">
+	<div class="u-responsive-ratio-16x9">
+		<iframe class="embeded-video"
+			src="https://www.youtube.com/embed/{{ include.video-id }}" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+		</iframe>
+	</div>
+	<figcaption class="{{include.caption-position}}">{{ include.caption }}
+		<span class="attribute"><br>{{ include.attribute }}</span>
+	</figcaption>
+</figure>

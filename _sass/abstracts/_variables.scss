@@ -2,16 +2,15 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-$serif_stack:
+$serif-stack:
 	'georgia',
 	serif !default;
 
-$sans_stack:
+$sans-stack:
 	'Arial black', 
 	sans-serif !default;
 
-$slab_stack:
+$slab-stack:
 	'Courier', 
 	monospace !default;
 
@@ -27,14 +26,14 @@ $body-leading: 1.24;
 $font_link_stack: $slab_stack;
 $font_link_weight: 700;
 
-$font_body_stack: $serif_stack;
+$font_body_stack: $serif-stack;
 
-$font_button_stack: $sans_stack;
-$font_title_stack: $sans_stack;
-$font_quote-highlight_stack: $sans_stack;
+$font_button_stack: $sans-stack;
+$font_title_stack: $sans-stack;
+$font_quote-highlight_stack: $sans-stack;
 
 
-$font_quote-highlight_stack: $sans_stack;
+$font_quote-highlight_stack: $sans-stack;
 $font_quote-highlight_size: 39pt;
 $font_quote-highlight_weight: 500;
 
@@ -124,9 +123,11 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  'one-hand': (min-width: 320px),
+  'one-hand-plus': (min-width: 414px),
+  'two-hands': (min-width: 768px),
+  'free-standing': (min-width: 1024px),
+  'free-standing-plus': (min-width: 1440px),
 ) !default;
 
 
@@ -134,3 +135,10 @@ $breakpoints: (
 // @type String
 // @example scss - When using a CDN
 // $base-url: 'http://cdn.example.com/assets/'
+
+
+// Used in layouts
+$negative-margin: 20.5%;
+
+// navbar
+$navbar__dropdown-bg: 200px;

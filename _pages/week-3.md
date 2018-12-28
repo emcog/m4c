@@ -1,7 +1,7 @@
 ---
-layout: course-content
-permalink: mindfulness-course/week-2
-title: Week 2
+layout: in-depth
+permalink: mindfulness-course/part-3
+title: Part 3
 banner-image: /assets/images/mr-brainwash_dalai-lama.jpg
 
 callout-row-title: What's next?

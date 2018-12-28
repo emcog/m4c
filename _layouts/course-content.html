@@ -1,0 +1,13 @@
+---
+layout: banner_top-of-page
+---
+{% include netlify-identity-widget.html %}
+<div class="g-12 l-offset-right">
+<!-- <article class="g-12 l-offset-right course-content"> -->
+	<article>
+		{{content}}
+		{% include course-content_callout-row.html %}
+	</article>
+{% include comments.html %}
+{% include scripts.html %}
+{% include amplitude.html %}

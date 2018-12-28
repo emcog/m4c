@@ -1,36 +1,12 @@
-/**
- * Basic typography style for copy text
- */
+// Basic typography style for copy text
 body {
+  font-family: $serif-stack;
+  font-size: 16pt;
+  line-height: 1.3;
   color: $text-color;
-  // font: normal 125% / 1.4 $text-font-stack;
+  background-color: white; //todo change this!!!
 }
 
-.font_quote-highlight {
-
-}
-
-.is_first-letter-follows + p::first-letter {
-  font-family: $sans-stack;
-  font-size: 2rem;
-}
-
-// p ($font_body_stack, $colour_M4C-wireframe-dark) {
-//  font-family: $font_body_stack;
-//  font-size: 1 rem;
-//  color: $colour_M4C-wireframe-dark; 
-// }
-
-p {
-  font-family: $font_body_stack;
-  font-size: 16px;
-  color: $colour_M4C-wireframe-dark; 
-}
-
-p {
-  margin-bottom: 1rem;
-  margin-top: .25rem;
-}
 
 h1,
 h2,
@@ -48,20 +24,31 @@ q
   }
 
 
-h2{
+h2 {
  font-weight: 400;
 }
+
+
 
 label {
   font-family: $font_body_stack;
 }
 
 
-//nav – make this conditional based inside button
- h2 {
+//was h2 nav – make this conditional based inside button
+ .btn {
     margin-top: 0;
     padding-top: .8em;
-  } 
+    
+    &-cta {
+      @extend .font-size-2;
+    }
+    
+    &-filter{
+    }
+ }
+
+
 
 //share block
 .attribute {
@@ -75,17 +62,20 @@ label {
 }
 
 
-//text hightlight with nice endings
+
 .is-highlighted  {
+  margin-bottom: 0;   
   color: white;
   background-color: var(--monotone);
+
+  //text hightlight with nice endings
   box-shadow: var(--highlight-pad) 0px var(--monotone), 
   calc(var(--highlight-pad)*-1) 0px var(--monotone);
-  white-space: pre-wrap;
-  box-decoration-break: clone;
   border: 1px solid var(--monotone);
-  margin-bottom: 0;   
+  box-decoration-break: clone;
+  white-space: pre-wrap;
  }
+
 
 
 //todo
@@ -95,17 +85,125 @@ label {
   color: white; 
 }
 
-p > a {
-  font-family: $font_body_stack;
-  color: $colour_M4C-wireframe-dark;
-  border-bottom: 1px solid;
-  padding-bottom: .125rem;
-  text-decoration: none;
+
+
+// headlines
+.font-size-1 {
+  font-size: 50pt;
+  line-height: 1;
 }
 
-p > a:hover {
-  border-bottom: 1px solid;
-  padding-bottom: .125rem;
-  text-decoration: none;
-  color: $colour_M4C-wireframe-dark;
+// quote blocks, audio player, section titles,
+.font-size-2 {
+  font-size: 22pt;
+  line-height: 1.5;
+}
+
+// body copy and primary nav links
+.font-size-3 {
+  font-size: 16pt;
+  line-height: 1.3;
+}
+
+// secondary nav links, folio-title
+.font-size-4 {
+  font-size: 13pt;
+  line-height: 1.15;
+}
+
+// small stuff, album name
+.font-size-5 {
+  font-size: 09pt;
+  // todo
+  // line-height: ;
+}
+
+
+// headlines
+@mixin font-size-1 {
+  font-size: 50pt;
+  line-height: 1;
+}
+
+// quote blocks, audio player, section titles,
+@mixin font-size-2 {
+  font-size: 22pt;
+  line-height: 1.5;
+}
+
+// body copy and primary nav links
+@mixin font-size-3 {
+  font-size: 16pt;
+  line-height: 1.3;
+}
+
+// secondary nav links, folio-title
+@mixin font-size-4 {
+  font-size: 13pt;
+  line-height: 1.15;
+}
+
+// small stuff, album name
+@mixin font-size-5 {
+  font-size: 09pt;
+  // todo
+  // line-height: ;
+}
+
+
+/* .is-highlighted {
+  // _bright-1 {
+  color:;
+  background:;
+  }
+
+  // _bright-2 {
+  color:;
+  background:;
+  }
+
+ ...
+ */
+
+
+
+p, .body-copy {
+  @extend .font-size-3;
+
+  // pargraph before
+  margin-top: .25rem;
+  // paragraph after
+  margin-bottom: 1rem;
+
+   > a {
+    border-bottom: 1px solid;
+    padding-bottom: .125rem;
+    text-decoration: none;
+  }
+
+  > a:hover {
+    border-bottom: 1px solid;
+    padding-bottom: .125rem;
+    text-decoration: none;
+  }
+}
+
+
+.share-block__meme-quote {
+  @extend .is-highlighted;
+  @extend .font-size-3;
+}
+
+.navbar__item {
+  // second level nav
+  @extend .font-size-4;
+    // first level nav
+    &.has-dropdown {
+    @extend .font-size-3;
+  }
+}
+
+.is_first-letter-follows + p::first-letter {
+  font-family: $sans-stack;
+  font-size: 2rem;
 }

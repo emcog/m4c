@@ -23,6 +23,11 @@
   'abstracts/functions',
   'abstracts/mixins';
 
+// 2. Utilities
+@import
+  'utilities/aspect-ratio';
+
+
 // 2. Vendors
 @import
   'vendor/normalize';
@@ -40,8 +45,10 @@
 @import
   'layout/header',
   'layout/footer',
-  'layout/grid-12_default',
-  'layout/grid_ecourse',
+  'layout/g-12',
+  // 'layout/grid_ecourse',
+  'layout/course-content',
+  'layout/g-in-depth',
   'layout/grid-12_share-block';
   // 'layout/share-block-left';
 
@@ -54,8 +61,9 @@
   'components/signup-form-2',
   'components/callout.scss',
   'components/image-banner',
-  'components/audio-player.scss',
-  'components/nav-bar';
+  'components/audio-player',
+  'components/navbar';
+  // 'components/nav-bar';
 
 // 6. Page-specific styles
 @import

@@ -1,0 +1,148 @@
+.g-in-depth {
+	display: grid;
+	grid-column: 1/-1;
+	grid-gap: $grid-gap;
+
+	article {
+		justify-self: end;
+	}
+	
+
+	@include respond-to('one-hand') {
+		grid-template-columns: repeat(12, 1fr);
+
+		article {
+			grid-column: 1/-1;
+		}
+
+		.is-flush { margin-left: 0; }
+		
+		.is-proud { 
+			float: left;
+			margin: 0;
+		 }
+		
+		.is-full-width { 
+			margin: 0;
+			width: 100%;
+
+			img {
+				width:100%;
+			}
+		}
+
+		.audio-player {
+			margin: 0;
+		}
+	}
+
+
+	@include respond-to('one-hand-plus') {
+		grid-template-columns: repeat(1, 1fr) 400px repeat(2, 1fr);
+
+		article {
+			grid-column: 2;
+			width: 80%;
+		}
+	}
+
+
+	@include respond-to('two-hands') {
+		grid-template-columns: repeat(2, 1fr ) 800px repeat(4, 1fr);
+
+		article {
+			grid-column: 3;
+			width: 88%;
+		}
+
+		.is-flush { margin-left: 0; }
+		
+		.is-proud { 
+			float: left;
+			margin: 3px 0 0 -$negative-margin;
+		 }
+		
+		.is-full-width { 
+			margin-left: -$negative-margin;
+			width: calc(100% + #{$negative-margin});
+
+			img {
+				width:100%;
+			}
+
+			figcaption {
+				float: left;
+				width: 16%;
+				margin-top: 7px;
+				@include font-size-4();
+			}
+		}
+
+		.audio-player {
+			margin-left: -$negative-margin;
+		}
+	}
+}
+
+
+
+.caption-right {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	figcaption {
+		// margin: 0 0 0 calc(#{$grid-gap*8});
+		margin: 0 0 0 $grid-gap;
+		// create paragraph and character styles and extend to here
+		font-family: $serif-stack;
+		font-size: 14pt;
+		line-height: 0.8;
+		color: $monotone;
+	}
+	// .attribute {}
+}
+
+
+
+.caption-below {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	figcaption {
+		// grid-column: 8/11;
+  		// align-self: center;
+  		margin: 0 0 0 $grid-gap-3x;
+  		font-family: $serif-stack;
+  		font-size: 24pt;
+  		line-height: 0.8;
+  		color: $monotone;
+	}
+	// .attribute {}
+}
+
+
+ 
+share-blocks {
+	grid-column: 2/-2;
+}
+
+
+
+.full-height,
+.wrapper-signup {
+	grid-column: 1/-1;
+}
+
+
+
+#mc_embed_signup_scroll {
+	// grid-column: /-4;
+}
+
+
+
+#mc_embed_signup {
+	// grid-column: 4/-4;
+}

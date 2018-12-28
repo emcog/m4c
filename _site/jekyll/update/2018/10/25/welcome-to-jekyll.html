@@ -6,111 +6,103 @@
 	<!-- <link rel="stylesheet" type="text/css" href="share-blocks.css"> -->
 </head>
 <body>
-  <nav id="navTop">
-    <div class="dropdown-background">
-    </div>
-    <ul class="has-dropdowns">
-      <li>
-        <figure class="logo-parent">
-          <a href="#">
-            <img class="logo" src="/assets/emcog_white.png" alt="M4C logo">
-          </a>
-        </figure>
-      </li>
-      <li>
+  <nav id="navbar">
+    <div class="navbar__dropdown-bg"></div>
+    <figure class="navbar__logo-wrapper">
+     <a href="#">
+        <img class="navbar__logo" src="/assets/emcog_white.png" alt="M4C logo">
+      </a>
+    </figure>
+    <ul class="navbar__items">
+      <li class="navbar__item navbar__top-item">
           <a href="#">
             <span>Manifesto</span>
           </a>
       </li>
-      <li>
+      <li class="navbar__item navbar__top-item">
         <a href="#">
           <span>Workshops & trainings</span>
         </a>
-        <ul class="dropdown">
-          <li>
+        <ul class="navbar__dropdown-menu navbar__items">
+          <li class="navbar__item">
             <span class="mboe">MBOE</span>
             <a href="#"></a>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Yoga Changemakers</span>
             <a href="#"></a>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Mindfulness and Inclusion</span>
             <a href="#"></a>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Conscious Organisations</span>
             <a href="#"></a>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Mindfulness and the Community</span>
             <a href="#"></a>
             </li>                    
         </ul>
       </li>
-      <li>
+      <li class="navbar__item navbar__top-item">
         <a href="#"><span>Better distractions</span></a>
-        <ul class="dropdown">
-          <li>
-            <span class="btn-filter">Read</span>
+        <ul class="navbar__dropdown-menu navbar__items">
+          <li class="navbar__item">
+            <span class="btn btn-filter">Read</span>
           </li>
-          <li>
-            <span class="btn-filter">Listen</span>
+          <li class="navbar__item">
+            <span class="btn btn-filter">Listen</span>
           </li>
-          <li>
-            <span class="btn-filter">Watch</span>
+          <li class="navbar__item">
+            <span class="btn btn-filter">Watch</span>
           </li>
-          </li>
+        </li>
         </ul>
       </li>
-      <li>
+      <li class="navbar__item navbar__top-item">
         <a href="#"><span>About</span></a>
-        <ul class="dropdown">
-          <li>
+        <ul class="navbar__dropdown-menu navbar__items">
+          <li class="navbar__item">
             <span>People</span>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Organisation</span>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Intention</span>
-          </li>
           </li>
         </ul>
       </li>
-      <li>
+      <li class="navbar__item navbar__top-item">
         <a href="#"><span>Wiki</span></a>
-        <ul class="dropdown">
-          <li>
+        <ul class="navbar__dropdown-menu navbar__items">
+          <li class="navbar__item">
             <span>Modern history of mindfulness</span>
           </li>
-          <li>
+          <li class="navbar__item">
             <span>
               Stages of mindfulness meditation
             </span>
-            
           </li>
-          <li>
+          <li class="navbar__item">
             <span>Defintions</span>
           </li>
         </ul>
       </li>
-      <li class="btn-cta">
+      <li class="navbar__item navbar__top-item btn btn-cta ">
         <a href="#">Free mindfulness ecourse</a>
-        <ul class = "dropdown">
-          <li><span>Introduction</span></li>
-          <li><span>Name of week one</span></li>
-          <li><span>Name of week two</span></li>
-          <li><span>Name of week three</span></li>
-          <li><span>Name of week four</span></li>
-          <li><span>Name of week five</span></li>
-          <li><span>Name of week six</span></li>
+        <ul class="navbar__dropdown-menu navbar__items">
+          <li class="navbar__item"><span>Introduction</span></li>
+          <li class="navbar__item"><span>Name of week one</span></li>
+          <li class="navbar__item"><span>Name of week two</span></li>
+          <li class="navbar__item"><span>Name of week three</span></li>
+          <li class="navbar__item"><span>Name of week four</span></li>
+          <li class="navbar__item"><span>Name of week five</span></li>
+          <li class="navbar__item"><span>Name of week six</span></li>
         </ul>
       </li>
-      <li>
-        <a href="">Donate</a>
-       </li>
     </ul>
   </nav>
   
@@ -118,51 +110,54 @@
 
 <!-- to do move js files -->
 <script>
-const tabs = document.querySelectorAll('.has-dropdowns > li');
-const nav =  document.querySelector('#navTop'); 
-const dropdown = document.querySelector('.dropdown');
-const background =  document.querySelector('.dropdown-background');
-const wrapper = document.getElementById('content-wrapper');
-// const wrapperStyle = document.styleSheets[0].rules[0].wrapper.style;
+const navbar =  document.querySelector('#navbar'); 
+// select top level of nav
+const tabs = document.querySelectorAll('.navbar__item.navbar__top-item');
+// select 2nd level of nav
+const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
+const background =  document.querySelector('.navbar__dropdown-bg');
 
 // Get the absolute position of Nav elements
-const coordsDropdown = dropdown.getBoundingClientRect();
-const coordsNav = nav.getBoundingClientRect();
-const coordsBG = background.getBoundingClientRect();
-const coords = {
-   height: coordsDropdown.height,  
+const coordsDropdownMenu = dropdownMenu.getBoundingClientRect();
+const coordsNav = navbar.getBoundingClientRect();
+// const coordsBG = background.getBoundingClientRect();
+
+const coordsBg = {
+   height: coordsDropdownMenu.height,  
    top: coordsNav.height
  };
+
+
 
 //Display correct content for li element clicked, disactivate active tab when active tab clicked. When active show background to nav.
 function tabClick() {
   //refactor using arrow functions
-if(this.classList.contains('tab-enter')) {
+if(this.classList.contains('tab_is-active')) {
   //dropdown close
-  this.classList.remove('tab-enter', 'is_tab-enter_active');
-  background.classList.remove('is-open');
-  nav.classList.remove('is_nav_open');
+  // this.classList.remove('tab-enter', 'is_tab-enter_active');
+  this.classList.remove('tab_is-active');
+  background.classList.remove('navbar__dropdown-bg_is-open');
+  navbar.classList.remove('navbar_is-open');
 } else {
   //dropdown open
   let i;
   for (i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove('tab-enter', 'is_tab-enter_active' );
-    this.classList.add('tab-enter', 'is_tab-enter_active');
-    background.classList.add('is-open');
-    nav.classList.add('is_nav_open');
+    tabs[i].classList.remove('tab_is-active');
+    this.classList.add('tab_is-active');
+    background.classList.add('navbar__dropdown-bg_is-open');
+    navbar.classList.add('navbar_is-open');
   }
 };
 }
 
 //Correctly position nav background
 window.onload = function() {
-  background.style.setProperty('transform', `translateY(${coords.top}px)`);
+  background.style.setProperty('transform', `translateY(${coordsBg.top}px)`);
 }
 //Create buttons
 tabs.forEach(tab => tab.addEventListener('mousedown', tabClick));
 
 </script>
-
 <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
