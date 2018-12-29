@@ -26,20 +26,25 @@ a.button {
 		color: var(--monotone);
 		/*text-align: center;*/
 	}
+
 	&-left{
 		@extend %radius-left;
 	}
+
 	&-centre {
 		@extend %btn;
 	}
+
 	&-right {
 		@extend %radius-right;
 	}
+
 	&-alone {
 		@extend %radius-right;
 		@extend %radius-left;
 	}
 }
+
 
 
 // move to btns

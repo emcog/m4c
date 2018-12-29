@@ -1,7 +1,8 @@
 ---
 layout: in-depth
 permalink: mindfulness-course/part-3
-title: Part 3
+folio: Part 3
+title: What is this all about anyway?
 banner-image: /assets/images/mr-brainwash_dalai-lama.jpg
 
 callout-row-title: What's next?
@@ -23,9 +24,6 @@ third-of-3_intro: The next course section or something else if part-last
 <!-- comments: true -->
 
 <!--   -->
-
-## In the beginning
-
 Auntissequi suntiusa sitae aboreris eation nullam earum dolupta tibustNam eum reic totaecabo. Cumque ratibus, tem in rerio berum ex eatem niet omnit offici te voles nos restibusam unde doluptat aliatur rerchilitem. Ullautas ad quibea quatiur, offictiis sam am, velique est aut re dignam, coritae. Uga. Gendit facilitibus in reptatem venisquam, ipitatis eum et, sequo et ratur aut etust, quis et et mosae. Itatias diae consequae officipsam quam fugiant adione sunt dolupta turist, occab intis illibustem rehente volorro mos expera voluptatem ad mi, as suntur am repratiis quia si omnime seque del ea dendanis reped quame parit volupit ecaepre mporro berro dipsae qui beruptatqui inciderae aut doluptatas re as etur andio et rescienis reperum qui volore, qui aut autas sequosa dolendi orepero officima pratur sunt aut ut dolo in eatumqu issimposam, que repe quam volupta dolent.
 
 {% include audio.html %}
@@ -33,7 +31,7 @@ Auntissequi suntiusa sitae aboreris eation nullam earum dolupta tibustNam eum re
 Pudaersped qui il maximenis sintion sequis accaborunt magnati iscimusda nat harciat volenieture es imincto esto es ut ut iduscim issequam, quid ellest, non num inus rectatiatur restrum unto in renis ne nosamen imaionsequi blam cum ium volo blam estius ut aut quodigendel idunt mod quam et earum iure sin ex exeritios ut harupta tioria nem assit remquatus et laborrum in corum ditiatet illaudis dipis sitiorp oritati dolum rerit res eium aut del ium comnist volupta tempore pellecatat fuga. Ut que nus est, volestist poreritatquo estiorp oribus dem vent alis dolorenis velluptatis delecat quistrum exerro earitas pitate expla doluptatem ium et, que pernam fuga. Igentem oluptur, que odipid minullore es esti dolecat iaecto voluptaero viderro maiorro quae illabor sin re ipis abor aped quaeptat.
 
 {% include course-image.html
-	is_proud-flush-inset=""
+	is-proud-flush-inset="is-flush"
 	is_body-format="is_body-portrait"
 	image-src="/assets/images/mr-brainwash_dalai-lama.jpg"
 	image-description="Dalai Lama"
@@ -56,7 +54,7 @@ Axim eum rehenis velest doluptiis cupta quas si as eaquo dolendi optae. Oreperci
 
 Totat optatqu aepere nosa debitem nam adis magnis sum rehent as dolum voluptamus et int aut iur? Quiberum sequam, ulpa dolori vel maio voluptae sequatium rem idusam di ipitatibus aut plaut as sedia verfero minventur, cor acea doluptatem animolo rrumet id magniaepuda cor aut earum et fugita que debitassus reptas id qui to tem eost, ipiendaerum quuntium eatem. Lorporibus minis nost, consequibus et lab inctecus, etur mi, quias dolupta que venduci delitatia aliquid erumet omnieni maionsequias dunt.
 
-{% include course-content_section-sub-head.html
+{% include in-depth__section-sub-head.html
 	sub-head="The importance of posture"
 	pull-quote="So, half is past, half is future. No present!"
 	attribute="Dalai Lama"
@@ -65,8 +63,9 @@ Totat optatqu aepere nosa debitem nam adis magnis sum rehent as dolum voluptamus
 Et faccaborem debis ate sinveritis estio. Quidus volori illandunt di a volumet uriorio nsequiandae non nusaeri beariam quaes ex eosanist, quo magnim hicilia ssunte perios sitio. Equi quatem apidebit plicillacero volestius.
 
 Agniam quis evenis enisqui sum alibus, evelessed eri undus.
+
 {% include course-image.html
-	is-proud-flush-inset=""
+	is-proud-flush-inset="is-flush"
 	caption-position="caption-right"
 	image-src="/assets/images/mr-brainwash_dalai-lama.jpg"
 	image-description="Dalai Lama"

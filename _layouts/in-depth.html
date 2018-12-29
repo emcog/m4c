@@ -1,11 +1,20 @@
 ---
-layout: banner_top-of-page
+layout: default
 ---
-{% include netlify-identity-widget.html %}
+
 <div class="g-in-depth">
-	<article>
+	<!-- <div class="banner__image-imersive banner_image-contents" style='background-image: url("{{ page.banner-image }}");'>
+	</div> -->
+	<div class="banner__image g-in-depth" style='background-image: url("{{ page.banner-image }}");'>
+		<div class="banner__header">
+			<span class="banner__header-folio is-highlighted">{{ page.folio }}</span>
+			<h1 class="banner__header-title is-highlighted">{{ page.title }}</h1>
+		</div>
+	</div>
+	<article class="banner__article is-first-letter">
 		{{content}}
-		{% include course-content_callout-row.html %}
+		<!-- {% include course-content_callout-row.html %} -->
+		{% include callout-row.html %}
 	</article>
 </div>
 <!-- {% include comments.html %} -->

@@ -51,6 +51,11 @@
 		grid-template-columns: repeat(2, 1fr ) 800px repeat(4, 1fr);
 
 		article {
+			margin: 52px 0 0 0;
+		}
+
+		article,
+		.section__sub-head {
 			grid-column: 3;
 			width: 88%;
 		}
@@ -71,9 +76,7 @@
 			}
 
 			figcaption {
-				float: left;
-				width: 16%;
-				margin-top: 7px;
+				@include in-depth_left();
 				@include font-size-4();
 			}
 		}

@@ -1,50 +1,72 @@
-.header_callout {
-	grid-column: -11/-9;
-	justify-self: right;
+.callout-row__header-folio {
+	float: left;
+	width: 16%;
+	margin-top: 7px;
+	@include font-size-4();
 }
 
-.folio {
-	font-family: $sans-stack;
-	font-size: 12pt;
-	color: $monotone;
-}
 
-.title_callout-row {
+
+.callout-row__header-title {
 	font-family: $serif-stack;
 	font-size: 22pt;
 	line-height: 0;
 	color: $monotone;
 }
 
-.callout > img {
-	width: 100%;
-	padding-top: 66.66%;
-	background-color: $monotone;
+
+
+.callout {
+
+	img {
+		width: 100%;
+		padding-top: 66.66%;
+		background-color: $monotone;
+	}
+
+	span {
+		padding: $grid-gap-half;
+		font-family: $sans-stack;
+		font-size: 18pt;
+		color: $monotone;
+	}
+
+	p {
+		padding: 0 $grid-gap-half;
+		font-family: $serif-stack;
+		font-size: 16pt;
+		line-height: 1.24;
+		color: $monotone;
+	}
+
+	&__first-of-3 {
+		grid-column: 1/5;
+	}
+
+	&__second-of-3 {
+		grid-column: 5/9;
+	}
+
+	&__third-of-3 {
+		grid-column: 9/13;
+	}
 }
 
-.callout > span {
-	padding: $grid-gap-half;
-	font-family: $sans-stack;
-	font-size: 18pt;
-	color: $monotone;
+
+
+.callouts {
+	@extend .g-12;
 }
 
-.callout > p {
-	padding: 0 $grid-gap-half;
-	font-family: $serif-stack;
-	font-size: 16pt;
-	line-height: 1.24;
-	color: $monotone;
+
+
+.callout-row__header {
+	@include in-depth_left;
 }
 
-.first-of-3 {
-	grid-column: 5/7;
-}
 
-.second-of-3 {
-	grid-column: 7/9;
-}
 
-.third-of-3 {
-	grid-column: 9/11;
+.callout-row {
+	grid-column: 3/4;
+	@extend .is-full-width;
 }

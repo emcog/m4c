@@ -77,3 +77,10 @@
 
 
 // typography, using mixins so the styles can be called within media queries – please refer to base/typography 
+
+
+@mixin in-depth_left {
+  float: left;
+  width: 16%;
+  margin-top: 7px;
+}

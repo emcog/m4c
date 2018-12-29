@@ -105,6 +105,10 @@
   transform-origin: 50% 0;
   transition: height 0.6s;
   background: cadetblue;
+
+  &_is-open {
+    height: $navbar__dropdown-bg;
+  }
 }
 
 

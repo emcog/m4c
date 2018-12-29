@@ -1,22 +1,25 @@
-<aside class="callout-row is_full-width g-12">
-	<div>
-		<span class="folio">Related</span>
-		<span class="callout-row-title">
+<aside class="callout-row">
+	<div class="callout-row__header">
+		<span class="callout-row__header-folio">Related</span>
+		<span class="callout-row__header-title">
 			<br>{{ page.callout-row-title }}
 		</span>
-	<div class="callout first-of-3">
-		<img src="{{page.first-of-3_image}}">
-		<span>{{page.first-of-3_title}}</span>
-		<p>{{page.first-of-3_intro}}</p>
 	</div>
-	<div class="callout second-of-3">
-		<img src="{{pages.second-of-3_image}}">
-		<span>{{page.second-of-3_title}}</span>
-		<p>{{page.second-of-3_intro}}</p>
-	</div>
-	<div class="callout third-of-3">
-		<img src="{{page.third-of-3_image}}">
-		<span>{{page.third-of-3_title}}</span>
-		<p>{{page.third-of-3_intro}}</p>
+	<div class="callouts">
+		<div class="callout callout__first-of-3">
+			<img src="{{page.first-of-3_image}}">
+			<span>{{page.first-of-3_title}}</span>
+			<p>{{page.first-of-3_intro}}</p>
+		</div>
+		<div class="callout callout__second-of-3">
+			<img src="{{pages.second-of-3_image}}">
+			<span>{{page.second-of-3_title}}</span>
+			<p>{{page.second-of-3_intro}}</p>
+		</div>
+		<div class="callout callout__third-of-3">
+			<img src="{{page.third-of-3_image}}">
+			<span>{{page.third-of-3_title}}</span>
+			<p>{{page.third-of-3_intro}}</p>
+		</div>
 	</div>
 </aside>
