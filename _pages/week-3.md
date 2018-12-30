@@ -32,6 +32,7 @@ Pudaersped qui il maximenis sintion sequis accaborunt magnati iscimusda nat harc
 
 {% include course-image.html
 	is-proud-flush-inset="is-flush"
+	caption_is-below-right="caption_is-below"
 	is_body-format="is_body-portrait"
 	image-src="/assets/images/mr-brainwash_dalai-lama.jpg"
 	image-description="Dalai Lama"
@@ -49,16 +50,11 @@ Volor sent aut quam quid mil incilluptas dolesti stibus, aborrore por sinci sit 
 	attribute="Amy Cuddy"
 	%}
 
-Axim eum rehenis velest doluptiis cupta quas si as eaquo dolendi optae. Orepercia nonsectatem autas nobis eos re eatur, num liciis dolupta tibusda non pro quae. Em. Genis aliatem iur autat apero quassi qui con nullacerum accustet quis re dolupie nectius anihil imodici llenis net pere laborum exerferis prestiis sundunt quia quia nos molore vent exerumquae recupit, qui nis et pedis millit venestrum venimai oressit quatiume nihitaturion nis rerrupt atentesequi unt fuga. Occate santiis quia corios exces volestis accabor sitiat.
+Axim eum rehenis velest doluptiis cupta quas si as eaquo dolendi optae. Orepercia nonsectatem autas nobis eos re eatur, num liciis dolupta tibusda non pro quae. Em. Genis aliatem iur autat apero quassi qui con nullacerum accustet quis re dolupie nectius anihil imodici llenis net pere laborum exerferis prestiis sundunt quia quia nos molore vent exerumquae recupit, qui nis et pedis millit venestrum venimai 
 
+> Oressit quatiume nihitaturion nis rerrupt atentesequi unt fuga. Occate santiis quia corios exces volestis accabor sitiat.
 
 Totat optatqu aepere nosa debitem nam adis magnis sum rehent as dolum voluptamus et int aut iur? Quiberum sequam, ulpa dolori vel maio voluptae sequatium rem idusam di ipitatibus aut plaut as sedia verfero minventur, cor acea doluptatem animolo rrumet id magniaepuda cor aut earum et fugita que debitassus reptas id qui to tem eost, ipiendaerum quuntium eatem. Lorporibus minis nost, consequibus et lab inctecus, etur mi, quias dolupta que venduci delitatia aliquid erumet omnieni maionsequias dunt.
-
-{% include in-depth__section-sub-head.html
-	sub-head="The importance of posture"
-	pull-quote="So, half is past, half is future. No present!"
-	attribute="Dalai Lama"
-	%}
 
 Et faccaborem debis ate sinveritis estio. Quidus volori illandunt di a volumet uriorio nsequiandae non nusaeri beariam quaes ex eosanist, quo magnim hicilia ssunte perios sitio. Equi quatem apidebit plicillacero volestius.
 
@@ -66,7 +62,7 @@ Agniam quis evenis enisqui sum alibus, evelessed eri undus.
 
 {% include course-image.html
 	is-proud-flush-inset="is-flush"
-	caption-position="caption-right"
+	caption_is-below-right="caption_is-right"
 	image-src="/assets/images/mr-brainwash_dalai-lama.jpg"
 	image-description="Dalai Lama"
 	caption="Punk"

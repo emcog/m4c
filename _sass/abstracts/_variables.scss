@@ -57,6 +57,7 @@ $colour_M4C-wireframe-dark: hsl(217, 19%, 36%);
 $colour_M4C-wireframe-light: hsl(0,0%,100%);
 $colour_M4C-wireframe-alt: chocolate;
 $monotone: #4B596F;
+$monotone-10: rgba(75,89,111,10) ;
 
 /// Regular font family
 /// @type List
@@ -139,6 +140,8 @@ $breakpoints: (
 
 // Used in layouts
 $negative-margin: 20.5%;
+$g-in-depth__margin_is-flush: 96px;
+$g-in-depth__margin_is-proud: 143px;
 
 // navbar
 $navbar__dropdown-bg: 200px;

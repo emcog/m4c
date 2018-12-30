@@ -23,7 +23,7 @@ h6
 
 q
   {
-  font-family: $font_quote-highlight_stack;
+  font-family: $slab-stack;
   }
 
 
@@ -35,7 +35,25 @@ h2 {
 
 
 label {
-  font-family: $font_body_stack;
+  font-family: $serif-stack;
+}
+
+
+
+blockquote {
+  margin: 12px 0 12px 0;
+  border-style: solid;
+  border-color: $monotone;
+  border-width: 0 0 0 6px;
+  padding: 6px 12px;
+  background-color: $monotone-10;
+
+  p { 
+    margin: 0;
+    padding: 0;
+    font-family: $serif-stack;
+    @extend %font-size-4; 
+  }
 }
 
 
@@ -68,7 +86,8 @@ label {
 
 
 
-.is-highlighted  {
+.is-highlighted, 
+%is-highlighted {
   margin-bottom: 0;   
   color: white;
   background-color: var(--monotone);
@@ -93,7 +112,8 @@ label {
 
 
 // headlines
-.font-size-1 {
+.font-size-1,
+%font-size-1 {
   font-size: 50pt;
   line-height: 1;
 }
@@ -101,7 +121,8 @@ label {
 
 
 // quote blocks, audio player, section titles,
-.font-size-2 {
+.font-size-2, 
+%font-size-2 {
   font-size: 22pt;
   line-height: 1.5;
 }
@@ -109,7 +130,8 @@ label {
 
 
 // body copy and primary nav links
-.font-size-3 {
+.font-size-3, 
+%font-size-3 {
   font-size: 16pt;
   line-height: 1.3;
 }
@@ -117,18 +139,25 @@ label {
 
 
 // secondary nav links, folio-title
-.font-size-4 {
-  font-size: 13pt;
+.font-size-4, 
+%font-size-4 {
+  font-size: 14pt;
   line-height: 1.15;
 }
 
 
 
 // small stuff, album name
-.font-size-5 {
+.font-size-5, 
+%font-size-5 {
   font-size: 09pt;
   // todo
   // line-height: ;
+}
+
+// attribute class
+%font-size-6 {
+  font-size: 12pt;
 }
 
 
@@ -171,22 +200,6 @@ label {
   // todo
   // line-height: ;
 }
-
-
-
-/* .is-highlighted {
-  // _bright-1 {
-  color:;
-  background:;
-  }
-
-  // _bright-2 {
-  color:;
-  background:;
-  }
-
- ...
- */
 
 
 
@@ -239,7 +252,7 @@ p, .body-copy {
 
 
 // select the first letter in the first paragraph which is in an element with the class .is-first-letter
-.is-first-letter p:first-of-type:first-letter {
+.is-first-letter > p:first-child:first-letter {
   font-family: $sans-stack;
   font-size: 3rem;
 }

@@ -18,7 +18,7 @@
   top: 86%;
   grid-column: 3/-1;
   // is calculatd from 12% of 800px which is the width primary column in g-in-depth
-  margin-left: 96px;
+  margin-left: $g-in-depth__margin_is-flush;
 }
 
 

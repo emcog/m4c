@@ -81,7 +81,7 @@
   border-top-right-radius: 999px;
 }
 
-.light-fill {
+.light-fill, %light-fill {
   @extend %border-styles;
   border-color: $colour_M4C-wireframe-dark;
   color: $colour_M4C-wireframe-dark;
