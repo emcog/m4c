@@ -13,7 +13,8 @@
           <img class="navbar__logo" src="/assets/emcog_monotone.png" alt="M4C logo">
         </a>
       </figure>
-    <ul class="navbar__items">
+    <ul id="navbar__left" class="navbar__items">
+      <!-- for navbar.js to tabOpenClose(); to function, ensure nested UL is the last element -->
       <li class="navbar__item navbar__top-item">
           <a href="#">
             <span>Manifesto</span>
@@ -91,64 +92,21 @@
           </li>
         </ul>
       </li>
-      <li class="navbar__item navbar__top-item btn btn-cta ">
+    </ul>
+    <ul id="navbar__right" class="navbar__items">
+      <li id="btn-menu" class="navbar__item btn btn-alone">
+        <a href="#">Menu</a>
+      </li>
+      <li id="btn-course-mobile" class="navbar__item btn btn-alone">
+        <a href="#">Course</a>
+      <li id="btn-course" class="navbar__item btn btn-alone">
         <a href="#">Mindfulness course</a>
       </li>
     </ul>
   </nav>
   
-
-
-<!-- to do move js files -->
-<script>
-const navbar =  document.querySelector('#navbar'); 
-// select top level of nav
-const tabs = document.querySelectorAll('.navbar__item.navbar__top-item');
-// select 2nd level of nav
-const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
-const background =  document.querySelector('.navbar__dropdown-bg');
-
-// Get the absolute position of Nav elements
-const coordsDropdownMenu = dropdownMenu.getBoundingClientRect();
-const coordsNav = navbar.getBoundingClientRect();
-// const coordsBG = background.getBoundingClientRect();
-
-const coordsBg = {
-   height: coordsDropdownMenu.height,  
-   top: coordsNav.height
- };
-
-
-
-//Display correct content for li element clicked, disactivate active tab when active tab clicked. When active show background to nav.
-function tabClick() {
-  //refactor using arrow functions
-if(this.classList.contains('tab_is-active')) {
-  //dropdown close
-  // this.classList.remove('tab-enter', 'is_tab-enter_active');
-  this.classList.remove('tab_is-active');
-  background.classList.remove('navbar__dropdown-bg_is-open');
-  navbar.classList.remove('navbar_is-open');
-} else {
-  //dropdown open
-  let i;
-  for (i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove('tab_is-active');
-    this.classList.add('tab_is-active');
-    background.classList.add('navbar__dropdown-bg_is-open');
-    navbar.classList.add('navbar_is-open');
-  }
-};
-}
-
-//Correctly position nav background
-window.onload = function() {
-  background.style.setProperty('transform', `translateY(${coordsBg.top}px)`);
-}
-//Create buttons
-tabs.forEach(tab => tab.addEventListener('mousedown', tabClick));
-
-</script>
+<script type="text/javascript" src="/assets/scripts/include-media-1.0.2.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/navbar.js"></script>
 <div class="g-12">
 	<div class ="is_full-width is_height-half banner_image-wrapper">
 		<div class="banner_image-contents" style='background-image: url("/assets/images/mr-brainwash_love-is-the-answer.jpg");'>

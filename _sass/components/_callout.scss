@@ -68,5 +68,5 @@
 
 .callout-row {
 	grid-column: 3/4;
-	@extend .is-full-width;
+	@extend %is-full-width !optional;
 }

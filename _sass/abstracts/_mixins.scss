@@ -84,3 +84,16 @@
   width: 16%;
   margin-top: 7px;
 }
+
+
+@mixin border-styles {
+  border-width: 2px;
+  border-style: solid;
+}
+
+@mixin light-fill {
+  @include border-styles;
+  border-color: $colour_M4C-wireframe-dark;
+  color: $colour_M4C-wireframe-dark;
+  background-color: white; 
+}

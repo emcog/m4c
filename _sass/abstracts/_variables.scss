@@ -123,13 +123,22 @@ $max-width: 1180px !default;
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'one-hand': (min-width: 320px),
-  'one-hand-plus': (min-width: 414px),
-  'two-hands': (min-width: 768px),
-  'free-standing': (min-width: 1024px),
-  'free-standing-plus': (min-width: 1440px),
-) !default;
+
+// $breakpoints: (
+//   'one-hand': (min-width: 320px),
+//   'one-hand-plus': (min-width: 414px),
+//   'two-hands': (min-width: 768px),
+//   'free-standing': (min-width: 1024px),
+//   'free-standing-plus': (min-width: 1440px),
+// ) !default;
+
+
+// $breakpoints: (
+//   'phone': 320px,
+//   'tablet': 768px,
+//   'desktop': 1024px
+// ) !default;
+
 
 
 // Relative or absolute URL where all assets are served from

@@ -8,7 +8,7 @@
 	}
 	
 
-	@include respond-to('one-hand') {
+	@include media('≥phone') {
 		grid-template-columns: repeat(12, 1fr);
 
 		article {
@@ -22,7 +22,8 @@
 			margin: 0;
 		 }
 		
-		.is-full-width { 
+		.is-full-width, 
+		%is-full-width { 
 			margin: 0;
 			width: 100%;
 
@@ -37,7 +38,7 @@
 	}
 
 
-	@include respond-to('one-hand-plus') {
+	@include media('>phone') {
 		grid-template-columns: repeat(1, 1fr) 400px repeat(2, 1fr);
 
 		article {
@@ -47,7 +48,7 @@
 	}
 
 
-	@include respond-to('two-hands') {
+	@include media('<tablet') {
 		grid-template-columns: repeat(2, 1fr ) 800px repeat(4, 1fr);
 
 		article {
@@ -67,7 +68,7 @@
 			margin: 3px 0 0 -$negative-margin;
 		 }
 		
-		.is-full-width { 
+		.is-full-width, %is-full-width { 
 			margin-left: -$g-in-depth__margin_is-proud;
 			width: calc(100% + #{$negative-margin});
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --monotone:#4B596F;
   --font1: 'Arial black', sans-serif;
@@ -7,6 +8,34 @@
   --highlight-pad: .25rem;
   --nav-dropdown: 100px; }
 
+@media (min-width: 320px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "phone-plus":{"value": "414px", "active": false}, "tablet":{"value": "768px", "active": false}, "desktop":{"value": "1024px", "active": false}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+@media (min-width: 414px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "phone-plus":{"value": "414px", "active": true}, "tablet":{"value": "768px", "active": false}, "desktop":{"value": "1024px", "active": false}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+@media (min-width: 768px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "phone-plus":{"value": "414px", "active": true}, "tablet":{"value": "768px", "active": true}, "desktop":{"value": "1024px", "active": false}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
+@media (min-width: 1024px) {
+  body::after {
+    content: '{"phone":{"value": "320px", "active": true}, "phone-plus":{"value": "414px", "active": true}, "tablet":{"value": "768px", "active": true}, "desktop":{"value": "1024px", "active": true}}';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0; } }
 .u-responsive-ratio-16x9 {
   position: relative;
   padding-top: 56.25%; }
@@ -430,6 +459,9 @@ template {
 html {
   box-sizing: border-box; }
 
+body {
+  margin: 0; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -527,7 +559,7 @@ fieldset {
   font-family: "Arial black", sans-serif;
   font-size: 18px; }
 
-input, .light-fill, .navbar__item.navbar__top-item.btn-cta, .dark-fill, input[type="submit"] {
+input, .light-fill, .dark-fill, input[type="submit"] {
   border-width: 2px;
   border-style: solid; }
 
@@ -539,7 +571,7 @@ input, input[type="submit"], .btn-right, .btn-alone, .audio-player, .amplitude-s
   border-bottom-right-radius: 999px;
   border-top-right-radius: 999px; }
 
-.light-fill, .navbar__item.navbar__top-item.btn-cta {
+.light-fill {
   border-color: #4a586d;
   color: #4a586d;
   background-color: white; }
@@ -724,7 +756,8 @@ blockquote {
   font-size: 22pt;
   line-height: 1.5; }
 
-.font-size-3, p, .body-copy, .share-block__meme-quote, .navbar__item.has-dropdown, .navbar__item {
+.font-size-3, p, .body-copy, .share-block__meme-quote, .navbar__item.has-dropdown,
+.navbar__item {
   font-size: 16pt;
   line-height: 1.3; }
 
@@ -861,20 +894,22 @@ share-blocks {
       .g-in-depth .is-proud {
         float: left;
         margin: 0; }
-      .g-in-depth .is-full-width, .g-in-depth .callout-row {
+      .g-in-depth .is-full-width,
+      .g-in-depth .callout-row {
         margin: 0;
         width: 100%; }
-        .g-in-depth .is-full-width img, .g-in-depth .callout-row img {
+        .g-in-depth .is-full-width img,
+        .g-in-depth .callout-row img {
           width: 100%; }
       .g-in-depth .audio-player {
         margin: 0; } }
-  @media (min-width: 414px) {
+  @media (min-width: 321px) {
     .g-in-depth {
       grid-template-columns: repeat(1, 1fr) 400px repeat(2, 1fr); }
       .g-in-depth article {
         grid-column: 2;
         width: 80%; } }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .g-in-depth {
       grid-template-columns: repeat(2, 1fr) 800px repeat(4, 1fr); }
       .g-in-depth article {
@@ -973,20 +1008,13 @@ a.button {
   color: white;
   margin-bottom: 10px; }
 
-.btn {
-  display: flex;
+.btn, .btn-centre {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  float: right;
-  height: 40px;
-  margin: 17px 0 .1rem 0; }
-  .btn-cta {
-    border: white solid 2px;
-    border-radius: 40px;
-    padding: 0px 3px 26px 3px;
-    background: white;
-    font-family: var(--font1);
-    color: var(--monotone);
-    /*text-align: center;*/ }
+  margin-top: -2px;
+  height: 44px;
+  padding: 15px 30px 11px 30px; }
 
 .btn-filter {
   font-size: 16px;
@@ -1235,6 +1263,14 @@ div.amplitude-play-pause.amplitude-playing {
   background: url("/assets/buttons/wireframe_button-pause.svg");
   background-size: cover; }
 
+/* restyle to suit mobile
+  – tab_is-active
+  – navbar__dropdown-bg_is-open
+  – navbar_is-open
+ */
+.menu_is-active#navbar {
+  margin-bottom: 180px; }
+
 .navbar__logo {
   height: 42px;
   width: 42px; }
@@ -1245,7 +1281,8 @@ div.amplitude-play-pause.amplitude-playing {
 
 .tab_is-active {
   opacity: 1;
-  transition: opacity 0.6s cubic-bezier(0.95, -1.32, 0, 1.01); }
+  transition: opacity 0.6s cubic-bezier(0.95, -1.32, 0, 1.01);
+  border-bottom: 0.5rem solid #4B596F; }
   .tab_is-active > span {
     border-bottom: .5rem solid white; }
   .tab_is-active > .navbar__dropdown-menu {
@@ -1257,38 +1294,84 @@ div.amplitude-play-pause.amplitude-playing {
   margin: 25px 10px; }
   .navbar__item > a {
     text-decoration: none; }
-  .navbar__item.navbar__top-item {
-    position: relative;
-    margin: 10px 15px 0px 15px; }
-    .navbar__item.navbar__top-item:last-child {
-      margin-right: 40px; }
-    .navbar__item.navbar__top-item.btn-cta {
-      margin-top: -1px;
-      margin-left: auto;
-      height: 44px;
-      padding: 13px 20px 11px 20px; }
-      .navbar__item.navbar__top-item.btn-cta > a {
-        margin: 0; }
-    .navbar__item.navbar__top-item > a {
-      margin: 16px 0 0px 0;
-      border-radius: 2px 2px 0px 0px;
-      text-decoration: none; }
-      .navbar__item.navbar__top-item > a span {
-        height: 1.8rem;
-        padding: 0 1px; }
-        .navbar__item.navbar__top-item > a span:hover {
-          border-bottom: 0.5rem solid #4B596F; }
+
+.navbar__top-item {
+  margin: 10px 15px 0px 15px; }
+  @media (max-width: 1023px) {
+    .navbar__top-item {
+      margin: 2px 0;
+      background-color: aquamarine;
+      padding: 6px 79px 6px 0px; } }
+  .navbar__top-item > a {
+    margin: 16px 0 0px 0;
+    border-radius: 2px 2px 0px 0px;
+    text-decoration: none; }
+    .navbar__top-item > a span {
+      height: 1.8rem;
+      padding: 0 1px; }
+      .navbar__top-item > a span:hover {
+        border-bottom: 0.5rem solid #4B596F; }
+
+@media (min-width: 1024px) {
+  #btn-menu {
+    display: none; } }
+
+@media (min-width: 768px) {
+  #btn-course-mobile {
+    display: none; } }
+
+#btn-course {
+  min-width: 227px; }
+  @media (max-width: 768px) {
+    #btn-course {
+      display: none; } }
 
 .navbar__items {
+  flex-direction: row; }
+  @media (max-width: 768px) {
+    .navbar__items {
+      display: flex;
+      flex-direction: column; } }
+
+#navbar__left {
+  transition: right ease .6s; }
+  @media (max-width: 1023px) {
+    #navbar__left {
+      visibility: hidden; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #navbar__left {
+    position: absolute;
+    top: 70px;
+    right: -300px; } }
+
+  @media (max-width: 768px) {
+    #navbar__left {
+      position: absolute;
+      top: 70px;
+      right: -300px; } }
+
+#navbar__right {
   display: flex;
   flex-direction: row;
-  width: 100%; }
+  margin-left: auto;
+  margin-right: 40px; }
+  #navbar__right .btn-alone {
+    margin-top: -2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #4a586d;
+    color: #4a586d;
+    background-color: white; }
+    #navbar__right .btn-alone > a {
+      margin: 0; }
 
 .navbar__dropdown-menu {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   position: absolute;
+  left: 0%;
+  right: 0%;
   overflow: hidden;
   margin: 0;
   padding: 20px;
@@ -1302,6 +1385,9 @@ div.amplitude-play-pause.amplitude-playing {
   border-radius: 0px;
   transition: height 0.6s;
   background: cadetblue; }
+  @media (max-width: 1023px) {
+    .navbar__dropdown-bg {
+      display: none; } }
   .navbar__dropdown-bg_is-open {
     height: 100px; }
 
@@ -1311,11 +1397,13 @@ div.amplitude-play-pause.amplitude-playing {
 #navbar {
   display: flex;
   position: relative;
-  padding: 14px 0px;
+  width: 100vw;
+  height: 82px;
+  padding: 21px 0px;
   transition: margin-bottom ease .6s; }
 
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 3px 0;
   display: flex; }
