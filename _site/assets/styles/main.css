@@ -1278,6 +1278,9 @@ div.amplitude-play-pause.amplitude-playing {
 .navbar__logo-wrapper {
   padding: 0px;
   margin: 0 20px 0 40px; }
+  @media (max-width: 768px) {
+    .navbar__logo-wrapper {
+      margin-left: 14px; } }
 
 .tab_is-active {
   opacity: 1;
@@ -1288,33 +1291,59 @@ div.amplitude-play-pause.amplitude-playing {
   .tab_is-active > .navbar__dropdown-menu {
     opacity: 1;
     transition: opacity 0.6s cubic-bezier(0.95, -1.32, 0, 1.01); }
+    @media (max-width: 1023px) {
+      .tab_is-active > .navbar__dropdown-menu {
+        opacity: 1;
+        transition: opacity .5s ease 0.12s; } }
 
 .navbar__item {
   font-family: "Courier", monospace;
   margin: 25px 10px; }
+  @media (max-width: 1023px) {
+    .navbar__item {
+      margin: 5px 0;
+      transition: margin-bottom .35s ease; } }
   .navbar__item > a {
     text-decoration: none; }
+
+@media (max-width: 1023px) {
+  .navbar__dropdown-item_is-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
 
 .navbar__top-item {
   margin: 10px 15px 0px 15px; }
   @media (max-width: 1023px) {
     .navbar__top-item {
-      margin: 2px 0;
+      margin: 4px 0 0 -1px;
       background-color: aquamarine;
-      padding: 6px 79px 6px 0px; } }
+      padding: 5px 96px 5px 0px; } }
   .navbar__top-item > a {
     margin: 16px 0 0px 0;
-    border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px -1px;
     text-decoration: none; }
     .navbar__top-item > a span {
       height: 1.8rem;
       padding: 0 1px; }
       .navbar__top-item > a span:hover {
         border-bottom: 0.5rem solid #4B596F; }
+        @media (max-width: 768px) {
+          .navbar__top-item > a span:hover {
+            border-bottom: none; } }
 
 @media (min-width: 1024px) {
   #btn-menu {
     display: none; } }
+@media (max-width: 768px) {
+  #btn-menu {
+    min-width: 88px;
+    margin-right: 12px; } }
 
 @media (min-width: 768px) {
   #btn-course-mobile {
@@ -1325,6 +1354,11 @@ div.amplitude-play-pause.amplitude-playing {
   @media (max-width: 768px) {
     #btn-course {
       display: none; } }
+
+@media (max-width: 768px) {
+  #btn-course-mobile, #btn-menu {
+    font-size: 12pt;
+    padding: 12px 18px 11px 18px; } }
 
 .navbar__items {
   flex-direction: row; }
@@ -1355,6 +1389,9 @@ div.amplitude-play-pause.amplitude-playing {
   flex-direction: row;
   margin-left: auto;
   margin-right: 40px; }
+  @media (max-width: 768px) {
+    #navbar__right {
+      margin-right: 16px; } }
   #navbar__right .btn-alone {
     margin-top: -2px;
     border-width: 2px;
@@ -1376,6 +1413,9 @@ div.amplitude-play-pause.amplitude-playing {
   margin: 0;
   padding: 20px;
   opacity: 0; }
+  @media (max-width: 1023px) {
+    .navbar__dropdown-menu {
+      padding: 18px 0 0px 15px; } }
 
 .navbar__dropdown-bg {
   position: absolute;
@@ -1398,9 +1438,14 @@ div.amplitude-play-pause.amplitude-playing {
   display: flex;
   position: relative;
   width: 100vw;
-  height: 82px;
   padding: 21px 0px;
   transition: margin-bottom ease .6s; }
+  @media (max-width: 768px) {
+    #navbar {
+      padding: 14px 0px 10px 0px; } }
+  @media (min-width: 768px) {
+    #navbar {
+      height: 82px; } }
 
 nav ul {
   list-style: none;

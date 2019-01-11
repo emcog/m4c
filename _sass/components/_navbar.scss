@@ -11,9 +11,8 @@
   &#navbar {
     margin-bottom: 180px;
   }
-
   &#navbar__left {
-  }
+  } 
 }
 
 
@@ -27,6 +26,7 @@
 
 
 .navbar__logo-wrapper {
+  @include media('≤tablet') {margin-left:14px;}
   padding: 0px;
   margin: 0 20px 0 40px;
 }
@@ -41,6 +41,12 @@
   > span {border-bottom: .5rem solid white;}
  
   > .navbar__dropdown-menu {
+
+      @include media('<desktop') {
+        opacity: 1;
+        transition: opacity .5s ease 0.12s;
+      }
+
       opacity: 1;
       transition: opacity .6s cubic-bezier(.95,-1.32,0,1.01);
   }
@@ -49,12 +55,31 @@
 
 
 .navbar__item {
+
+    @include media("<desktop") {
+      margin: 5px 0;
+      transition: margin-bottom .35s ease;
+   
+    }
+
   font-family: $slab-stack;
   @extend %font-size-3;
   margin: 25px 10px;
 
   > a {
     text-decoration: none;
+
+
+
+  }
+}
+
+
+
+
+.navbar__dropdown-item_is-hidden {
+  @include media("<desktop") {
+   @include visually-hidden;
   }
 }
 
@@ -63,23 +88,29 @@
 .navbar__top-item {
 
   @include media("<desktop") {
-    margin: 2px 0;
+    margin: 4px 0 0 -1px;
     background-color: aquamarine;
-    padding: 6px 79px 6px 0px;
+    padding: 5px 96px 5px 0px;
   }
 
   margin: 10px 15px 0px 15px;
 
   > a {
     margin: 16px 0 0px 0;
-    border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px -1px;
     text-decoration: none;
         
     & span {
       height: 1.8rem;
       padding: 0 1px;
             
-      &:hover { border-bottom: .5rem solid $monotone; }
+      &:hover {
+        border-bottom: .5rem solid $monotone;
+
+        @include media('≤tablet') {
+          border-bottom: none;
+        }
+      }
     } 
   }
 }
@@ -87,17 +118,36 @@
 
 
 #btn-menu {
-  // width: 100px;
   @include media("≥desktop") { display: none; }
+  @include media('≤tablet') {
+    min-width: 88px; 
+    margin-right: 12px;
+  }
 }
+
+
 
 #btn-course-mobile {
   @include media("≥tablet")  { display: none; }
 }
 
+
+
 #btn-course {
   min-width: 227px;
   @include media("≤tablet") { display: none; }
+}
+
+
+
+#btn{
+  &-course-mobile,
+  &-menu {
+    @include media('≤tablet') {
+      font-size: 12pt;
+      padding: 12px 18px 11px 18px;
+    }
+  }
 }
 
 
@@ -140,6 +190,9 @@
 
 
 #navbar__right {
+
+  @include media ('≤tablet') { margin-right: 16px;}
+
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -156,6 +209,11 @@
 
 
 .navbar__dropdown-menu {
+
+  @include media('<desktop'){
+    padding: 18px 0 0px 15px;
+  }
+
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -197,10 +255,13 @@
 
 
 #navbar {
+  @include media('≤tablet') { padding: 14px 0px 10px 0px; }
+
+  @include media('≥tablet') {height: 82px;}
+  
   display: flex;
   position: relative;
   width: 100vw;
-  height: 82px;
   padding: 21px 0px;
   transition: margin-bottom ease .6s;
 }
