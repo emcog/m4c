@@ -35,6 +35,31 @@ let activeNavbarItemChildren;
 
 const navbarDropdownMenuItem = document.getElementsByClassName('navbar__dropdown-item');
 
+const collapseDropdown = {
+  stage1: function() { 
+          setTimeout(function(){
+          removeTabIsActive();
+          deactivateDropdownMenu();  
+          }, 50)},
+
+  stage2: function() {
+          setTimeout(function(){
+          navbar.style.removeProperty('margin-bottom');
+          }, 125)},
+
+  stage3: function() {
+          setTimeout(function(){
+          menubar.style.removeProperty('right');
+          navbar.classList.remove('menu_is-active', 'navbar_is-open');
+          }, 125)},
+
+  stage4: function() {
+          setTimeout(function(){
+          menubar.style.removeProperty('visibility');
+          }, 500)}  
+}
+
+
 
 // Desktop nav
 //Display correct content for li element clicked, disactivate active tab when active tab clicked. When active show background to nav.
@@ -72,19 +97,6 @@ function tabOpenClose() {
       background.classList.add('navbar__dropdown-bg_is-open');
       navbar.classList.add('navbar_is-open');
 
-
-      /* Mobile nav
-      1 Hide all navbar__dropdown-items
-      2 Remove all margin-bottom stlye from navbar__dropdown-menu
-      3 Show navbar__dropdown-items from the touched navbar__dropdown
-      4 Expand the navbar__dropdown to the height of its items
-      */
-
-      console.log(this.lastElementChild);
-      
-      // 1 Assign values to global variables, which are used in other functions
-
-
       // 1 Hide all navbar__dropdown-items
       addChildClassIsHidden(); 
       // 2 Hide dropdown menu
@@ -104,7 +116,6 @@ function tabOpenClose() {
       activeNavbarItemHeight = getActiveNavbarItemParams.height;
       // 7 Assign the height of the active dropdown to its parent, active tab.
       this.style.setProperty('margin-bottom', `${activeNavbarItemHeight + 23}px`);
-      console.log(`${activeNavbarItemHeight}`);
     }
   }
 }
@@ -158,25 +169,26 @@ menu.addEventListener('touchstart', menuPressed);
 
 // mobile nav – layer 1
 function menuPressed() {
-  if(menu.classList.contains('menu_is-active')) {
-    
-    removeTabIsActive();
+  if(navbar.classList.contains('navbar_is-open', 'menu_is-active')) {
     addChildClassIsHidden();
-    deactivateDropdownMenu();
-
-    navbar.style.removeProperty('margin-bottom');
-    menu.classList.remove('menu_is-active');
-    menubar.style.removeProperty('visibility');
-    menubar.style.removeProperty('right');
+    collapseDropdown.stage1();
+    collapseDropdown.stage2();
+    collapseDropdown.stage3();
+    collapseDropdown.stage4();
     menu.innerText = "Menu ";
-    navbar.classList.remove('menu_is-active', 'navbar_is-open');
+  } else if (navbar.classList.contains('menu_is-active')) {
+    clearTimeout(collapseDropdown.stage2());
+    clearTimeout(collapseDropdown.stage3());
+    clearTimeout(collapseDropdown.stage4());
+    menu.innerText = "Menu ";
   } else {
     navbar.classList.add('menu_is-active');
-    // navbar.style.setProperty('margin-bottom', `${navbarHeight}px`);
     navbar.style.setProperty('margin-bottom', '70vh');
-    menu.classList.add('menu_is-active');
     menubar.style.setProperty('visibility', 'visible');
     menubar.style.setProperty('right', '0px');
     menu.innerText = "Close";
   }
 }
+
+// add + to navbar dropdown menu to indicate an expanding nav
+// rotate + to a x 
