@@ -7,6 +7,19 @@
 
 // }
 
+.navbar__icon-more {
+  @include media('>tablet'){ display: none;}
+  
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  transition: transform 0.5s ease;
+
+  &_is-active{
+    transform: rotate(45deg);
+  }
+}
+
 .menu_is-active {
   &#navbar {
     margin-bottom: 180px;
@@ -88,6 +101,7 @@
 .navbar__top-item {
 
   @include media("<desktop") {
+    position: relative;
     margin: 4px 0 0 -1px;
     background-color: aquamarine;
     padding: 5px 96px 5px 0px;

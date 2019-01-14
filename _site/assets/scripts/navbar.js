@@ -1,11 +1,13 @@
 // Desktop nav
 const navbar =  document.querySelector('#navbar'); 
-// select top level of nav
+
+// Select top level of nav
 const tabs = document.querySelectorAll('.navbar__item.navbar__top-item');
 
-// select 2nd level of nav
+// Select 2nd level of nav
 const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
-// todo fix this WET
+
+// Todo fix this WET
 const dropdownMenu2 = document.getElementsByClassName('navbar__dropdown-menu');
 const background =  document.querySelector('.navbar__dropdown-bg');
 
@@ -25,6 +27,10 @@ const menubar = document.getElementById('navbar__left');
 let getNavbarParams = menubar.getBoundingClientRect();
 let navbarHeight = getNavbarParams.height;
 
+// Manipulate '+' icon on mobile, assigned inside tabOpenClose
+let activeTab;
+let activeNavbarMoreIcon;
+
 // Returns an html collection, should have length: 1 or 0.
 let activeNavbarItem;
 
@@ -35,6 +41,8 @@ let activeNavbarItemChildren;
 
 const navbarDropdownMenuItem = document.getElementsByClassName('navbar__dropdown-item');
 
+
+// Referenced in menuPressed();
 const collapseDropdown = {
   stage1: function() { 
           setTimeout(function(){
@@ -80,6 +88,8 @@ function tabOpenClose() {
     //Todo test is addChildClassIsHidden is used/necessary here
     addChildClassIsHidden();
     deactivateDropdownMenu();
+    // Collapse the more or "+" icon
+    activeNavbarMoreIcon.classList.remove('navbar__icon-more_is-active');
 
     // Remove margin-bottom from all navbar__top-item 
     for (let i = 0; i < tabs.length; i++) {
@@ -97,6 +107,8 @@ function tabOpenClose() {
       background.classList.add('navbar__dropdown-bg_is-open');
       navbar.classList.add('navbar_is-open');
 
+      // Find the child of tab_i
+
       // 1 Hide all navbar__dropdown-items
       addChildClassIsHidden(); 
       // 2 Hide dropdown menu
@@ -111,16 +123,26 @@ function tabOpenClose() {
       activeNavbarItemChildren = activeNavbarItem[0].children;
       // 5 Show the active tab's dropdown-menu items
       removeChildClassIsHidden();
-      // 6 Get the size the active tab needs to be
+      //6 Rotate the active tab's more or "+" icon 
+      activeTab = document.getElementsByClassName('tab_is-active');
+        /* Warning – These values"[0]"" are heavily dependent on navabar.html structure
+        is there a prototype function to select the named elements and unbind from html structure?*/
+      activeNavbarMoreIcon = activeTab[0].children[0].children[0];
+        // Add class to active tab > > to rotate the '+' icon
+      activeNavbarMoreIcon.classList.add('navbar__icon-more_is-active')
+      // 7 Get the size the active tab needs to be
       getActiveNavbarItemParams = activeNavbarItem[0].getBoundingClientRect();
       activeNavbarItemHeight = getActiveNavbarItemParams.height;
-      // 7 Assign the height of the active dropdown to its parent, active tab.
+      // 8 Assign the height of the active dropdown to its parent, active tab.
       this.style.setProperty('margin-bottom', `${activeNavbarItemHeight + 23}px`);
     }
   }
 }
 
+// activeTab[0].children[0].children
 
+
+// Show all dropdown menu items
 function removeChildClassIsHidden() {
    for (let i = 0; i < activeNavbarItemChildren.length; i++) {
       activeNavbarItemChildren[i].classList.remove('navbar__dropdown-item_is-hidden');
@@ -128,7 +150,9 @@ function removeChildClassIsHidden() {
   }
 }
 
-// Hide all drop down menu items
+
+
+// Hide all dropdown menu items
 function addChildClassIsHidden() {
   for (let i = 0 ; i < navbarDropdownMenuItem.length; i++) {
     navbarDropdownMenuItem[i].classList.add('navbar__dropdown-item_is-hidden');
@@ -136,11 +160,13 @@ function addChildClassIsHidden() {
 }
 
 
+
 function deactivateDropdownMenu() {
   for (let i = 0; i < dropdownMenu2.length; i++) {
     dropdownMenu2[i].classList.remove('navbar__dropdown-menu_is-active');
   }
 }
+
 
 
 function removeTabIsActive() {
@@ -157,14 +183,18 @@ function removeTabIsActive() {
 window.onload = function() {
   background.style.setProperty('transform', `translateY(${backgroundParams.top}px)`);
 }
+
+
+
 // Desktop nav buttons
 tabs.forEach(tab => tab.addEventListener('mousedown', tabOpenClose));
+
 
 
 // Mobile nav buttons
 menu.addEventListener('mousedown', menuPressed);
 menu.addEventListener('touchstart', menuPressed);
-// tabs.forEach(tab => tab.addEventListener('touchstart', menuItemPressed));
+
 
 
 // mobile nav – layer 1
@@ -189,6 +219,3 @@ function menuPressed() {
     menu.innerText = "Close";
   }
 }
-
-// add + to navbar dropdown menu to indicate an expanding nav
-// rotate + to a x 

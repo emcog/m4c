@@ -1268,6 +1268,17 @@ div.amplitude-play-pause.amplitude-playing {
   – navbar__dropdown-bg_is-open
   – navbar_is-open
  */
+.navbar__icon-more {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  transition: transform 0.5s ease; }
+  @media (min-width: 769px) {
+    .navbar__icon-more {
+      display: none; } }
+  .navbar__icon-more_is-active {
+    transform: rotate(45deg); }
+
 .menu_is-active#navbar {
   margin-bottom: 180px; }
 
@@ -1321,6 +1332,7 @@ div.amplitude-play-pause.amplitude-playing {
   margin: 10px 15px 0px 15px; }
   @media (max-width: 1023px) {
     .navbar__top-item {
+      position: relative;
       margin: 4px 0 0 -1px;
       background-color: aquamarine;
       padding: 5px 96px 5px 0px; } }
