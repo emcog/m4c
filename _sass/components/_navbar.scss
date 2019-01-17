@@ -1,18 +1,12 @@
-/* restyle to suit mobile
-  – tab_is-active
-  – navbar__dropdown-bg_is-open
-  – navbar_is-open
- */
-// .navbar__dropdown-menu_is-active {
-
-// }
+// Mobile navbar fades away on click of link
+// Change display of button on ≤phone-plus (from mindfulness course to course or online course)
 
 .navbar__icon-more {
   @include media('>tablet'){ display: none;}
   
   position: absolute;
-  top: 11px;
-  right: 11px;
+  top: 13px;
+  right: 13px;
   transition: transform 0.5s ease;
 
   &_is-active{
@@ -47,6 +41,10 @@
 
 
 .tab_is-active {
+  @include media('≤tablet') {
+    border-bottom: none;
+  }
+
   opacity: 1;
   transition: opacity .6s cubic-bezier(.95,-1.32,0,1.01);
   border-bottom: .5rem solid $monotone;
@@ -277,7 +275,7 @@
   position: relative;
   width: 100vw;
   padding: 21px 0px;
-  transition: margin-bottom ease .6s;
+  transition: margin-bottom ease .7s;
 }
 
 

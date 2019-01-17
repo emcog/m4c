@@ -123,13 +123,8 @@ function tabOpenClose() {
       activeNavbarItemChildren = activeNavbarItem[0].children;
       // 5 Show the active tab's dropdown-menu items
       removeChildClassIsHidden();
-      //6 Rotate the active tab's more or "+" icon 
-      activeTab = document.getElementsByClassName('tab_is-active');
-        /* Warning – These values"[0]"" are heavily dependent on navabar.html structure
-        is there a prototype function to select the named elements and unbind from html structure?*/
-      activeNavbarMoreIcon = activeTab[0].children[0].children[0];
-        // Add class to active tab > > to rotate the '+' icon
-      activeNavbarMoreIcon.classList.add('navbar__icon-more_is-active')
+      // //6 Rotate the active tab's more or "+" icon 
+      rotateMoreIcon();
       // 7 Get the size the active tab needs to be
       getActiveNavbarItemParams = activeNavbarItem[0].getBoundingClientRect();
       activeNavbarItemHeight = getActiveNavbarItemParams.height;
@@ -177,6 +172,16 @@ function removeTabIsActive() {
 }
 
 
+function rotateMoreIcon() {
+  //6 Rotate the active tab's more or "+" icon 
+      activeTab = document.getElementsByClassName('tab_is-active');
+        /* Warning – These values"[0]"" are heavily dependent on navabar.html structure
+        is there a prototype function to select the named elements and unbind from html structure?*/
+      activeNavbarMoreIcon = activeTab[0].children[0].children[0];
+        // Add class to active tab > > to rotate the '+' icon
+      activeNavbarMoreIcon.classList.add('navbar__icon-more_is-active');
+}
+
 
 // Desktop nav
 //Correctly position nav background
@@ -201,6 +206,7 @@ menu.addEventListener('touchstart', menuPressed);
 function menuPressed() {
   if(navbar.classList.contains('navbar_is-open', 'menu_is-active')) {
     addChildClassIsHidden();
+    activeNavbarMoreIcon.classList.remove('navbar__icon-more_is-active');
     collapseDropdown.stage1();
     collapseDropdown.stage2();
     collapseDropdown.stage3();
@@ -213,7 +219,7 @@ function menuPressed() {
     menu.innerText = "Menu ";
   } else {
     navbar.classList.add('menu_is-active');
-    navbar.style.setProperty('margin-bottom', '70vh');
+    navbar.style.setProperty('margin-bottom', '75vh');
     menubar.style.setProperty('visibility', 'visible');
     menubar.style.setProperty('right', '0px');
     menu.innerText = "Close";
