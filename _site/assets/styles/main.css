@@ -796,6 +796,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 16px 0 0 0;
   height: 3rem;
   background: #4a586d; }
 
@@ -803,19 +804,36 @@ footer > a {
   padding: 0 2rem 0 2rem;
   color: white; }
 
-.g-12, .callouts {
-  display: grid;
-  grid-column: 1/-1;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: minmax(100px, max-content);
-  grid-gap: 16px; }
+.g-12 p, .callouts p {
+  grid-column: 3/-3; }
 
-share-blocks {
+.share-blocks {
   grid-column: 2/-2; }
 
 .full-height,
 .wrapper-signup {
   grid-column: 1/-1; }
+
+@media (min-width: 1024px) {
+  .g-12_is-adjusted-left-column {
+    margin: 0 20% 0 116px; } }
+@media (min-width: 769px) and (max-width: 1023px) {
+  .g-12_is-adjusted-left-column {
+    margin: 0 6% 0 83px; } }
+
+@media (max-width: 768px) and (min-width: 415px) {
+  .g-12_is-adjusted-left-column {
+    margin: 0 14px; } }
+
+@media (max-width: 414px) {
+  .g-12_is-adjusted-left-column {
+    margin: 0 14px; } }
+
+.g-12, .callouts {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px; }
 
 .course-content > p {
   grid-column: 5/-3;
@@ -906,7 +924,7 @@ share-blocks {
     .g-in-depth {
       grid-template-columns: repeat(2, 1fr) 800px repeat(4, 1fr); }
       .g-in-depth article {
-        margin: 52px 0 0 0;
+        margin: 54px 0 0 0;
         grid-column: 2/4; }
       .g-in-depth article,
       .g-in-depth .section__sub-head {
@@ -1008,7 +1026,7 @@ a.button {
   align-items: center;
   margin-top: -2px;
   height: 44px;
-  padding: 15px 30px 11px 30px; }
+  padding: 12px 18px 11px 18px; }
 
 .btn-filter {
   font-size: 16px;
@@ -1091,16 +1109,24 @@ h2 br {
   margin: -3px 0 0 0;
   font-size: 50pt;
   line-height: 1; }
+  @media (min-width: 768px) {
+    .banner__header-title {
+      right: 0px;
+      top: 565px; } }
 
 .banner__header-folio {
   margin: -3px 0 0 0;
   font-family: "Courier", monospace;
   font-size: 16pt;
   line-height: 1.3; }
+  @media (min-width: 768px) {
+    .banner__header-folio {
+      top: 537px; } }
 
-.banner__header {
+.banner__header,
+.banner__header-folio,
+.banner__header-title {
   position: absolute;
-  top: 86%;
   grid-column: 3/-1;
   margin-left: 96px; }
 
@@ -1110,6 +1136,18 @@ h2 br {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+
+.card {
+  background-color: #4B596F; }
+  @media (min-width: 415px) {
+    .card {
+      grid-column: span 4; } }
+  @media (max-width: 414px) {
+    .card {
+      grid-column: span 12; } }
+  .card img {
+    width: 100%;
+    background-color: #4B596F; }
 
 .signup-form {
   display: grid;
@@ -1344,7 +1382,7 @@ div.amplitude-play-pause.amplitude-playing {
 @media (min-width: 1024px) {
   #btn-menu {
     display: none; } }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   #btn-menu {
     min-width: 88px;
     margin-right: 12px; } }
@@ -1354,15 +1392,10 @@ div.amplitude-play-pause.amplitude-playing {
     display: none; } }
 
 #btn-course {
-  min-width: 227px; }
+  min-width: 147px; }
   @media (max-width: 768px) {
     #btn-course {
       display: none; } }
-
-@media (max-width: 768px) {
-  #btn-course-mobile, #btn-menu {
-    font-size: 12pt;
-    padding: 12px 18px 11px 18px; } }
 
 .navbar__items {
   flex-direction: row; }

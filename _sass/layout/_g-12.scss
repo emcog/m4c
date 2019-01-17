@@ -1,14 +1,10 @@
-.g-12 {
-	display: grid;
-	grid-column: 1/-1;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: minmax(100px, max-content);
-	grid-gap: $grid-gap;
+.g-12{
+	& p{
+		grid-column: 3/-3;
+	}
 }
-
-
  
-share-blocks {
+.share-blocks {
 	grid-column: 2/-2;
 }
 
@@ -29,4 +25,34 @@ share-blocks {
 
 #mc_embed_signup {
 	// grid-column: 4/-4;
+}
+
+
+
+.g-12_is-adjusted-left-column {
+	@include media('≥desktop') {
+		margin: 0 20% 0 116px;
+	}
+
+	@include media('>tablet', '<desktop') {
+		margin: 0 6% 0 83px;
+	}
+
+	@include media('≤tablet', '>phone-plus') {
+		margin: 0 14px;
+	}
+
+	@include media('≤phone-plus') {
+		margin: 0 14px;
+	}
+}
+
+
+
+.g-12 {
+	display: grid;
+	grid-column: 1/-1;
+	grid-template-columns: repeat(12, 1fr);
+	// grid-template-rows: minmax(100px, max-content);
+	grid-gap: $grid-gap;
 }

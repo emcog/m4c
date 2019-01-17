@@ -77,13 +77,13 @@
         </a>
         <ul class="navbar__dropdown-menu navbar__items">
           <li class="navbar__item navbar__dropdown-item navbar__dropdown-item_is-hidden">
-            <span>People</span>
+            People
           </li>
           <li class="navbar__item navbar__dropdown-item navbar__dropdown-item_is-hidden">
-            <span>Organisation</span>
+            Organisation
           </li>
           <li class="navbar__item navbar__dropdown-item navbar__dropdown-item_is-hidden">
-            <span>Intention</span>
+            Intention
           </li>
         </ul>
       </li>
@@ -114,17 +114,16 @@
         <a href="#"></a>
       </li>
       <li id="btn-course-mobile" class="navbar__item btn btn-alone">
-        Mindfulness Course
+        Take action
         <a href="#"></a>
       <li id="btn-course" class="navbar__item btn btn-alone">
-        Mindfulness Course
-        <a href="#"></a>
+        <a href="/mindfulness-course">Take action</a>
       </li>
     </ul>
   </nav>
   
 <script type="text/javascript" src="/assets/scripts/include-media-1.0.2.min.js"></script>
-<script type="text/javascript" src="/assets/scripts/navbar.js"></script>
+<!-- <script type="text/javascript" src="/assets/scripts/navbar.js"></script> -->
 <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
@@ -152,4 +151,25 @@
 	<a>privacy policy</a>
 </footer>
 </body>
+<script type="text/javascript" src="/assets/scripts/navbar.js"></script>
+<script type="text/javascript" src="/assets/scripts/layouts.js"></script>
+<script type="text/javascript" src="/assets/scripts/amplitude.min.js"></script> 
+<script type="text/javascript">
+	Amplitude.init({
+		"songs": [
+			{
+				"name": "Three minute reset",
+				"album": "M4C Make a change course",
+				"url": "/assets/audio/Three-step-reset.mp3"
+			}
+		]
+	});
+	
+	document.getElementById('song-played-progress').addEventListener('click', function(e){
+	    var offset = this.getBoundingClientRect();
+	    var x = e.pageX - offset.left;
+	
+	    Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+	});
+</script>
 </html>

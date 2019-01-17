@@ -1,4 +1,8 @@
 .banner__header-title {
+   @include media(≥tablet){ 
+    right: 0px; 
+    top: 565px;
+  }
   margin: -3px 0 0 0; 
   @include font-size-1();
 }
@@ -6,6 +10,9 @@
 
 
 .banner__header-folio {
+  @include media(≥tablet){ 
+    top: 537px; 
+  }
   margin: -3px 0 0 0; 
   font-family: $slab-stack;
   @include font-size-3();
@@ -13,12 +20,13 @@
 
 
 
-.banner__header {
+.banner__header,
+.banner__header-folio,
+.banner__header-title {
   position: absolute;
-  top: 86%;
   grid-column: 3/-1;
   // is calculatd from 12% of 800px which is the width primary column in g-in-depth
-  margin-left: $g-in-depth__margin_is-flush;
+  margin-left: $g-in-depth__margin_is-flush;  
 }
 
 

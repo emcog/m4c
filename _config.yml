@@ -37,6 +37,12 @@ sass:
 #Build settings
 include: ['_pages', '_redirects']
 
+collections:
+  - coursechapters
+  - glossary
+
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

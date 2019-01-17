@@ -1,9 +1,14 @@
 ---
 layout: in-depth
 permalink: mindfulness-course/part-3
+
+intro: This is some intro text which to intrigue and encourage reading
+
+
 folio: Part 3
-title: What is this all about anyway?
+title: What is this all about any way?
 banner-image: /assets/images/mr-brainwash_dalai-lama.jpg
+
 
 callout-row-title: What's next?
 
@@ -18,7 +23,6 @@ second-of-3_intro: A cross-related article, perhaps in the blog
 third-of-3_image:
 third-of-3_title: Next
 third-of-3_intro: The next course section or something else if part-last
-
 ---
 <!-- disqus setting -->
 <!-- comments: true -->

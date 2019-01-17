@@ -1,0 +1,16 @@
+.card {
+	@include media('>phone-plus'){
+		grid-column: span 4;
+	}
+
+	@include media('≤phone-plus'){
+		grid-column: span 12;
+	}
+
+	img{
+		width: 100%;
+		background-color: $monotone;
+	}
+	
+	background-color: $monotone;
+}

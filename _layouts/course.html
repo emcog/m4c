@@ -1,0 +1,16 @@
+---
+layout: default
+title: Mindfulness Course
+permalink: mindfulness-course
+---
+{% for course-part in site.pages.course-parts %}
+	<section class="card">
+		<img src="{%page.banner-image%}">
+		<div>
+			<span>{% page.folio %}</span>
+			<span>{% page.title %}</span>
+			<p>{% page.intro %}</p> <!--would be great to gather first x characters-->
+		</div>
+	</section>
+{% endfor %}
+<!-- close g-12 -->

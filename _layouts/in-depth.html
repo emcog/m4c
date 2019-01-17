@@ -5,10 +5,12 @@ layout: default
 	<!-- <div class="banner__image-imersive banner_image-contents" style='background-image: url("{{ page.banner-image }}");'>
 	</div> -->
 	<div class="banner__image g-in-depth" style='background-image: url("{{ page.banner-image }}");'>
-		<div class="banner__header">
+	<!-- 	<div class="banner__header">
 			<span class="banner__header-folio is-highlighted">{{ page.folio }}</span>
 			<h1 class="banner__header-title is-highlighted">{{ page.title }}</h1>
-		</div>
+		</div> -->
+		<span class="banner__header-folio is-highlighted">{{ page.folio }}</span>
+		<h1 class="banner__header-title is-highlighted">{{ page.title }}</h1>
 	</div>
 	<article class="banner__article is-first-letter">
 		{{content}}
@@ -17,5 +19,3 @@ layout: default
 	</article>
 </div>
 <!-- {% include comments.html %} -->
-{% include scripts.html %}
-{% include amplitude.html %}

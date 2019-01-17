@@ -131,7 +131,7 @@
 
 #btn-menu {
   @include media("≥desktop") { display: none; }
-  @include media('≤tablet') {
+  @include media('<desktop') {
     min-width: 88px; 
     margin-right: 12px;
   }
@@ -146,21 +146,21 @@
 
 
 #btn-course {
-  min-width: 227px;
+  min-width: 147px;
   @include media("≤tablet") { display: none; }
 }
 
 
 
-#btn{
-  &-course-mobile,
-  &-menu {
-    @include media('≤tablet') {
-      font-size: 12pt;
-      padding: 12px 18px 11px 18px;
-    }
-  }
-}
+// #btn{
+//   &-course-mobile,
+//   &-menu {
+//     @include media('≤tablet') {
+//       font-size: 12pt;
+//       padding: 12px 18px 11px 18px;
+//     }
+//   }
+// }
 
 
 
