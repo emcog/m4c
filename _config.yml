@@ -38,8 +38,10 @@ sass:
 include: ['_pages', '_redirects']
 
 collections:
-  - coursechapters
-  - glossary
+  course:
+    # output: true
+    # permalink: /:collection:/name
+  # - _glossary
 
 
 

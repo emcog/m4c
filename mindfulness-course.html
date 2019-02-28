@@ -1,0 +1,20 @@
+---
+layout: default
+title: Mindfulness Course
+permalink: mindfulness-course
+---
+<div class="g-12 g-12_is-adjusted-left-column">
+	<span>AHHHHHHHHHH</span>
+	{% for c in site.course %}
+		 <section class="card">
+		 	<a href={{c.permalink}}>
+				<img class=".u-responsive-ratio-16x9" src="{{c.banner-image}}">
+				<div>
+					<span>{{ c.folio }}</span>
+					<span>{{ c.title }}</span>
+					<p>{{ c.intro }}</p>
+				</div> 
+			</a>
+		</section> 
+	{% endfor %}
+</div>

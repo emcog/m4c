@@ -685,7 +685,7 @@ input[type="submit"] {
 
 body {
   font-family: "georgia", serif;
-  font-size: 16pt;
+  font-size: 14pt;
   line-height: 1.3;
   color: #222222;
   background-color: white; }
@@ -698,6 +698,25 @@ h5,
 h6 {
   font-family: "Arial black", sans-serif; }
 
+p {
+  font-size: 14pt;
+  line-height: 1.3;
+  margin-top: .25rem;
+  margin-bottom: 1rem; }
+  p > a {
+    border-bottom: 1px solid;
+    padding-bottom: .125rem;
+    text-decoration: none; }
+  p > a:hover {
+    border-bottom: 1px solid;
+    padding-bottom: .125rem;
+    text-decoration: none; }
+
+a:hover {
+  border-bottom: 1px solid;
+  padding-bottom: .125rem;
+  text-decoration: none; }
+
 q {
   font-family: "Courier", monospace; }
 
@@ -706,6 +725,42 @@ h2 {
 
 label {
   font-family: "georgia", serif; }
+
+.font-size-1,
+.caption_is-right figcaption {
+  font-size: 50pt;
+  line-height: 1; }
+
+.font-size-2, .btn-cta,
+.caption_is-right .caption__attribute {
+  font-size: 22pt;
+  line-height: 1.5; }
+
+.font-size-3,
+.navbar__item.has-dropdown,
+.navbar__item {
+  font-size: 16pt;
+  line-height: 1.3; }
+
+.font-size-4, .navbar__item,
+blockquote p,
+.caption_is-below figcaption {
+  font-size: 14pt;
+  line-height: 1.15; }
+
+.font-size-5 {
+  font-size: 09pt; }
+
+.caption_is-below figcaption .caption__attribute {
+  font-size: 12pt; }
+
+.is-first-letter-follows + p::first-letter {
+  font-family: "Arial black", sans-serif;
+  font-size: 2rem; }
+
+.is-first-letter > p:first-child:first-letter {
+  font-family: "Arial black", sans-serif;
+  font-size: 3rem; }
 
 blockquote {
   margin: 12px 0 12px 0;
@@ -723,15 +778,7 @@ blockquote {
   margin-top: 0;
   padding-top: .8em; }
 
-.attribute {
-  font-family: var(--font3);
-  color: var(--monotone);
-  font-size: 12pt; }
-
-.molecule__meme-text > p {
-  padding-left: 2rem; }
-
-.is-highlighted, .share-block__meme-quote {
+.is-highlighted {
   margin-bottom: 0;
   color: white;
   background-color: var(--monotone);
@@ -739,58 +786,6 @@ blockquote {
   border: 1px solid var(--monotone);
   box-decoration-break: clone;
   white-space: pre-wrap; }
-
-.is-highlighted, .share-block__meme-quote {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  color: white; }
-
-.font-size-1,
-.caption_is-right figcaption {
-  font-size: 50pt;
-  line-height: 1; }
-
-.font-size-2, .btn-cta,
-.caption_is-right .caption__attribute {
-  font-size: 22pt;
-  line-height: 1.5; }
-
-.font-size-3, p, .body-copy, .share-block__meme-quote, .navbar__item.has-dropdown,
-.navbar__item {
-  font-size: 16pt;
-  line-height: 1.3; }
-
-.font-size-4, .navbar__item,
-blockquote p,
-.caption_is-below figcaption {
-  font-size: 14pt;
-  line-height: 1.15; }
-
-.font-size-5 {
-  font-size: 09pt; }
-
-.caption_is-below figcaption .caption__attribute {
-  font-size: 12pt; }
-
-p, .body-copy {
-  margin-top: .25rem;
-  margin-bottom: 1rem; }
-  p > a, .body-copy > a {
-    border-bottom: 1px solid;
-    padding-bottom: .125rem;
-    text-decoration: none; }
-  p > a:hover, .body-copy > a:hover {
-    border-bottom: 1px solid;
-    padding-bottom: .125rem;
-    text-decoration: none; }
-
-.is-first-letter-follows + p::first-letter {
-  font-family: "Arial black", sans-serif;
-  font-size: 2rem; }
-
-.is-first-letter > p:first-child:first-letter {
-  font-family: "Arial black", sans-serif;
-  font-size: 3rem; }
 
 footer {
   display: flex;
@@ -804,7 +799,7 @@ footer > a {
   padding: 0 2rem 0 2rem;
   color: white; }
 
-.g-12 p, .callouts p {
+.g-12 > p, .callouts > p {
   grid-column: 3/-3; }
 
 .share-blocks {
@@ -944,7 +939,7 @@ footer > a {
           float: left;
           width: 16%;
           margin-top: 7px;
-          font-size: 13pt;
+          font-size: 12pt;
           line-height: 1.15; }
       .g-in-depth .audio-player {
         margin-top: 30px;
@@ -980,39 +975,6 @@ share-blocks {
 .wrapper-signup {
   grid-column: 1/-1; }
 
-.grid-12_share-block {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 16px;
-  margin: 15px 0 15px 0; }
-
-.share-image {
-  grid-column: 5;
-  grid-row: 1; }
-
-.social-buttons {
-  grid-column: 4;
-  grid-row: 1;
-  justify-self: end;
-  display: flex;
-  flex-direction: column; }
-
-.quote-n-attribute,
-.share-block_supporting-text {
-  grid-column: 6/10;
-  grid-row: 1; }
-
-.share-block_supporting-text {
-  align-self: end;
-  margin-bottom: 0.5rem; }
-
-.quote-n-attribute > h2 {
-  padding-top: 0; }
-
-.social-button {
-  padding-bottom: 3px; }
-
 a.button {
   background: black;
   display: block;
@@ -1027,6 +989,8 @@ a.button {
   margin-top: -2px;
   height: 44px;
   padding: 12px 18px 11px 18px; }
+  .btn > a:hover, .btn-centre > a:hover {
+    margin-bottom: none; }
 
 .btn-filter {
   font-size: 16px;
@@ -1040,6 +1004,9 @@ a.button {
   font-family: var(--font1);
   text-align: center;
   justify-content: center; }
+
+.social-button {
+  width: 100%; }
 
 .full-height {
   display: flex;
@@ -1117,7 +1084,7 @@ h2 br {
 .banner__header-folio {
   margin: -3px 0 0 0;
   font-family: "Courier", monospace;
-  font-size: 16pt;
+  font-size: 14pt;
   line-height: 1.3; }
   @media (min-width: 768px) {
     .banner__header-folio {
@@ -1148,6 +1115,61 @@ h2 br {
   .card img {
     width: 100%;
     background-color: #4B596F; }
+
+.g-12__share-this {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 22px 200px repeat(7, 1fr);
+  grid-gap: 16px;
+  margin: 15px 0 15px 0; }
+
+.g-12__share-this > img {
+  grid-column: 4;
+  grid-row: 1;
+  width: 100%; }
+
+.g-12__share-this > a:hover {
+  text-decoration: none;
+  border-bottom: none 0px !important; }
+
+.share-this__social-buttons {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  margin: 0; }
+
+.share-this__quote-n-attribute {
+  grid-column: 5/10;
+  grid-row: 1; }
+
+p.share-this__explanation {
+  grid-column: 4/9;
+  grid-row: 2;
+  align-self: end;
+  margin: auto -7px auto 8px;
+  font-size: 12pt;
+  line-height: 1.15; }
+
+ashare-this__quote-n-attribute:hover {
+  border-bottom: none; }
+
+.share-this__quote-n-attribute span {
+  line-height: 3;
+  border-bottom: 1px solid;
+  padding-bottom: .125rem;
+  text-decoration: none;
+  padding-bottom: 0; }
+.share-this__quote-n-attribute > q {
+  padding-top: 0;
+  font-family: "Arial black", sans-serif;
+  font-size: 18pt;
+  line-height: 1.25;
+  color: white; }
+
+.social-button {
+  padding-bottom: 3px; }
 
 .signup-form {
   display: grid;
@@ -1198,7 +1220,7 @@ h2 br {
   float: left;
   width: 16%;
   margin-top: 7px;
-  font-size: 13pt;
+  font-size: 12pt;
   line-height: 1.15; }
 
 .callout-row__header-title {
